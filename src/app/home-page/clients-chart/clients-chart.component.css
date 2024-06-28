@@ -1,0 +1,256 @@
+.main-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 93%;
+    height: 92vh;
+    margin: 25px 50px;
+    padding: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(111, 113, 116, 0.4) 0px 0px 0px 2px, rgba(135, 136, 136, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.img-container {
+    border-radius: 20px 0 0 20px;
+    width: 28vw;
+    margin-left: 0;
+    height: 100%;
+}
+
+.img-container img{
+    display: none;
+}
+
+.content-container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-chart-container{
+    width: 100%;
+}
+
+.title-container h2{
+    margin: 10px 0 0 0 ;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+h2 span{
+    color: yellow;
+    font-family: "Inter", sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+#clientChart {
+    width: 580px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1440px){
+
+    .container{
+        height: 96vh;
+    }
+
+    .title-container h2{
+        margin: 20px 0 0 0 ;
+        font-size: 26px;
+    }
+
+    h2 span{
+        font-size: 34px;
+    }
+
+    #clientChart{
+        width: 525px;
+        height: 525px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .container{
+        width: 100%;
+        margin: 20px 40px;
+        height: 95vh;
+    }
+
+    .img-container{
+        width: 40vw;
+    }
+
+    .title-container h2{
+        margin: 15px 0 0 0 ;
+        font-size: 24px;
+    }
+
+    h2 span{
+        font-size: 32px;
+    }
+
+    .chart-container{
+        width: 100%;
+    }
+
+    #clientChart{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: auto;
+    }
+
+    .img-container {
+        background: none;
+        width: 100%;
+        height: 300px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .img-container img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+        object-position: 0 40%;
+    }
+
+    .content-container{
+        width: 100%;
+        height: 60%;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .title-chart-container{
+        width: 100%;
+    }
+
+    #clientChart {
+        width: 475px;
+        height: 475px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container{
+        width: 100%;
+        margin: 20px 20px;
+    }
+
+    .title-container h2{
+        margin: 20px 0 0 0 ;
+        font-size: 20px;
+    }
+
+    h2 span{
+        font-size: 28px;
+    }
+
+    #clientChart{
+        width: 475px;
+        height: 475px;
+    }
+}
+
+@media screen and (max-width: 426px){
+
+    .img-container{
+        height: 200px;
+    }
+
+    .img-container img{
+        object-position: 0% 35%;
+    }
+
+    .container{
+        width: 100%;
+        margin: 20px 20px;
+    }
+
+    .title-container h2{
+        margin: 20px 0 0 0 ;
+        font-size: 18px;
+        /* color: black; */
+    }
+
+    h2 span{
+        font-size: 24px;
+    }
+
+    #clientChart{
+        width: 390px;
+        height: 390px;
+    }
+}
+
+@media screen and (max-width: 376px){
+    
+        .img-container{
+            height: 175px;
+        }
+    
+        .container{
+            width: 100%;
+            margin: 20px 20px;
+        }
+    
+        .title-container h2{
+            margin: 20px 0 0 0 ;
+            font-size: 16px;
+        }
+    
+        h2 span{
+            font-size: 22px;
+        }
+    
+        #clientChart{
+            width: 340px;
+            height: 340px;
+        }
+    
+}
+
+@media screen and (max-width: 320px){
+
+    .img-container{
+        height: 150px;
+    }
+
+    .container{
+        width: 87.5%;
+    }
+
+    #clientChart{
+        width: 280px;
+        height: 280px;
+    }
+}

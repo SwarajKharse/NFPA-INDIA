@@ -1,0 +1,325 @@
+.navBar-container{
+    background-color: #ffffff00;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.normal{
+    position: relative;
+    width: 100%;
+    background-color: #ffffff00;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 150px 0 25px;
+}
+
+.navBar-logo h2{
+    word-spacing: 1px;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    white-space: nowrap;
+}
+
+.logoImage {
+    width: 80px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+.navBar-menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+.navBar-menu .navBar-menu-item a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    list-style-type: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navBar-menu .navBar-menu-item a:hover {
+    color: #838383;
+}
+
+.navBar-menu .navBar-menu-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #ff0000;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.navBar-menu .navBar-menu-item a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ff0000;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #000;
+    transform: translateX(-375px);
+    margin: 0px 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.navBar-menu-item.dropdown:hover .dropdown-content{
+    display: flex;
+    width: 600px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.navBar-menu-item.dropdown:hover .dropdown-content h4{
+    width: 90%;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 5px;
+    border-bottom: #e9ecef 2px solid;
+}
+
+.navBar-menu-item.dropdown:hover .dropdown-content a{
+    width: 100%;
+    color: #000;
+    font-size: 12px;
+    font-weight: 350;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+}
+
+.navBar-menu-item.dropdown:hover .dropdown-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.mobile{
+    display: none;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+@media screen and (max-width: 1440px){
+    .dropdown-content{
+        transform: translateX(-425px);
+    }
+
+    .navBar-menu-item.dropdown:hover .dropdown-content{
+        width: 600px;
+        border-radius: 20px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .navBar-logo{
+        padding: 0 50px 0 25px;
+    }
+
+    .navBar-logo h2{
+        font-size: 18px;
+    }
+
+    .logoImage{
+        width: 70px;
+        height: 60px;
+    }
+
+    .dropdown-content{
+        transform: translateX(-475px);
+    }
+
+    .navBar-menu-item.dropdown:hover .dropdown-content{
+        width: 570px;
+        border-radius: 20px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navBar-menu .navBar-menu-item a{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .navBar-logo{
+        padding: 0 50px 0 25px;
+    }
+
+    .normal {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navBar-logo-mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile .navBar-mobile-menu {
+        width: 100%;
+        display: none;
+        padding: 10px;
+        background: linear-gradient(to bottom, #000000 0%, #000000 100%);
+    }
+
+    .mobile .navBar-mobile-menu.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile .navBar-menu-item {
+        width: 95%;
+        padding: 10px 0;
+        display: flex;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 1px;
+        border-bottom: #e9ecef 1px solid;
+    }
+
+    .mobile .navBar-menu-item a {
+        display: inline-block;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        letter-spacing: 1px;
+        list-style-type: none;
+        padding: 10px;
+        display: block;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navBar-mobile-menu .navBar-menu-item a:hover {
+        background-color: #ff9800;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    .navBar-logo{
+        padding: 0 20px 0 20px;
+    }
+
+    .navBar-logo h2{
+        font-size: 16px;
+    }
+
+    .logoImage{
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu-toggle {
+        font-size: 25px;
+    }
+
+    .navBar-menu .navBar-menu-item a{
+        font-size: 10px;
+    }
+
+    .mobile .navBar-mobile-menu {
+        width: 94%;
+    }
+
+    .mobile .navBar-menu-item a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .navBar-logo h2{
+        font-size: 14px;
+    }
+
+    .logoImage{
+        width: 45px;
+        height: 45px;
+    }
+
+    .menu-toggle {
+        font-size: 22px;
+    }
+}

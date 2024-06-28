@@ -1,0 +1,264 @@
+.container{
+    top: 0;
+    height: 100vh;
+    /* height: 90vh; */
+    width: 100%;
+    overflow: hidden;
+    
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 1)), 
+            linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url('../../../assets/AboutUs/aboutUsHandShake.jpeg') repeat center center; */
+}
+
+.img-container{
+    width: 100%;
+    height: 100%; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 1)), 
+        linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1));
+    pointer-events: none; 
+}
+
+.content {
+    width: 600px; 
+    position: absolute;
+    right: 0%;
+    bottom: 15%;
+    margin-right: 50px;
+    color: white;
+    text-align: right;
+    overflow: hidden;
+}
+
+.content h1{
+    margin: 10px 0;
+    font-size: 80px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+h1 span{
+    color: #C1121F;
+}
+
+.content h3{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+h3 span{
+    color: #C1121F;
+}
+
+.content p{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+@media screen and (max-width: 1440px){
+    .content h1{
+        font-size: 70px;
+    }
+    .content h3{
+        font-size: 30px;
+    }
+    .content p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .img-container img{
+        object-position: 10%;
+    }
+
+    .container{
+        height: 100vh;
+    }
+
+    .content h1{
+        font-size: 60px;
+    }
+
+    .content h3{
+        font-size: 25px;
+    }
+    
+    .content p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .container{
+        height: 100vh;
+    }
+
+    .img-container img{
+        object-position: 20%;
+    }
+
+    .content{
+        bottom: 20%;
+    }
+
+    .content h1{
+        font-size: 50px;
+    }
+
+    .content h3{
+        font-size: 20px;
+    }
+    
+    .content p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .container{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .content{
+        bottom: 20%;
+    }
+
+    .content h1{
+        font-size: 50px;
+    }
+    .content h3{
+        font-size: 18px;
+    }
+    .content p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 426px){
+
+    .container{
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: none;
+    }
+
+    .img-container{
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+
+    .img-container img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: 50px 70%;
+        scale: 1.5;
+    }
+
+    .img-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1));        
+        z-index: 1;
+    }
+
+    .content{
+        position: relative;
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        margin: 0px;
+        padding: 10px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 1));
+    }
+
+    .content h1{
+        text-align: center;
+        margin: 10px 0;
+        font-size: 45px;
+    }
+
+    .content h3{
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .content p{
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 376px){
+
+    .container{
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .img-container{
+        height: 35vh;
+    }
+
+    .content h1{
+        font-size: 40px;
+    }
+
+    .content h3{
+        font-size: 16px;
+    }
+
+    .content p{
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,343 @@
+.mission{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.mission-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 97.5%;
+    width: 93.5%;
+    padding: 0; 
+    margin: 0;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(111, 113, 116, 0.4) 0px 0px 0px 2px, rgba(135, 136, 136, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.mission-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mission-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1));
+    pointer-events: none; 
+    border-radius: 20px;
+}
+
+.mission-content {
+    width: 600px; 
+    position: absolute;
+    right: 3.5%;
+    top: 25%;
+    margin-right: 50px;
+}
+
+.mission-content .mission-text {
+    right: 0;
+    position: absolute;
+}
+  
+.mission-content .mission-text h3 {
+    color: #C1121F;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    text-align: right;
+}
+
+.mission-content .mission-text h2 {
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.mission-content .mission-text p {
+    width: 500px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    color: #9d9d9d;
+    line-height: 30px;
+    text-align: right;
+}
+
+@media screen and (max-width: 1440px){
+
+    .mission-content {
+        top: 21%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .mission{
+        height: 90vh;
+    }
+
+    .mission-container {
+        height: 100%;
+        padding: 25px 0;
+        margin: 40px;
+    }
+
+    .mission-container img{
+        height: 112%;
+    }
+
+    .mission-content {
+        width: 500px;
+        padding: 0 20px;
+        right: 25px;
+        position: absolute;
+    }
+
+    .mission-content .mission-text h3 {
+        font-size: 18px;
+    }
+
+    .mission-content .mission-text h2 {
+        font-size: 24px;
+    }
+
+    .mission-content .mission-text p {
+        width: 350px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .mission {
+        height: 75vh;
+        padding: 0;
+    }
+
+    .mission-container{
+        height: 100%;
+        padding: 25px 0;
+        margin: 20px;
+    }
+
+    .mission-container img{
+        height: 115%;
+    }
+
+    .mission-content {
+        top: 15%;
+        right: -10px;
+        width: 400px;
+        position: absolute;
+        padding: 0 20px;
+    }
+
+    .mission-content .mission-text h3 {
+        font-size: 16px;
+    }
+
+    .mission-content .mission-text h2 {
+        font-size: 20px;
+    }
+
+    .mission-content .mission-text p {
+        width: 350px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .mission{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        border-radius: 20px;
+        margin: 20px;
+        height: auto;
+        padding: 0;
+        background-color: whitesmoke;
+        box-shadow: rgba(111, 113, 116, 0.4) 0px 0px 0px 2px, rgba(135, 136, 136, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+
+    .mission-container {
+        background: none;
+        background-color: none;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+    }
+
+    .mission-container img{
+        display: block;
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .mission-container::after {
+        background: none;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .mission-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        position: relative;
+        right: 0;
+        margin: 0;
+    }
+    
+    .mission-content .mission-text {
+        text-align: center;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 35px;
+        padding-bottom: 20px;
+    }
+    
+    .mission-content .mission-text h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .mission-content .mission-text h2 {
+        font-size: 24px;
+        margin: 0;
+        color: black;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    .mission-content .mission-text p {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (max-width: 426px) {
+
+    .mission-container img{
+        height: 180px;
+    }
+
+    .mission-content .mission-text {
+        padding: 0 25px 25px 25px;
+    }
+
+    .mission-content .mission-text h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .mission-content .mission-text h2 {
+        font-size: 22px;
+        margin: 0;
+        color: black;
+        margin-bottom: 3px;
+    }
+    
+    .mission-content .mission-text p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+@media screen and (max-width: 376px){
+
+    .mission-container img{
+        height: 160px;
+    }
+
+    .mission-content .mission-text {
+        padding: 0 20px 15px 20px;
+
+    }
+
+    .mission-content .mission-text h3 {
+        font-size: 14px;
+    }
+
+    .mission-content .mission-text h2 {
+        font-size: 16px;
+    }
+
+    .mission-content .mission-text p {
+        width: 100%;
+        font-size: 10px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .mission-container img{
+        height: 135px;
+    }
+
+    .mission-content .mission-text h3 {
+        font-size: 12px;
+    }
+
+    .mission-content .mission-text h2 {
+        font-size: 14px;
+    }
+
+    .mission-content .mission-text p {
+        width: 100%;
+        font-size: 8px;
+        line-height: 16px;
+    }
+}

@@ -1,0 +1,55 @@
+<div class="products-container">
+    <div class="title-container">
+        <h2 #title>OUR PRODUCTS</h2>
+        <p #title>Explore a Variety of our products</p>
+    </div>
+    <div class="overall-products">
+        <div #mySwiper class="mySwiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" #prods>
+                    <div class="product-card extinguisher">
+                        <div class="image-wrapper">
+                            <img src="{{extinguisher}}" alt="Product Image">
+                        </div>
+                        <div class="product-overlay"></div>
+                        <div class="product-title">Fire Extinguisher</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" #prods>
+                    <div class="product-card sprinkler">
+                        <div class="image-wrapper">
+                            <img src="{{sprinkler}}" alt="Product Image">
+                        </div>
+                        <div class="product-overlay"></div>
+                        <div class="product-title">Fire Sprinkler System</div>
+                    </div>
+                </div>
+                <div class="swiper-slide" #prods>
+                    <div class="product-card detection">
+                        <div class="image-wrapper">
+                            <img src="{{detection}}" alt="Product Image">
+                        </div>
+                        <div class="product-overlay"></div>
+                        <div class="product-title">Fire Detection System</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="product-card hydrant">
+                        <div class="image-wrapper">
+                            <img src="{{hydrant}}" alt="Product Image">
+                        </div>
+                        <div class="product-overlay"></div>
+                        <div class="product-title">Fire Hydrant System</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div #buttons class="swiper-button-next"></div>
+            <div #buttons class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div #link class="all-products-link">
+        <a routerLink="/total-systems">View All Products</a>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<div #navbar class="navBar-container">
+  <div class="normal">
+    <div class="navBar-logo">
+      <img #logo src="{{logoImage}}" alt="logo" class="logoImage" />
+      <h2 #logoText>NFPA India Pvt. Ltd.</h2>
+    </div>
+    <div class="navBar-menu">
+      <div class="navBar-menu-item">
+        <div #navBarMenuItem>
+          <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+        </div>
+      </div>
+      <div class="navBar-menu-item">
+        <div #navBarMenuItem>
+          <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a>
+        </div>
+      </div>
+      <div class="navBar-menu-item">
+        <div #navBarMenuItem>
+          <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
+        </div>
+      </div>
+      <div class="navBar-menu-item">
+        <div #navBarMenuItem>
+          <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
+        </div>
+     </div>
+      <div (mouseenter)="dropdownEnter()" 
+          (mouseleave)="dropdownLeave()" 
+          class="navBar-menu-item dropdown">
+        <div #navBarMenuItem>
+          <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
+        </div>
+        <div #dropdown class="dropdown-content">
+          <div class="dropdown-column">
+            <h4 #dropdownHead>Systems</h4>
+            <a #dropdownbody href="#">Supression Systems</a>
+            <a #dropdownbody href="#">Sprinkler System</a>
+            <a #dropdownbody href="#">Hydrant System</a>
+            <a #dropdownbody href="#">Detection Systems</a>
+          </div>
+          <div class="dropdown-column">
+            <h4 #dropdownHead>Products</h4>
+            <a #dropdownbody href="#">Fire Extinguishers</a>
+            <a #dropdownbody href="#">Public Address</a>
+            <a #dropdownbody href="#">Fire Metal Doors</a>
+            <a #dropdownbody href="#">Water Level Detector</a>
+          </div>
+          <div class="dropdown-column">
+            <h4 #dropdownHead>Services</h4>
+            <a #dropdownbody href="#">AMC</a>
+            <a #dropdownbody href="#">Training</a>
+            <a #dropdownbody href="#">One-Time-Repair</a>
+            <a #dropdownbody href="#">Fire Audits</a>
+            <a #dropdownbody href="#">Fire Extinguisher Refilling & HPT</a>
+            <a #dropdownbody href="#">Licensing & Documentation</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="navBar-menu-item">
+        <div #navBarMenuItem>
+          <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile">
+    <div class="navBar-logo-mobile">
+      <div class="navBar-logo">
+        <img #logo src="{{logoImage}}" alt="logo" class="logoImage" />
+        <h2 #logoText>NFPA India Pvt. Ltd.</h2>
+      </div>
+      <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+    </div>
+    <div class="navBar-mobile-menu mobile-menu" [class.show]="menuOpen">
+      <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
+        <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+      </div>
+      <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
+        <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a>
+      </div>
+      <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
+        <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
+      </div>
+      <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
+        <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
+      </div>
+      <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
+        <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
+      </div>
+      <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
+        <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
