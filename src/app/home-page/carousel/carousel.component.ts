@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CommonModule, NgFor } from '@angular/common';
 
 gsap.registerPlugin(ScrollTrigger);
+import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-carousel',
@@ -30,7 +31,13 @@ export class CarouselComponent implements AfterViewInit {
   @ViewChild('slideTitle2') slideTitle2!: ElementRef;
   @ViewChild('slideText2') slideText2!: ElementRef;
 
-  constructor() {}
+  constructor(private storage: Storage) {}
+  imageUrl: string | null = null;
+
+  async ngOnInit() {
+    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/home/carousel1.webp");
+    this.imageUrl = await getDownloadURL(imageRef);
+  }
 
   ngAfterViewInit(): void {
 
