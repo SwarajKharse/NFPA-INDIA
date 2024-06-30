@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-top-comp',
@@ -16,13 +15,7 @@ export class TopCompComponent implements AfterViewInit{
   @ViewChildren('h3tag') h3tag!: QueryList<ElementRef>;
   @ViewChildren('container') container!: QueryList<ElementRef>;
 
-  aboutUs: string | null = null;
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const reff = ref(this.storage, 'gs://nfpa-website.appspot.com/images/aboutUs/main.svg');
-    this.aboutUs = await getDownloadURL(reff);
-  }
+  constructor() {}
 
   ngAfterViewInit(): void {
     const h3Element = this.h3tag.find((el, index) => index === 0)?.nativeElement;

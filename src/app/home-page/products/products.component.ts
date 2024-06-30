@@ -6,8 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
-
 @Component({
   selector: 'app-products',
   standalone: true,
@@ -19,26 +17,7 @@ import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 export class ProductsComponent implements AfterViewInit{
 
-  extinguisher: string | null = null;
-  detection: string | null = null;
-  hydrant: string | null = null;
-  sprinkler: string | null = null;
-
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/home/extinguishers.svg");
-    this.extinguisher = await getDownloadURL(imageRef);
-
-    const imageRef1 = ref(this.storage, "gs://nfpa-website.appspot.com/images/home/detection.svg");
-    this.detection = await getDownloadURL(imageRef1);
-
-    const imageRef2 = ref(this.storage, "gs://nfpa-website.appspot.com/images/home/hydrant.svg");
-    this.hydrant = await getDownloadURL(imageRef2);
-
-    const imageRef3 = ref(this.storage, "gs://nfpa-website.appspot.com/images/home/sprinkler.svg");
-    this.sprinkler = await getDownloadURL(imageRef3);
-  }
+  constructor() {}
 
   @ViewChild('mySwiper') mySwiper!: ElementRef;
   @ViewChildren('title') title!: QueryList<ElementRef>;
@@ -92,7 +71,7 @@ export class ProductsComponent implements AfterViewInit{
         opacity: 0,
         scale: 0.5,
         x: -200,
-        duration: 1.2,
+        duration: 0.7,
         stagger: 0.3
     }, '-=0.5');
 
@@ -100,8 +79,8 @@ export class ProductsComponent implements AfterViewInit{
       link, { 
         opacity: 0,
         y: 100,
-        duration: 1
-    }, '-=0.8');
+        duration: 0.8
+    }, '-=0.6');
       
   }
 

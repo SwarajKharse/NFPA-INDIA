@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-counter',
@@ -19,32 +18,7 @@ export class CounterComponent implements AfterViewInit{
   @ViewChildren('img') img!: QueryList<ElementRef>;
   @ViewChildren('text') texts!: QueryList<ElementRef>;
 
-  counter: string | null = null;
-  systemsInstalled: string | null = null;
-  statesServed: string | null = null;
-  clients: string | null = null;
-  services: string | null = null;
-
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-
-    const reff = ref(this.storage, 'gs://nfpa-website.appspot.com/images/home/counter.svg');
-    this.counter = await getDownloadURL(reff);
-
-    const reference = ref(this.storage, 'gs://nfpa-website.appspot.com/icons/home/systems-installed.svg');
-    this.systemsInstalled = await getDownloadURL(reference);
-
-    const imageRef1 = ref(this.storage, 'gs://nfpa-website.appspot.com/icons/home/states-served.svg');
-    this.statesServed = await getDownloadURL(imageRef1);
-
-    const imageRef2 = ref(this.storage, 'gs://nfpa-website.appspot.com/icons/home/clients.svg');
-    this.clients = await getDownloadURL(imageRef2);
-
-    const imageRef3 = ref(this.storage, 'gs://nfpa-website.appspot.com/icons/home/services.svg');
-    this.services = await getDownloadURL(imageRef3);
-
-  }
+  constructor() {}
 
   ngAfterViewInit() {
     

@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-ceo',
@@ -16,15 +15,6 @@ export class CeoComponent implements AfterViewInit{
 
   @ViewChildren('h3tag') h3tag!: QueryList<ElementRef>;
   @ViewChildren('pic') pic!: QueryList<ElementRef>;
-
-  ceo: string | null = null;
-
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/ceo.svg");
-    this.ceo = await getDownloadURL(imageRef);
-  }
 
   ngAfterViewInit() {
 
@@ -76,7 +66,7 @@ export class CeoComponent implements AfterViewInit{
           duration: 1,
           ease: "power2.inOut"
         },
-        "-=1.5" // Start this animation 1.5 seconds before the previous one ends
+        "-=1.5"
       )
       .fromTo(h2Element,
         { opacity: 0, x: 100 },
@@ -86,7 +76,7 @@ export class CeoComponent implements AfterViewInit{
           duration: 1,
           ease: "power2.inOut"
         },
-        "-=0.5" // Start this animation 0.5 seconds before the previous one ends
+        "-=0.5"
       )
       .fromTo(h3Element,
         { opacity: 0, x: 100 },
@@ -96,10 +86,8 @@ export class CeoComponent implements AfterViewInit{
           duration: 1,
           ease: "power2.inOut"
         },
-        "-=0.5" // Start this animation 0.5 seconds before the previous one ends
+        "-=0.5"
       );
     }
   }
-
 }
-

@@ -49,6 +49,7 @@
 .mySwiper.swiper-container {
     height: 525px;
     width: 750px;
+    overflow: hidden;
     --swiper-navigation-color: #fff; 
     --swiper-pagination-color: #fff;
 }
@@ -63,6 +64,7 @@
 }
 
 .swiper-slide {
+    height: 525px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,6 +84,7 @@
     justify-content: center;
     align-items: center;
     height: 425px;
+    display: none;
 }
 
 .mySwiper2 .swiper-slide {
@@ -114,7 +117,7 @@
         font-size: 24px;
     }
 
-    .mySwiper.swiper-container {
+    .mySwiper.swiper-container, .mySwiper.swiper-container .swiper-slide {
         width: 600px;
         height: 400px;
     }
@@ -146,8 +149,9 @@
         font-size: 20px;
     }
 
-    .mySwiper.swiper-container {
+    .mySwiper.swiper-container, .mySwiper.swiper-container .swiper-slide{
         width: 500px;
+        height: 400px;
     }
 
     .mySwiper2 {
@@ -183,8 +187,9 @@
         font-size: 19px;
     }
 
-    .mySwiper.swiper-container {
+    .mySwiper.swiper-container, .mySwiper.swiper-container .swiper-slide{
         width: 450px;
+        height: 350px;
     }
 
     .mySwiper2 {
@@ -207,7 +212,7 @@
         font-size: 16px;
     }
 
-    .mySwiper.swiper-container {
+    .mySwiper.swiper-container, .mySwiper.swiper-container .swiper-slide{
         width: 375px;
         height: 275px;
     }
@@ -218,7 +223,7 @@
 }
 
 @media screen and (max-width: 376px){
-    .mySwiper.swiper-container {
+    .mySwiper.swiper-container, .mySwiper.swiper-container .swiper-slide{
         width: 350px;
         height: 250px;
     }
@@ -238,7 +243,7 @@
         font-size: 14px;
     }
 
-    .mySwiper.swiper-container {
+    .mySwiper.swiper-container, .mySwiper.swiper-container .swiper-slide{
         width: 300px;
         height: 225px;
     }

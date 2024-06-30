@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-our-mission',
@@ -17,14 +16,6 @@ export class OurMissionComponent implements AfterViewInit {
 
   @ViewChildren('h3tag') h3tag!: QueryList<ElementRef>;
   @ViewChildren('container') container!: QueryList<ElementRef>;
-  missionImage: string | null = null;
-
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/home/mission.svg");
-    this.missionImage = await getDownloadURL(imageRef);
-  }
 
   ngAfterViewInit() {
 

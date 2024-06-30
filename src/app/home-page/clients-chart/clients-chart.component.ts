@@ -1,7 +1,6 @@
 import { Component, ViewChild, ElementRef, AfterViewInit, QueryList, HostListener } from '@angular/core';
 import { Chart , ChartType, registerables} from 'chart.js/auto';
 Chart.register(...registerables);
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -18,14 +17,8 @@ export class ClientsChartComponent implements AfterViewInit{
   @ViewChild('clientChart') clientChart!: ElementRef<HTMLCanvasElement>;
   chart!: Chart;
   legendFontSize: number = 11; // Initial font size for legend labels
-  chartImage: string | null = null;
 
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/home/client.svg");
-    this.chartImage = await getDownloadURL(imageRef);
-  }
+  constructor() {}
 
   datalabels = ['Hospitality Groups', 
     'Industrial Sheds', 'Commercial Offices',

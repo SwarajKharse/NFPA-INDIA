@@ -11,6 +11,7 @@ swiper-container {
   height: 100%;
   overflow: hidden;
   background-color: black;
+  overflow: hidden;
 }
 
 swiper-slide {
@@ -22,6 +23,7 @@ swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .carousel{
@@ -33,6 +35,7 @@ swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 swiper-slide img {

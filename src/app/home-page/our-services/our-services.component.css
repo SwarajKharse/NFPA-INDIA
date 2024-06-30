@@ -104,9 +104,12 @@
     display: none;
 }
 
+.swiper-container, .swiper-wrapper{
+    display: flex;
+}
+
 .swiper-slide-active .capsule-container {
     position: relative; 
-    background-color: #FFA500; 
     background-color: #161A1D;
     border-radius: 75px; 
     padding: 8px 25px; 
@@ -125,7 +128,6 @@
     justify-content: center;
     top: 0%;
     left: 50%;
-    background-color: #FFA500;
     background-color: #fff;
     transform: translate(-50%, -50%);
     border: white 4px solid;
@@ -170,7 +172,7 @@
 .swiper-container {
     width: 100%;
     height: 100%;
-    --swiper-theme-color: #FFA500;
+    --swiper-theme-color: #d8d7d7;
     overflow: hidden;
 }
 

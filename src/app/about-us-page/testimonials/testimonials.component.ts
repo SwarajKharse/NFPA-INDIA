@@ -7,8 +7,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
-
 @Component({
   selector: 'app-testimonials',
   standalone: true,
@@ -33,18 +31,11 @@ export class TestimonialsComponent implements AfterViewInit{
 
   private swiperInstance!: Swiper;
 
-  testimonails: string | null = null;
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/testimonial.svg");
-    this.testimonails = await getDownloadURL(imageRef);
-  }
+  constructor() {}
 
   ngAfterViewInit(): void {
         
       const container = this.container.find((el, index) => index === 0)?.nativeElement;
-      // const myswiper = this.myswiper.find((el, index) => index === 0)?.nativeElement;
       const title = this.title.map((el) => el.nativeElement);
       const slide1 = this.slide1.map((el) => el.nativeElement);
       const stars = this.stars.map((el) => el.nativeElement);

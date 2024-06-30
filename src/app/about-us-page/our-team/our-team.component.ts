@@ -6,8 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
-
 
 @Component({
   selector: 'app-our-team',
@@ -29,36 +27,7 @@ export class OurTeamComponent implements AfterViewInit{
   private thumbsSwiper!: Swiper;
   private mainSwiper!: Swiper;
 
-  team1: string | null = null;
-  team2: string | null = null;
-  team3: string | null = null;
-  team4: string | null = null;
-  team5: string | null = null;
-  team6: string | null = null;
-
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/team/team1.svg");
-    this.team1 = await getDownloadURL(imageRef);
-
-    const imageRef1 = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/team/team2.svg");
-    this.team2 = await getDownloadURL(imageRef1);
-
-    const imageRef2 = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/team/team3.svg");
-    this.team3 = await getDownloadURL(imageRef2);
-
-    const imageRef3 = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/team/team4.svg");
-    this.team4 = await getDownloadURL(imageRef3);
-
-    const imageRef4 = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/team/team5.svg");
-    this.team5 = await getDownloadURL(imageRef4);
-
-    const imageRef5 = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/team/team6.svg");
-    this.team6 = await getDownloadURL(imageRef5);
-
-  }
-
+  constructor() {}
 
   ngAfterViewInit(): void {
       
@@ -110,6 +79,7 @@ export class OurTeamComponent implements AfterViewInit{
   }
 
   initializeSwiper(): void {
+
     this.thumbsSwiper = new Swiper(this.thumbs.nativeElement, {
       loop: true,
       freeMode: true,
@@ -118,21 +88,21 @@ export class OurTeamComponent implements AfterViewInit{
       slidesPerView: 3,
       spaceBetween: 30,
       speed: 1000,
-
     });
 
     this.mainSwiper = new Swiper(this.swiper.nativeElement, {
       loop: true,
+      speed: 1000,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
       },
-      speed: 1000,
       thumbs: {
         swiper: this.thumbsSwiper
       },
       effect: 'fade',
     });
+    
   }
 
 }

@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-why-us',
@@ -15,17 +14,11 @@ import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 export class WhyUsComponent implements AfterViewInit{
 
-  whyUs: string | null = null;
-
   @ViewChildren('h3tag') h3tag!: QueryList<ElementRef>;
   @ViewChildren('pic') pic!: QueryList<ElementRef>;
 
-  constructor(private storage: Storage) {}
+  constructor() {}
 
-  async ngOnInit() {
-    const imageRef = ref(this.storage, "gs://nfpa-website.appspot.com/images/aboutUs/whyUS.svg");
-    this.whyUs = await getDownloadURL(imageRef);
-  }
   ngAfterViewInit() {
 
     const h3Element = this.h3tag.find((el, index) => index === 0)?.nativeElement;
