@@ -4,7 +4,7 @@ import { NgIf, NgStyle, NgClass, CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavbarAnimationComponent } from './navbarAnimation/navbarAnimation.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,7 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
     RouterLink,
     RouterLinkActive,
     FormsModule,
-    NavbarAnimationComponent
+    NavbarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

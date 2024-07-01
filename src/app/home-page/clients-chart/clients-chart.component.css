@@ -54,7 +54,8 @@
 }
 
 h2 span{
-    color: yellow;
+    color: rgba(218, 185, 0, 1);
+    /* color: white; */
     font-family: "Inter", sans-serif;
     font-size: 38px;
     font-weight: 600;

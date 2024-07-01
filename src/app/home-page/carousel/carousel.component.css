@@ -66,7 +66,7 @@ swiper-slide img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 102%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 1)), 
     linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
   pointer-events: none; 
@@ -125,7 +125,6 @@ swiper-slide img {
     opacity: 1;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1));        
   }
-
 }
 
 @media screen and (max-width: 1024px){
@@ -162,21 +161,16 @@ swiper-slide img {
   .carousel{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     background-color: black;
     padding: 0;
     margin: 0;
   }
 
   .imageContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     padding: 0;
-    margin: 0;
+    margin: 0 0 30px 0;
     z-index: 0;
     animation-delay: 0.25s;
     animation: imgAnimation 2s ease-in;
@@ -203,6 +197,8 @@ swiper-slide img {
   .imageContainer::after {
     background: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 1)), 
       linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0),rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 1)), 
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
   }
 
   .swiper-slide-active{
@@ -245,7 +241,9 @@ swiper-slide img {
 }
 
 @media screen and (max-width: 576px){
-
+  .imageContainer{
+    margin: 0 0 60px 0;
+  }
 }
 
 @media screen and (max-width: 426px){
@@ -284,6 +282,14 @@ swiper-slide img {
     object-position: 50%;
   }
 
+  .swiper-slide-active .h1class{
+    font-size: 24px;
+  }
+  
+  .swiper-slide-active .pClass{
+    font-size: 20px;
+  }
+
 }
 
 @media screen and (max-width: 376px){
@@ -291,14 +297,6 @@ swiper-slide img {
   .content{
     width: 320px;
   }
-
-  .swiper-slide-active .h1class{
-    font-size: 28px;
-  }
-
-  .swiper-slide-active .pClass{
-    font-size: 24px;
-  } 
 
   .slide1 .imageContainer img{
     object-position: 20%;
@@ -328,8 +326,16 @@ swiper-slide img {
     width: 300px;
   }
 
+  .swiper-slide-active .h1class{
+    font-size: 22px;
+  }
+  
+  .swiper-slide-active .pClass{
+    font-size: 18px;
+  }
+
   .slide1 .imageContainer img{
-    object-position: 20%;
+    object-position: 5%;
   }
 
   .slide2 .imageContainer img{

@@ -128,6 +128,10 @@ export class ProgressChartComponent  implements AfterViewInit {
                 }
               }
             }
+          },
+          animation: {
+            duration: 2000,
+            easing: 'easeInOutExpo'
           }
         }
       });

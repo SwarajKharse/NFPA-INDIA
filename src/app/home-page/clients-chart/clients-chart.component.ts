@@ -36,22 +36,22 @@ export class ClientsChartComponent implements AfterViewInit{
             datasets: [{
               data: [30, 25, 20, 10, 5, 5, 5],
               backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8)',
-                'rgba(153, 102, 255, 0.8)',
-                'rgba(201, 201, 201, 0.8)',
-                'rgba(230, 25, 75, 0.8)'
+                'rgba(20, 82, 119, 0.8)',
+                'rgba(38, 103, 133, 0.8)',
+                'rgba(57, 124, 147, 0.8)',
+                'rgba(76, 145, 161, 0.8)',
+                'rgba(94, 166, 175, 0.8)',
+                'rgba(113, 187, 189, 0.8)',
+                'rgba(131, 208, 203, 0.8)'
               ],
               borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(201, 201, 201, 1)',
-                'rgba(230, 25, 75, 1)'
+                'rgba(20, 82, 119, 1)',
+                'rgba(38, 103, 133, 1)',
+                'rgba(57, 124, 147, 1)',
+                'rgba(76, 145, 161, 1)',
+                'rgba(94, 166, 175, 1)',
+                'rgba(113, 187, 189, 1)',
+                'rgba(131, 208, 203, 1)'
               ],
               borderWidth: 1, 
               hoverOffset: 15,
@@ -76,6 +76,10 @@ export class ClientsChartComponent implements AfterViewInit{
                   }
                 }
               }
+            },
+            animation: {
+              duration: 2500,
+              easing: 'easeInOutExpo'
             }
           }
         });
@@ -115,7 +119,6 @@ export class ClientsChartComponent implements AfterViewInit{
 
     // Update chart legend options
     if (this.chart && this.chart.options.plugins && this.chart.options.plugins.legend) {
-      // this.chart.options.plugins.legend.labels!.font!.size = this.legendFontSize;
       this.chart.update();
     }
   }

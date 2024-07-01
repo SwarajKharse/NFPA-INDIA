@@ -8,7 +8,7 @@ import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
-  selector: 'app-navbarAnimation',
+  selector: 'app-navbar',
   standalone: true,
   imports: [
     NgStyle,
@@ -19,11 +19,11 @@ gsap.registerPlugin(ScrollTrigger);
     RouterLink,
     RouterLinkActive,
   ],
-  templateUrl: './navbarAnimation.component.html',
-  styleUrl: './navbarAnimation.component.css',
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.css',
 })
 
-export class NavbarAnimationComponent implements AfterViewInit{
+export class NavbarComponent implements AfterViewInit{
   @ViewChildren('navbar') navbarElement!: QueryList<ElementRef>;
   @ViewChildren('logo') logo!: QueryList<ElementRef>;
   @ViewChildren('logoText') logoText!: QueryList<ElementRef>;
