@@ -5,6 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
+import { Navigation } from 'swiper/modules';
 
 @Component({
   selector: 'app-products',
@@ -86,6 +87,7 @@ export class ProductsComponent implements AfterViewInit{
 
   initializeSwiper(): void {
     this.swiperInstance = new Swiper(this.mySwiper.nativeElement, {
+      modules: [Navigation],
       loop: true,
       autoplay: {
         delay: 3000,
