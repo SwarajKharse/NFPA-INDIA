@@ -3,6 +3,9 @@
   height: 100vh;
   width: 100%;
   background-color: black;
+  max-width: 1700px;
+  min-height: 600px;
+  max-height: 700px;
   /* overflow: hidden; */
 }
 
@@ -170,7 +173,7 @@ swiper-slide img {
   .imageContainer{
     position: relative;
     padding: 0;
-    margin: 0 0 30px 0;
+    margin: 0;
     z-index: 0;
     animation-delay: 0.25s;
     animation: imgAnimation 2s ease-in;
@@ -180,6 +183,7 @@ swiper-slide img {
     display: block;
     animation-delay: 0.25s;
     object-fit: cover;
+    height: 500px;
   }
 
   .imageContainer::before {
@@ -192,6 +196,7 @@ swiper-slide img {
     z-index: 0;
     animation-delay: 0.25s;
     animation: imgAnimation 2s ease-in;
+    height: 500px;
   }
 
   .imageContainer::after {
@@ -238,28 +243,28 @@ swiper-slide img {
     font-size: 28px;
   }
 
-}
-
-@media screen and (max-width: 576px){
-  .imageContainer{
-    margin: 0 0 60px 0;
+  .slide1 .imageContainer img{
+    object-position: 10%;
   }
 }
 
-@media screen and (max-width: 426px){
+@media screen and (max-width: 480px){
 
   .content{
     width: 380px;
   }
 
+  .imageContainer{
+    margin: 0;
+  }
+
   .imageContainer img{
-    width: 426px;
-    height: 400px;
+    width: 480px;
+    height: 500px;
   }
 
   .imageContainer::before {
-    width: 426px;
-    height: 400px;
+    height: 500px;
   }
 
   .slide1 .imageContainer img{
@@ -298,10 +303,6 @@ swiper-slide img {
     width: 320px;
   }
 
-  .slide1 .imageContainer img{
-    object-position: 20%;
-  }
-
   .slide2 .imageContainer img{
     object-position: 65%;
   }
@@ -335,7 +336,7 @@ swiper-slide img {
   }
 
   .slide1 .imageContainer img{
-    object-position: 5%;
+    object-position: 0%;
   }
 
   .slide2 .imageContainer img{

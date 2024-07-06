@@ -53,8 +53,8 @@
 @media screen and (max-width: 825px){
 
     #clientChart {
-        width: 750px !important;
-        height: 425px !important;
+        width: 750px;
+        height: 425px;
     }
 }
 
