@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef, AfterViewInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, ElementRef, AfterViewInit, ViewChildren, QueryList } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -6,6 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
+import { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/modules';
+
+import SwiperCore from 'swiper';
+SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay]);
 
 @Component({
   selector: 'app-our-team',
@@ -13,13 +17,13 @@ import 'swiper/swiper-bundle.css';
   imports: [],
   templateUrl: './our-team.component.html',
   styleUrl: './our-team.component.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class OurTeamComponent implements AfterViewInit{
   @ViewChildren('container') container!: QueryList<ElementRef>;
-  @ViewChild('swiper') swiper!: ElementRef;
-  @ViewChild('thumbs') thumbs!: ElementRef;
+  @ViewChild('teamsSwiperSelector') teamsSwiperSelector!: ElementRef;
+  @ViewChild('teamsThumbsSelector') teamsThumbsSelector!: ElementRef;
   @ViewChildren('title') title!: QueryList<ElementRef>;
   @ViewChildren('slide1') slide1!: QueryList<ElementRef>;
   @ViewChildren('slide2') slide2!: QueryList<ElementRef>;
@@ -32,7 +36,7 @@ export class OurTeamComponent implements AfterViewInit{
   ngAfterViewInit(): void {
       
     const container = this.container.find((el, index) => index === 0)?.nativeElement;
-    const swiper = this.swiper.nativeElement;
+    // const teamsSwiperSelectorEle = this.teamsSwiperSelector.nativeElement;
     const title = this.title.map((el) => el.nativeElement);
     const slide1 = this.slide1.map((el) => el.nativeElement);
     const slide2 = this.slide2.map((el) => el.nativeElement);
@@ -65,7 +69,6 @@ export class OurTeamComponent implements AfterViewInit{
         scale: 0.5,
         x: 100,
         duration: 0.5, 
-        stagger: 0.2 
     }, "-=0.5");
 
     tl.from(
@@ -80,29 +83,33 @@ export class OurTeamComponent implements AfterViewInit{
 
   initializeSwiper(): void {
 
-    this.thumbsSwiper = new Swiper(this.thumbs.nativeElement, {
-      loop: true,
-      freeMode: true,
-      watchSlidesProgress: true,
-      direction: 'vertical',
-      slidesPerView: 3,
-      spaceBetween: 30,
-      speed: 1000,
-    });
+    // this.thumbsSwiper = new Swiper(this.teamsThumbsSelector.nativeElement, {
+    //   // modules: [Thumbs, Navigation],
+    //   loop: true,
+    //   freeMode: true,
+    //   watchSlidesProgress: true,
+    //   direction: 'vertical',
+    //   slidesPerView: 3,
+    //   speed: 1000,
+    // });
 
-    this.mainSwiper = new Swiper(this.swiper.nativeElement, {
+    this.mainSwiper = new Swiper(this.teamsSwiperSelector.nativeElement, {
+      modules: [Navigation],
       loop: true,
       speed: 1000,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
       },
-      thumbs: {
-        swiper: this.thumbsSwiper
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
       },
-      effect: 'fade',
+      slidesPerView: 1,
+      // thumbs: {
+      //   swiper: this.thumbsSwiper
+      // },
+      effect: 'coverflow',
     });
-    
   }
-
 }

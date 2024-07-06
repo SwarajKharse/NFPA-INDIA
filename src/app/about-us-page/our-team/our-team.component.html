@@ -1,13 +1,13 @@
-<div #container class="container">
-    <div class="title-container">
+<div #container class="ourTeamContainer">
+    <div class="ourTeamTitleContainer">
         <h2>Our Team</h2>
         <h3>We harness the vigor of our youth to fortify your organization's safety</h3>
     </div>
-    <div class="gallery-container">
+    <div class="ourTeamGalleryContainer">
 
-        <div class="mySwiper swiper-container" #swiper>
+        <div class="ourTeamMainSwiperContainer swiper-container" #teamsSwiperSelector>
             
-            <div class="swiper-wrapper" #slide1>
+            <div class="ourTeamMainSwiperWrapper swiper-wrapper" #slide1>
                 <div class="swiper-slide">
                     <img src="assets/AboutUs/team/team1.webp" />
                 </div>
@@ -27,11 +27,15 @@
                     <img src="assets/AboutUs/team/team6.webp" />
                 </div>
             </div>
+
+            <div #buttons class="swiper-button-prev"></div>
+            <div #buttons class="swiper-button-next"></div>
+
         </div>
 
-        <div class="mySwiper2 thumbs-container" #thumbs>
+        <!-- <div class="ourTeamThumbsSwiperContainer swiper-container" #teamsThumbsSelector>
             
-            <div class="swiper-wrapper thumbs-wrapper">
+            <div class="swiper-wrapper ourTeamThumbsSwiperWrapper">
                 <div class="swiper-slide" #slide2>
                     <img src="assets/AboutUs/team/team1.webp" />
                 </div>
@@ -51,6 +55,6 @@
                     <img src="assets/AboutUs/team/team6.webp" />
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

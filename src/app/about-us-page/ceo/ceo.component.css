@@ -1,4 +1,3 @@
-
 .main-container{
     width: 100%;
     height: auto;
@@ -10,6 +9,7 @@
     margin-bottom: 25px;
     background-color: white;
     overflow: hidden;
+    max-width: 1700px;
 }
 
 .img-container{
