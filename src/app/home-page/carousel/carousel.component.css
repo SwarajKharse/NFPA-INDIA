@@ -132,11 +132,6 @@ swiper-slide img {
 }
 
 @media screen and (max-width: 1024px){
-/* 
-  .content{
-    top: 25%;
-    left: 6%;
-  } */
 
   .swiper-slide-active .h1class{
     font-size: 38px;
