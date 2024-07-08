@@ -36,7 +36,7 @@
 }
 
 .overall-products{
-    width: 100%;
+    width: 98%;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -137,6 +137,7 @@
 .swiper-container {
     width: 100%;
     height: 100%;
+    position: relative;
     --swiper-theme-color: #fff;
     --swiper-navigation-color: #fff; 
     --swiper-pagination-color: #fff;
@@ -182,7 +183,7 @@
 
 @media screen and (max-width: 1440px){
     .products-container{
-        width: 100%;
+        width: 98%;
         height: 100%;   
     }
 

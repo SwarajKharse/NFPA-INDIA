@@ -17,19 +17,19 @@
       </div>
       <div class="navBar-menu-item">
         <div #navBarMenuItem>
-          <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
+          <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
         </div>
       </div>
       <div class="navBar-menu-item">
         <div #navBarMenuItem>
-          <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
+          <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
         </div>
      </div>
       <div (mouseenter)="dropdownEnter()" 
           (mouseleave)="dropdownLeave()" 
           class="navBar-menu-item dropdown">
         <div #navBarMenuItem>
-          <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
+          <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
         </div>
         <div #dropdown class="dropdown-content">
           <div class="dropdown-column">
@@ -81,13 +81,13 @@
         <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
-        <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
+        <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
-        <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
+        <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
-        <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
+        <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
         <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
@@ -95,5 +95,3 @@
     </div>
   </div>
 </div>
-
-<router-outlet></router-outlet>
