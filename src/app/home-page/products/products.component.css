@@ -177,7 +177,7 @@
 }
 
 .swiper-button-next{
-    right: 3%;
+    right: 0%;
     background-image: url("/assets/Common/Buttons/next.png");
 }
 
@@ -217,12 +217,15 @@
         transform: translate(0px, 180px) !important;
     }
 
+}
+
+@media screen and (max-width: 1180px){
     .swiper-button-prev{
-        left: 2%;
+        left: -2%;
     }
     
     .swiper-button-next{
-        right: 2%;
+        right: -2%;
     }
 }
 
@@ -274,7 +277,7 @@
     }
     
     .swiper-button-next{
-        right: 1%;
+        right: 0%;
     }
 }
 
@@ -303,13 +306,15 @@
     .swiper-button-next, .swiper-button-prev{
         transform: translate(0px, 160px) !important;
     }
+}
 
+@media screen and (max-width: 640px){
     .swiper-button-prev{
-        left: 2%;
+        left: -1%;
     }
     
     .swiper-button-next{
-        right: 2%;
+        right: -1%;
     }
 }
 
@@ -394,13 +399,6 @@
         transform: translate(0px, 140px) !important;
     }
 
-    .swiper-button-prev{
-        left: 5%;
-    }
-    
-    .swiper-button-next{
-        right: 5%;
-    }
 }
 
 @media screen and (max-width: 376px){
