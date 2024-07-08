@@ -79,7 +79,7 @@ export class CounterComponent implements AfterViewInit{
     this.valueDisplays.forEach((valueDisplayRef) => {
       const valueDisplay: HTMLElement = valueDisplayRef.nativeElement;
       const endValue = parseInt(valueDisplay.getAttribute("data-val") || '0', 10);
-      const duration = 8; // Adjust duration as needed
+      const duration = 4; // Adjust duration as needed
   
       let startValue = 0;
   
