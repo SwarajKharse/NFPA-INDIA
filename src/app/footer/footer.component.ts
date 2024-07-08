@@ -25,12 +25,14 @@ export class FooterComponent implements AfterViewInit{
   @ViewChildren('mail') mail!: QueryList<ElementRef>;
   @ViewChildren('developer') developer!: QueryList<ElementRef>;
 
+  private footerTriggerId = 'footerTrigger';
+
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        ScrollTrigger.refresh();
+        // ScrollTrigger.refresh();  // If this doesnt work then in setupFooterAnimation uncomment the first lines
         this.setupFooterAnimation();
       }
     });
@@ -41,6 +43,9 @@ export class FooterComponent implements AfterViewInit{
   }
 
   setupFooterAnimation() {
+    // Ensure previous ScrollTriggers are killed to avoid duplicates
+    ScrollTrigger.getById(this.footerTriggerId)?.kill();
+
     const footer = this.footer.find((el, index) => index === 0)?.nativeElement;
     const logo = this.logo.map((el) => el.nativeElement);
     const aboutText = this.aboutText.map((el) => el.nativeElement);
@@ -51,8 +56,19 @@ export class FooterComponent implements AfterViewInit{
     const mail = this.mail.find((el, index) => index === 0)?.nativeElement;
     const developer = this.developer.find((el, index) => index === 0)?.nativeElement;
 
+    // Set initial styles
+    gsap.set([logo, aboutText, socialLogos, headings, pgStructureItems, address, mail, developer], { opacity: 0 });
+    gsap.set(logo, { x: -100 });
+    gsap.set(aboutText, { y: 100 });
+    gsap.set(socialLogos, { x: -100 });
+    gsap.set(headings, { y: -50 });
+    gsap.set(pgStructureItems, { x: -100 });
+    gsap.set(address, { x: -100 });
+    gsap.set(mail, { x: -100 });
+
     const tl = gsap.timeline({
       scrollTrigger: {
+        id: this.footerTriggerId,  // Assign the unique id here
         trigger: footer,
         start: 'top 80%',
         end: 'bottom 0%',
