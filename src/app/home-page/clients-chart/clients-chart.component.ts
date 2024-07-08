@@ -70,9 +70,10 @@ export class ClientsChartComponent implements AfterViewInit{
                   boxWidth: 15,
                   padding: 20,
                   usePointStyle: true,
+                  color: 'rgba(255,255,255, 1)', // Set legend font color here
                   font: {
                     size: this.legendFontSize,
-                    weight: 'bold'
+                    weight: 300
                   }
                 }
               }

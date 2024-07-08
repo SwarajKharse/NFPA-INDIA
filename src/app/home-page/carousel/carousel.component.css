@@ -50,10 +50,12 @@ swiper-slide img {
 
 .content {
   position: absolute;
-  top: 20%;
-  left: 10%;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
   color: white;
-  text-align: left;
+  text-align: center;
 }
 
 .imageContainer img{
@@ -70,8 +72,7 @@ swiper-slide img {
   left: 0;
   width: 100%;
   height: 102%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 1)), 
-    linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1));        
   pointer-events: none; 
 }
 
@@ -87,7 +88,7 @@ swiper-slide img {
 }
 
 .swiper-slide-active .pClass{
-  color: #ac1f1f;
+  color: #C1121F;
   font-family: "Inter", sans-serif;
   font-size: 36px;
   font-weight: 500;
@@ -169,7 +170,8 @@ swiper-slide img {
     padding: 0;
     margin: 0;
   }
-
+/*   white-space: nowrap;
+ */
   .imageContainer{
     position: relative;
     padding: 0;
