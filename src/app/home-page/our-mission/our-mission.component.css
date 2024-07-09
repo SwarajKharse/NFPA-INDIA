@@ -270,7 +270,7 @@
     
     .mission-content .mission-text p {
         width: 100%;
-        text-align: center;
+        text-align: justify;
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 10px;

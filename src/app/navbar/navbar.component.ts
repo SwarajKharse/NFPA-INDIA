@@ -3,7 +3,6 @@ import { Component, ElementRef, AfterViewInit, ViewChildren, QueryList } from '@
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Storage, ref, getDownloadURL } from '@angular/fire/storage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,14 +39,7 @@ export class NavbarComponent implements AfterViewInit{
   private tl2!: gsap.core.Timeline;
   private tl3!: gsap.core.Timeline;
 
-  logoImage: string | null = null;
-
-  constructor(private storage: Storage) {}
-
-  async ngOnInit() {
-    const imageRef1 = ref(this.storage, 'gs://nfpa-website.appspot.com/icons/NavbarFooter/logo.png');
-    this.logoImage = await getDownloadURL(imageRef1);
-  }
+  constructor() {}
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;

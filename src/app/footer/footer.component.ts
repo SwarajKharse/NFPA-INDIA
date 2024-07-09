@@ -66,16 +66,33 @@ export class FooterComponent implements AfterViewInit{
     gsap.set(address, { x: -100 });
     gsap.set(mail, { x: -100 });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        id: this.footerTriggerId,  // Assign the unique id here
-        trigger: footer,
-        start: 'top 80%',
-        end: 'bottom 0%',
-        toggleActions: 'play none none none',
-        markers: false
-      }
-    });
+    var tl = gsap.timeline();
+
+    if (document.documentElement.scrollHeight > 2500) {
+      // Directly play the animations if height > 2500px
+      tl = gsap.timeline({
+        scrollTrigger: {
+          id: this.footerTriggerId,  // Assign the unique id here
+          trigger: footer,
+          start: 'top 95%',
+          end: 'bottom 0%',
+          toggleActions: 'play none none none',
+          markers: false
+        }
+      });
+  } else {
+      // Set up ScrollTrigger if height <= 2500px
+      tl = gsap.timeline({
+        scrollTrigger: {
+          id: this.footerTriggerId,  // Assign the unique id here
+          trigger: footer,
+          start: 'top 80%',
+          end: 'bottom 0%',
+          toggleActions: 'play none none none',
+          markers: false
+        }
+      });
+  }
 
     tl.fromTo(
       logo,
