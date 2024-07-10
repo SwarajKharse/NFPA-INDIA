@@ -1,6 +1,6 @@
-
-.container{
+.testimonialsMainContainer{
   height: 90vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,26 +9,17 @@
   margin-top: 30px;
   position: relative;
   overflow: hidden;
+  max-width: 1700px;
+  min-height: 600px;
 }
 
-.testimonials-container {
-  height: 90vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-  overflow: hidden;
-}
-
-.title-container{
+.testimonialsTitleContainer{
   text-align: center;
   position: absolute;
   top: 1%;
 }
 
-h3{
+.testimonialsTitleContainer h3{
   color: #C1121F;
   font-family: "Inter", sans-serif;
   font-size: 28px;
@@ -39,8 +30,20 @@ h3{
   margin-bottom: 5px;
 }
 
-/* For capsules*/
-swiper-container, .swiper-container {
+.testimonialsContainer {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  overflow: hidden;
+  min-height: 500px;
+  max-height: 600px;
+}
+
+.testimonialsSwiperContainer.swiper-container {
   width: 100%;
   height: 100%;
   --swiper-theme-color: #d6c0c0;
@@ -49,9 +52,7 @@ swiper-container, .swiper-container {
   --swiper-navigation-top-offset: 95%;
 }
 
-swiper-slide, .swiper-slide {
-  height: auto;
-  width: auto;
+.testimonialsSwiperContainer.swiper-container .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: rgba(0, 0, 0, 0);
@@ -60,17 +61,17 @@ swiper-slide, .swiper-slide {
   align-items: center;
 }
 
-.swiper-container, .swiper-wrapper{
+.testimonialsSwiperContainer.swiper-container, 
+.testimonialsSwiperWrapper.swiper-wrapper{
   display: flex;
+  align-items: center;
 }
 
-.testimonial {
+.testimonialsSwiperContainer.swiper-container .testimonialsCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
-  height: 330px;
   background-color: #f1f1f18f;
   padding: 20px 40px;
   border-radius: 20px;
@@ -78,7 +79,13 @@ swiper-slide, .swiper-slide {
   color: black;
 }
 
-.testimonial .stars {
+.testimonialsSwiperContainer.swiper-container .swiper-slide, 
+.testimonialsSwiperContainer.swiper-container .testimonialsCard {
+  width: 500px;
+  height: 330px;
+}
+
+.testimonialsCard .stars {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,12 +93,12 @@ swiper-slide, .swiper-slide {
   margin-bottom: 10px;
 }
 
-.stars .star {
+.testimonialsCard  .stars .star {
   color: #ff9900;
   font-size: 24px;
 }
 
-.testimonial .quote {
+.testimonialsCard .quote {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -100,16 +107,16 @@ swiper-slide, .swiper-slide {
   margin-bottom: 20px;
 }
 
-.author {
+.testimonialsCard .author {
   width: 80%;
   border-top: 1px solid #130f0f;
 }
 
-.author p{
+.testimonialsCard .author p{
   margin: 0;
 }
 
-.author .name {
+.testimonialsCard .author .name {
   font-family: "Inter", sans-serif;
   font-size: 22px;
   font-weight: 400;
@@ -119,7 +126,7 @@ swiper-slide, .swiper-slide {
   margin-top: 10px;
 }
 
-.author .title {
+.testimonialsCard .author .title {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -129,164 +136,295 @@ swiper-slide, .swiper-slide {
   margin: 5px;
 }
 
+.testimonialsSwiperContainer.swiper-container .swiper-button-next, 
+.testimonialsSwiperContainer.swiper-container .swiper-button-prev, 
+.testimonialsSwiperContainer.swiper-container #swiperPrev, 
+.testimonialsSwiperContainer.swiper-container #swiperNext{
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate(0px, 210px) !important;
+    opacity: 1;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 50px;
+    bottom: 43%;
+}
+
+.testimonialsSwiperContainer.swiper-container .swiper-button-next:hover,
+.testimonialsSwiperContainer.swiper-container .swiper-button-prev:hover, 
+.testimonialsSwiperContainer.swiper-container #swiperPrev:hover, 
+.testimonialsSwiperContainer.swiper-container #swiperNext:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.testimonialsSwiperContainer.swiper-container .swiper-button-prev, 
+.testimonialsSwiperContainer.swiper-container #swiperPrev{
+    background-image: url("/assets/Common/Buttons/prev.png");
+    left: 42%;
+}
+
+.testimonialsSwiperContainer.swiper-container .swiper-button-next, 
+.testimonialsSwiperContainer.swiper-container #swiperNext{
+    right: 42%;
+    background-image: url("/assets/Common/Buttons/next.png");
+}
+
+@media screen and (max-width: 1220px){
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 450px;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 1120px){
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 425px;
+    height: 310px;
+  }
+}
+
 @media screen and (max-width: 1024px){
 
-  .container{
+  .testimonialsMainContainer{
     height: 100vh;
+    max-height: 600px;
   }
 
-  .swiper-container {
+  .testimonialsSwiperContainer.swiper-container {
     --swiper-navigation-sides-offset: 40%;
   }
 
-  .testimonial {
-    width: 375px;
-    height: 300px;
+  .testimonialsCard {
     padding: 18px 36px;
   }
 
-  .testimonial .stars {
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 375px;
+    height: 300px;
+  }
+
+  .testimonialsCard .stars {
     gap: 20px;
   }
 
-  .stars .star {
+  .testimonialsCard .stars .star {
     font-size: 20px;
   }
 
-  .testimonial .quote {
+  .testimonialsCard .quote {
     font-size: 14px;
   }
 
-  .author .name {
+  .testimonialsCard .author .name {
     font-size: 20px;
   }
 
-  .author .title {
+  .testimonialsCard .author .title {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 970px){
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 360px;
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 910px){
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 330px;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 830px){
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 300px;
+    height: 280px;
   }
 }
 
 @media screen and (max-width: 768px){
 
-  h3{
+  .testimonialsMainContainer{
+    min-height: 450px;
+    max-height: 500px;
+  }
+
+  .testimonialsTitleContainer h3{
     font-size: 24px;
   }
 
-  .testimonial {
-    width: 280px;
-    height: 270px;
+  .testimonialsCard {
     padding: 16px 32px;
   }
 
-  .swiper-container {
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 290px;
+    height: 270px;
+  }
+
+  .testimonialsSwiperContainer.swiper-container {
     --swiper-navigation-sides-offset: 35%;
   }
 
-  .testimonial .stars {
+  .testimonialsCard .stars {
     gap: 15px;
   }
 
-  .stars .star {
+  .testimonialsCard .stars .star {
     font-size: 16px;
   }
 
-  .testimonial .quote {
+  .testimonialsCard .quote {
     font-size: 12px;
   }
 
-  .author .name {
+  .testimonialsCard .author .name {
     font-size: 16px;
   }
 
-  .author .title {
+  .testimonialsCard .author .title {
     font-size: 12px;
   }
 }
 
+@media screen and (max-width: 576px){
+  /* .testimonialsMainContainer{
+    max-height: 600px;
+  } */
+}
+
 @media screen and (max-width: 426px){
 
-  .container{
+  .testimonialsMainContainer{
     height: 80vh;
   }
 
-  h3{
+  .testimonialsTitleContainer h3{
     font-size: 20px;
   }
 
-  .testimonial {
-    width: 250px;
-    height: 250px;
+  .testimonialsCard {
     padding: 14px 28px;
   }
 
-  .testimonial .stars {
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 250px;
+    height: 250px;
+  }
+
+  .testimonialsCard .stars {
     gap: 10px;
   }
 
-  .stars .star {
+  .testimonialsCard .stars .star {
     font-size: 14px;
   }
 
-  .testimonial .quote {
+  .testimonialsCard .quote {
     font-size: 10px;
   }
 
-  .author .name {
+  .testimonialsCard .author .name {
     font-size: 14px;
   }
 
-  .author .title {
+  .testimonialsCard .author .title {
     font-size: 10px;
+  }
+
+  .testimonialsSwiperContainer.swiper-container .swiper-button-next:hover,
+  .testimonialsSwiperContainer.swiper-container .swiper-button-prev:hover, 
+  .testimonialsSwiperContainer.swiper-container #swiperPrev:hover, 
+  .testimonialsSwiperContainer.swiper-container #swiperNext:hover{
+      bottom: 50%;
+  }
+
+  .testimonialsSwiperContainer.swiper-container .swiper-button-next:hover,
+  .testimonialsSwiperContainer.swiper-container #swiperNext:hover{
+      right: 35%;
+  }
+
+  .testimonialsSwiperContainer.swiper-container .swiper-button-prev:hover, 
+  .testimonialsSwiperContainer.swiper-container #swiperPrev:hover{
+      left: 35%;
   }
 }
 
 @media screen and (max-width: 375px){
 
-  .container{
+  .testimonialsMainContainer{
     height: 75vh;
   }
 
-  h3{
+  .testimonialsTitleContainer h3{
     font-size: 18px;
   }
 
-  .testimonial {
-    width: 230px;
-    height: 235px;
+  .testimonialsCard {
     padding: 12px 24px;
   }
 
-  .testimonial .stars {
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
+    width: 230px;
+    height: 235px;
+  }
+
+  .testimonialsCard .stars {
     gap: 8px;
   }
 
-  .stars .star {
+  .testimonialsCard .stars .star {
     font-size: 12px;
   }
 
-  .testimonial .quote {
+  .testimonialsCard .quote {
     font-size: 8px;
   }
 
-  .author .name {
+  .testimonialsCard .author .name {
     font-size: 12px;
   }
 
-  .author .title {
+  .testimonialsCard .author .title {
     font-size: 8px;
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 321px){
 
-  h3{
+  .testimonialsMainContainer{
+    height: 70vh;
+    min-height: 350px;
+    max-height: 400px;
+  }
+
+  .testimonialsTitleContainer h3{
     font-size: 16px;
   }
 
-  .testimonial {
+  .testimonialsCard {
+    padding: 10px 20px;
+  }
+
+  .testimonialsSwiperContainer.swiper-container .swiper-slide, 
+  .testimonialsSwiperContainer.swiper-container .testimonialsCard {
     width: 250px;
     height: 210px;
-    padding: 10px 20px;
   }
 
 }

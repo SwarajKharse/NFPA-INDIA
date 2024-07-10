@@ -26,6 +26,7 @@ export class TopCompComponent implements AfterViewInit{
     if (h3Element && h2Element && pElement) {
 
       const tl = gsap.timeline({
+        // delay: 3.5, // Add delay here
         scrollTrigger: {
           trigger: container,
           start: 'top 80%',

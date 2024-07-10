@@ -1,9 +1,11 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild, ElementRef, AfterViewInit, ViewChildren, QueryList } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, ViewChildren, QueryList } from '@angular/core';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
+Swiper.use([Navigation]);
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Navigation } from 'swiper/modules';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,8 +14,8 @@ gsap.registerPlugin(ScrollTrigger);
   standalone: true,
   imports: [], 
   templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.css',],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  styleUrls: ['./testimonials.component.css',
+  ],
 })
 
 export class TestimonialsComponent implements AfterViewInit{
@@ -31,7 +33,9 @@ export class TestimonialsComponent implements AfterViewInit{
 
   private swiperInstance!: Swiper;
 
-  constructor() {}
+  constructor() {
+    Swiper.use([Navigation]);
+  }
 
   ngAfterViewInit(): void {
         
@@ -107,11 +111,11 @@ export class TestimonialsComponent implements AfterViewInit{
           duration: 1.2,
           stagger: 0.3
       }, '-=0.6');
-
   }
 
   initializeSwiper(): void {
     this.swiperInstance = new Swiper(this.mySwiper.nativeElement, {
+      modules: [Navigation],
       loop: true,
       autoplay: {
         delay: 5000,

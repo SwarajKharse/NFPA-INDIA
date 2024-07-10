@@ -23,10 +23,8 @@ SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay]);
 export class OurTeamComponent implements AfterViewInit{
   @ViewChildren('container') container!: QueryList<ElementRef>;
   @ViewChild('teamsSwiperSelector') teamsSwiperSelector!: ElementRef;
-  @ViewChild('teamsThumbsSelector') teamsThumbsSelector!: ElementRef;
   @ViewChildren('title') title!: QueryList<ElementRef>;
   @ViewChildren('slide1') slide1!: QueryList<ElementRef>;
-  @ViewChildren('slide2') slide2!: QueryList<ElementRef>;
 
   private thumbsSwiper!: Swiper;
   private mainSwiper!: Swiper;
@@ -36,10 +34,8 @@ export class OurTeamComponent implements AfterViewInit{
   ngAfterViewInit(): void {
       
     const container = this.container.find((el, index) => index === 0)?.nativeElement;
-    // const teamsSwiperSelectorEle = this.teamsSwiperSelector.nativeElement;
     const title = this.title.map((el) => el.nativeElement);
     const slide1 = this.slide1.map((el) => el.nativeElement);
-    const slide2 = this.slide2.map((el) => el.nativeElement);
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -69,15 +65,6 @@ export class OurTeamComponent implements AfterViewInit{
         scale: 0.5,
         x: 100,
         duration: 0.5, 
-    }, "-=0.5");
-
-    tl.from(
-      slide2, { 
-        opacity: 0,
-        scale: 0.5,
-        x: 100,
-        duration: 0.5, 
-        stagger: 0.2 
     }, "-=0.5");
   }
 

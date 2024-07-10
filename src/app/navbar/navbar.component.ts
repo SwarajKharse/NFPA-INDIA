@@ -73,6 +73,7 @@ export class NavbarComponent implements AfterViewInit{
     const dropdownbody = this.dropdownbody.map((el) => el.nativeElement);
 
     const tl = gsap.timeline({
+      // delay: 3.25,
       scrollTrigger: {
         trigger: navbar,
         start: 'top 80%',
