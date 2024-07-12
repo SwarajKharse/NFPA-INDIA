@@ -346,20 +346,20 @@
     font-size: 10px;
   }
 
-  .testimonialsSwiperContainer.swiper-container .swiper-button-next:hover,
-  .testimonialsSwiperContainer.swiper-container .swiper-button-prev:hover, 
-  .testimonialsSwiperContainer.swiper-container #swiperPrev:hover, 
-  .testimonialsSwiperContainer.swiper-container #swiperNext:hover{
+  .testimonialsSwiperContainer.swiper-container .swiper-button-next, 
+  .testimonialsSwiperContainer.swiper-container .swiper-button-prev, 
+  .testimonialsSwiperContainer.swiper-container #swiperPrev, 
+  .testimonialsSwiperContainer.swiper-container #swiperNext{
       bottom: 50%;
   }
 
-  .testimonialsSwiperContainer.swiper-container .swiper-button-next:hover,
-  .testimonialsSwiperContainer.swiper-container #swiperNext:hover{
+  .testimonialsSwiperContainer.swiper-container .swiper-button-next, 
+  .testimonialsSwiperContainer.swiper-container #swiperNext{
       right: 35%;
   }
 
-  .testimonialsSwiperContainer.swiper-container .swiper-button-prev:hover, 
-  .testimonialsSwiperContainer.swiper-container #swiperPrev:hover{
+  .testimonialsSwiperContainer.swiper-container .swiper-button-prev, 
+  .testimonialsSwiperContainer.swiper-container #swiperPrev{
       left: 35%;
   }
 }
