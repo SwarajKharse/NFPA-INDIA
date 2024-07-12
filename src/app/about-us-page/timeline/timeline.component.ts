@@ -1,18 +1,14 @@
-import { Component, ViewChildren, QueryList, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ViewChildren, QueryList, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { NgFor } from '@angular/common';
+
 import Swiper from 'swiper';
-import Navigation from 'swiper';
-import Pagination from 'swiper';
-import Autoplay, { SwiperOptions } from 'swiper/types';
-import Thumbs from 'swiper';
-
-import 'swiper/swiper-bundle.css';
-
 import SwiperCore from 'swiper';
+import 'swiper/swiper-bundle.css';
+import { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/modules';
+SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay]);
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
@@ -21,7 +17,6 @@ gsap.registerPlugin(ScrollTrigger);
   imports: [NgFor],
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class TimelineComponent implements AfterViewInit{
@@ -43,7 +38,9 @@ export class TimelineComponent implements AfterViewInit{
   private thumbsSwiperEl!: Swiper;
   private mainSwiper!: Swiper;
 
-  constructor() { }
+  constructor() { 
+    // SwiperCore.use([Navigation]);
+  }
 
   ngAfterViewInit(): void {
 
@@ -64,19 +61,20 @@ export class TimelineComponent implements AfterViewInit{
       }
     });
 
-    tl.fromTo(title, 
+    tl
+    .add(() => {
+      this.initializeSwipers();
+    })
+    .fromTo(title, 
       { opacity: 0, x: -200 },
       {
         opacity: 1,
         x: 0,
-        duration: 0.8,
+        duration: 0.5,
         stagger: 0.3,
         ease: "power2.inOut"
-      }
+      }, "-=0.2"
     )
-    .add(() => {
-      this.initializeSwipers();
-    })
     .fromTo(sliderText,
       { opacity: 0, x: -200 },
       {
@@ -86,7 +84,7 @@ export class TimelineComponent implements AfterViewInit{
         stagger: 0.3,
         ease: "power2.inOut"
       },
-      "-=0.7" // Start this animation 1.5 seconds before the previous one ends
+      "-=1" // Start this animation 1.5 seconds before the previous one ends
     )
     .fromTo(wrapperLine,
       { opacity: 0 },
@@ -108,7 +106,7 @@ export class TimelineComponent implements AfterViewInit{
         stagger: 0.1,
         ease: "power2.inOut"
       },
-      "-=0.5" // Start this animation 0.5 seconds before the previous one ends
+      "-=0.7" // Start this animation 0.5 seconds before the previous one ends
     )
     .fromTo(buttons,
       { opacity: 0, x: -200 },
@@ -123,7 +121,7 @@ export class TimelineComponent implements AfterViewInit{
     );
 
     // Initial check on component load
-    this.checkWindowWidth();
+    // this.checkWindowWidth();
 
     this.mainSwiper.on('slideChange', () => {
       // const activeIndex = mainSwiper.activeIndex;
@@ -144,21 +142,19 @@ export class TimelineComponent implements AfterViewInit{
       loop: true,
       freeMode: true,
       watchSlidesProgress: true,
-      direction: 'vertical',
       breakpoints: {
-        576: {
+        577: {
           direction: 'vertical',
-          spaceBetween: 50,
+          spaceBetween: 30,
           slidesPerView: 6,
         },
         476:{
-          direction: 'horizontal',
-          spaceBetween: 50,
+          spaceBetween: 25,
           slidesPerView: 5,
         },
         0:{
           direction: 'horizontal',
-          spaceBetween: 30,
+          spaceBetween: 20,
           slidesPerView: 3,
         },
       }
@@ -180,7 +176,7 @@ export class TimelineComponent implements AfterViewInit{
         prevEl: '.swiper-button-prev'
       },
       breakpoints: {
-        768: {
+        577: {
           direction: 'vertical',
         },
         0:{
@@ -189,26 +185,26 @@ export class TimelineComponent implements AfterViewInit{
       }
     });
 
-    if(this.singleChance!==true){
-      this.thumbsSwiperEl.slidePrev();
-      this.singleChance = true;
-    }
+    // if(this.singleChance!==true){
+    //   this.thumbsSwiperEl.slidePrev();
+    //   this.singleChance = true;
+    // }
 
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkWindowWidth();
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: any) {
+  //   this.checkWindowWidth();
+  // }
 
-  private checkWindowWidth(){
-    const windowWidth = window.innerWidth;
-    if (windowWidth > 476 && windowWidth < 576 && !this.hasSlidOnce){
-      this.hasSlidOnce = true;
-      this.thumbsSwiperEl.slideNext();
-      this.thumbsSwiperEl.slideNext();
-      this.thumbsSwiperEl.slideNext();
-    }
-  }
+  // private checkWindowWidth(){
+  //   const windowWidth = window.innerWidth;
+  //   if (windowWidth > 0 && windowWidth < 576 && !this.hasSlidOnce){
+  //     this.hasSlidOnce = true;
+  //     this.thumbsSwiperEl.slideNext();
+  //     this.thumbsSwiperEl.slideNext();
+  //     this.thumbsSwiperEl.slideNext();
+  //   }
+  // }
 
 }

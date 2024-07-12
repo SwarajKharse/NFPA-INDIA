@@ -428,3 +428,12 @@
   }
 
 }
+
+@media screen and (max-height: 425px){
+  .testimonialsSwiperContainer.swiper-container .swiper-button-next, 
+  .testimonialsSwiperContainer.swiper-container .swiper-button-prev, 
+  .testimonialsSwiperContainer.swiper-container #swiperPrev, 
+  .testimonialsSwiperContainer.swiper-container #swiperNext{
+      bottom: 50%;
+  }
+}

@@ -1,28 +1,16 @@
-:root {
-    --white: #fff;
-    --black: #000;
-    --primary: #d4a024;
-    --gray: #616161;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-}
-
-.container {
+.timelineContainer {
     margin-top: 80px;
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
     flex-direction: column;
     position: relative;
+    max-width: 1700px;
 }
 
-.title{
+.timelineTitle{
     position: absolute;
     top: -8%;
     left: 44%;
@@ -30,7 +18,7 @@ body {
     z-index: 5;
 }
 
-.title h4{
+.timelineTitle h4{
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -40,7 +28,7 @@ body {
     color: red;
 }
 
-.title h2{
+.timelineTitle h2{
     font-family: "Inter", sans-serif;
     font-size: 32px;
     font-weight: 500;
@@ -50,10 +38,9 @@ body {
     margin: 10px;
 }
 
-.timeline {
+.timelineCont {
     position: relative;
     width: 100%;
-    background-color: #fff;
     box-shadow: 0 5px 25px 5px rgba(#000, 0.2);
     display: flex;
     flex-direction: column;
@@ -62,13 +49,13 @@ body {
     overflow: hidden;
 }
 
-.timeline .swiper-container.main-swiper {
+.timelineCont .swiper-container.timelineMainSwiper {
     height: 600px;
     width: 100%;
     position: relative;
 }
 
-.swiper-container{
+.swiper-container.timelineMainSwiper{
     --swiper-navigation-size: 20px;
     --swiper-theme-color: #d49f24;
     --swiper-pagination-bullet-width: 50px;
@@ -79,11 +66,11 @@ body {
     --swiper-navigation-sides-offset: 30%;
 }
 
-.timeline .swiper-wrapper.main-swiper-wrapper {
+.swiper-container.timelineMainSwiper .swiper-wrapper.timelineMainWrapper  {
     transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
 }
 
-.timeline .swiper-wrapper.main-swiper-wrapper .swiper-slide {
+.timelineCont .swiper-wrapper.timelineMainWrapper .swiper-slide {
     position: relative;
     width: 100%;
     color: #fff;
@@ -92,7 +79,7 @@ body {
     background-position: center center;
 }
 
-.timeline .swiper-wrapper.main-swiper-wrapper .swiper-slide::after {
+.timelineCont .swiper-wrapper.timelineMainWrapper .swiper-slide::after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -109,11 +96,17 @@ body {
     box-shadow: -230px 0 150px 50vw rgba(#000, 0.7);
 }
 
-.timeline .swiper-slide-content {
+@media screen and (min-width: 1700px){
+    .timelineCont .swiper-wrapper.timelineMainWrapper .swiper-slide::after {
+        box-shadow: -230px 0 150px 500px rgba(#000, 0.7);
+    }
+}
+
+.timelineCont .swiper-container.timelineMainSwiper .swiper-slide-content {
     position: absolute;
     text-align: center;
     width: 80%;
-    max-width: 310px;
+    max-width: 360px;
     right: 50%;
     top: 13%;
     transform: translate(50%, 0);
@@ -123,12 +116,18 @@ body {
     left: 25%;
     top: 50%;
     transform: translateY(-50%);
-    width: 310px;
+    width: 360px;
     font-size: 11px;
+    padding: 10px;
     text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-.timeline .swiper-slide .timeline-year-main {
+.timelineCont .swiper-slide .timelineContentYear {
     display: block;
     font-style: italic;
     font-size: 42px;
@@ -142,51 +141,51 @@ body {
     font-size: 32px;
 }
 
-.timeline .swiper-slide .timeline-title {
-    font-weight: 800;
-    font-size: 34px;
+.timelineCont .swiper-slide .timelineContentTitle {
+    font-weight: 700;
+    font-size: 28px;
     margin: 0 0 30px;
     opacity: 0;
     transform: translate3d(-20px, 0, 0);
     transition: 0.2s ease 0.5s;
-    font-size: 46px;
+    font-size: 40px;
     margin: 0;
 }
 
-.timeline .swiper-slide .timeline-text {
+.timelineCont .swiper-slide .timelineContentText {
     line-height: 1.5;
     opacity: 0;
     transform: translate3d(-20px, 0, 0);
     transition: 0.2s ease 0.6s;
 }
 
-.timeline .swiper-slide-active .timeline-year-main {
+.timelineCont .swiper-slide-active .timelineContentYear {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: 0.4s ease 1.6s;
 }
 
-.timeline .swiper-slide-active .timeline-title {
+.timelineCont .swiper-slide-active .timelineContentTitle {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: 0.4s ease 1.7s;
 }
 
-.timeline .swiper-slide-active .timeline-text {
+.timelineCont .swiper-slide-active .timelineContentText {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: 0.4s ease 1.8s;
 }
 
-.timeline .swiper-container.main-swiper .swiper-button-prev{
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-prev{
     left: 30%;
 }
 
-.timeline .swiper-container.main-swiper .swiper-button-next{
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-next{
     left: 40%;
 }
 
-.timeline .swiper-container.thumbs-swiper {
+.timelineCont .swiper-container.timelineThumbsSwiper {
     height: 300px;
     height: auto;
     width: 50px;
@@ -205,7 +204,7 @@ body {
     overflow: hidden;
 }
 
-.timeline .swiper-container.thumbs-swiper .swiper-wrapper {
+.timelineCont .swiper-container.timelineThumbsSwiper .swiper-wrapper.timelineThumbsWrapper {
     position: relative; 
     height: 400px;
     width: 50px;
@@ -215,7 +214,7 @@ body {
     font-style: italic;
 }
 
-.timeline .thumbs-wrapper::before {
+.timelineCont .timelineThumbsWrapper::before {
     content: '';
     position: absolute;
     top: 0;
@@ -227,9 +226,10 @@ body {
     transform: translateX(-50%);
 }
 
-.timeline .thumbs-swiper .swiper-slide.thumbs-slide {
+.timelineCont .timelineThumbsSwiper .swiper-slide.thumbs-slide {
     width: 50px;
-    height: 30px;
+    height: 30px !important;
+    margin: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,20 +241,20 @@ body {
     transform: translateX(-50%);
 }
 
-.timeline .thumbs-swiper .swiper-slide span {
+.timelineCont .swiper-container.timelineThumbsSwiper .swiper-slide span {
     width: 100%;
     font-size: 16px;
     color: #080808;
 }
 
-/* .timeline .thumbs-swiper .swiper-button-next,
-.timeline .thumbs-swiper .swiper-button-prev {
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-next,
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-prev {
     background-size: 20px 20px;
     z-index: 999;
     transition: 0.2s;
 }
 
-.timeline .thumbs-swiper .swiper-button-prev {
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-prev {
     top: -25%;
     right: 0;
     left: auto;
@@ -265,15 +265,14 @@ body {
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
-
 }
 
-.timeline .thumbs-swiper .swiper-button-prev:hover {
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-prev:hover {
     transform: translateX(-3px);
     transform: rotate(90deg) translate(-3px, 10px);
 }
 
-.timeline .thumbs-swiper .swiper-button-next {
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-next {
     right: 0%;
     top: auto;
     bottom: 0%;
@@ -284,29 +283,28 @@ body {
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23d4a024'%2F%3E%3C%2Fsvg%3E");
-
 }
 
-.timeline .thumbs-swiper .swiper-button-next:hover {
+.timelineCont .swiper-container.timelineMainSwiper .swiper-button-next:hover {
     transform: translateX(3px);
     transform: rotate(90deg) translate(3px, 10px);
-} */
+}
 
 @media screen and (max-width: 1024px) {
 
-    .title{
+    .timelineTitle{
         left: 40%;
     }
 
-    .title h4{
+    .timelineTitle h4{
         font-size: 22px;
     }
 
-    .title h2{
+    .timelineTitle h2{
         font-size: 28px;
     }
 
-    .timeline .swiper-slide::after {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide::after {
         right: -20%;
         bottom: -12%;
         width: 240px;
@@ -314,30 +312,31 @@ body {
         box-shadow: -230px 0 150px 39vw rgba(#000, 0.7);
     }
 
-    .timeline .swiper-slide-content {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide-content {
         right: 25%;
     }
 }
 
 @media screen and (max-width: 768px) {
 
-    .title h4{
+    .timelineTitle h4{
         font-size: 20px;
     }
 
-    .title h2{
+    .timelineTitle h2{
         font-size: 24px;
     }
 
-    .timeline .swiper-slide::after {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide::after {
         right: -30%;
         bottom: -8%;
         width: 240px;
         height: 50%;
+        /* needs to be changed */
         box-shadow: -230px 0 150px 50vw #000000b1;
     }
 
-    .timeline .swiper-slide-content {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide-content {
         left: 30%;
         top: 50%;
         transform: translateY(-50%);
@@ -346,215 +345,198 @@ body {
         text-align: left;
     }
 
-    .timeline .swiper-slide .timeline-year {
-        margin-bottom: 0;
-        font-size: 32px;
-    }
-
-    .timeline .swiper-slide .timeline-title {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide .timelineContentTitle {
         font-size: 46px;
         margin: 0;
     }
 
-    .timeline .swiper-container.main-swiper .swiper-button-prev{
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-button-prev{
         left: 40%;
     }
     
-    .timeline .swiper-container.main-swiper .swiper-button-next{
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-button-next{
         left: 50%;
+    }
+    
+    .timelineCont .swiper-container.timelineThumbsSwiper .swiper-slide .timeline-year {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .swiper-container.timelineMainSwiper, .swiper-container.timelineThumbsSwiper {
+        display: flex;
+    }
+    
+    .swiper-wrapper.timelineMainWrapper, .swiper-wrapper.timelineThumbsWrapper{
+        display: flex;
     }
 }
 
 @media screen and (max-width: 576px){
 
-    .title{
+    .timelineTitle{
         top: -5%;
         left: 36%;
     }
 
-    .title h4{
+    .timelineTitle h4{
         font-size: 16px;
     }
 
-    .title h2{
+    .timelineTitle h2{
         font-size: 20px;
     }
 
-    .swiper-container{
+    .swiper-container.timelineMainSwiper{
         --swiper-navigation-top-offset: 60%;
     }
 
-    .timeline .swiper-slide-content {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide-content {
         left: 17%;
         top: 35%;
     }
 
-    .timeline .swiper-wrapper.main-swiper-wrapper .swiper-slide::after{
+    .timelineCont .swiper-wrapper.timelineMainWrapper .swiper-slide::after{
         box-shadow: 230px 0 150px 35vw #000000b3;
     }
 
-    .timeline .swiper-container.main-swiper .swiper-button-prev{
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-button-prev{
         left: 30%;
     }
     
-    .timeline .swiper-container.main-swiper .swiper-button-next{
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-button-next{
         left: 45%;
     }
 
-    .timeline .swiper-container.thumbs-swiper {
-        height: auto;
+    .timelineCont .swiper-container.timelineThumbsSwiper {
+        height: 30px;
         width: 500px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         left: 6% !important;
+        left: 0% !important;
         bottom: 20%;
         color: #000000;
         text-align: center;
     }
 
-    .timeline .swiper-container.thumbs-swiper .swiper-wrapper {
-        height: auto;
+    .timelineCont .swiper-container.timelineThumbsSwiper .swiper-wrapper.timelineThumbsWrapper {
+        height: 30px;
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
     }
 
-    .timeline .thumbs-wrapper::before {
-        left: 0%;
+    .timelineCont .timelineThumbsWrapper::before {
+        left: 18%;
+        left: 0;
         height: 2px;
+        bottom: 20%;
         width: 1200px;
         background-color: #d4a024;
         transform: translateY(750%);
+    }
+
+    .timelineCont .timelineThumbsSwiper .swiper-slide.thumbs-slide {
+        width: 80px !important;
+        height: 30px !important;
+        padding: 0 15px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        background-color: #d4a024;
+        cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
 }
 
 @media screen and (max-width: 426px){
 
-    .title{
+    .timelineTitle{
         left: 30%;
     }
 
-    .swiper-container{
+    .swiper-container.timelineMainSwiper{
         --swiper-navigation-top-offset: 55%;
     }
 
-    .timeline .swiper-slide-content {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide-content {
         left: 10%;
         top: 33%;
     }
 
-    .timeline .swiper-container.main-swiper .swiper-button-next{
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-button-next{
         left: 65%;
     }
 
-    .timeline .swiper-container.thumbs-swiper {
-        height: auto;
+    .timelineCont .swiper-container.timelineThumbsSwiper .swiper-wrapper.timelineThumbsWrapper {
+        justify-content: flex-start;
+    }
+/* 
+    .timelineCont .timelineThumbsWrapper::before {
+        left: 10%;
+    }
+
+    .timelineCont .swiper-container.timelineThumbsSwiper {
         width: 375px;
-        display: flex;
-        flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
-        left: 6% !important;
-        bottom: 20%;
-        color: #000000;
-        text-align: center;
-    }
-
-    .timeline .thumbs-swiper .swiper-slide.thumbs-slide {
-        width: 70px;
-        height: 30px;
-        margin-right: 0;
-        /* display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        background-color: #d4a024;
-        cursor: pointer;
-        position: relative; */
-        /* left: 0%; */
-        /* transform: translateX(-50%); */
-    }
-
-    .timeline .swiper-container.thumbs-swiper .swiper-wrapper {
-        height: auto;
-        width: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-
+    } */
 }
 
 @media screen and (max-width: 376px){
 
-    .title{
+    .timelineTitle{
         left: 27%;
     }
 
-    .timeline .swiper-slide .timeline-year-main {
+    .timelineCont .swiper-slide .timelineContentYear {
         margin-bottom: 0px;
         font-size: 28px;
     }
     
-    .timeline .swiper-slide .timeline-title {
+    .timelineCont .swiper-slide .timelineContentTitle {
         font-weight: 800;
         font-size: 38px;
         margin: 0;
     }
 
-    .timeline .swiper-container.thumbs-swiper {
+    /* .timelineCont .swiper-container.timelineThumbsSwiper {
         width: 340px;
         left: 6% !important;
         bottom: 25%;
-    }
-
-    .timeline .thumbs-swiper .swiper-slide.thumbs-slide {
-        width: 70px;
-        height: 30px;
-        margin-right: 0;
-    }
-
-    .timeline .swiper-container.thumbs-swiper .swiper-wrapper {
-        height: auto;
-        width: 50px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-    }
+    } */
 }
 
 @media screen and (max-width: 321px){
 
-    .title{
+    .timelineTitle{
         left: 24%;
     }
 
-    .timeline .swiper-slide-content {
+    .timelineCont .swiper-container.timelineMainSwiper .swiper-slide-content {
         width: 270px;
     }
 
-    .timeline .swiper-container.thumbs-swiper {
+    /* .timelineCont .swiper-container.timelineThumbsSwiper {
         width: 280px;
         left: 8% !important;
         bottom: 25%;
-    }
+    } */
 
-    .timeline .thumbs-swiper .swiper-slide.thumbs-slide {
-        width: 70px;
-        height: 30px;
-        margin-right: 0;
-    }
-
-    .timeline .swiper-container.thumbs-swiper .swiper-wrapper {
-        height: auto;
-        width: 50px;
-        display: flex;
-        flex-direction: row;
+    .timelineCont .swiper-container.timelineThumbsSwiper .swiper-wrapper.timelineThumbsWrapper {
         justify-content: flex-start;
     }
 }
