@@ -42,7 +42,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* gap: 20px; */
     padding: 25px;
 }
 
@@ -159,7 +158,8 @@
     translate: none;
     rotate: none;
     scale: none;
-    transform: translate(0px, 210px) !important;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 1;
     position: absolute;
     width: 30px;
@@ -212,11 +212,6 @@
     .all-products-link a{
         font-size: 16px;
     }
-
-    .swiper-button-next, .swiper-button-prev{
-        transform: translate(0px, 180px) !important;
-    }
-
 }
 
 @media screen and (max-width: 1180px){
@@ -248,10 +243,6 @@
         padding: 10px;
     }
 
-    .swiper-container{
-        --swiper-navigation-sides-offset: 0px !important;
-    }
-
     .product-card{
         width: 250px;
         max-width: 250px;
@@ -266,10 +257,6 @@
 
     .all-products-link a{
         font-size: 14px;
-    }
-
-    .swiper-button-next, .swiper-button-prev{
-        transform: translate(0px, 150px) !important;
     }
 
     .swiper-button-prev{
@@ -302,10 +289,6 @@
         width: 100%;
         padding: 5px;
     }
-
-    .swiper-button-next, .swiper-button-prev{
-        transform: translate(0px, 160px) !important;
-    }
 }
 
 @media screen and (max-width: 640px){
@@ -319,11 +302,6 @@
 }
 
 @media screen and (max-width: 576px){
-
-    .swiper-container{
-        --swiper-navigation-sides-offset: 0px !important;
-        --swiper-navigation-size: 24px !important;
-    }
 
     .products-container{
         width: 98%;
@@ -342,7 +320,6 @@
     }
 
     .swiper-button-next, .swiper-button-prev{
-        transform: translate(0px, 150px) !important;
         width: 30px;
         height: 30px;
     }
@@ -358,10 +335,6 @@
 }
 
 @media screen and (max-width: 426px){
-
-    .swiper-container{
-        --swiper-navigation-sides-offset: 5px !important;
-    }
 
     .products-container{
         width: 90%;
@@ -394,18 +367,9 @@
     .all-products-link a{
         font-size: 12px;
     }
-
-    .swiper-button-next, .swiper-button-prev{
-        transform: translate(0px, 140px) !important;
-    }
-
 }
 
 @media screen and (max-width: 376px){
-
-    .swiper-container{
-        --swiper-navigation-sides-offset: 0px !important;
-    }
 
     .products-container{
         width: 87.5%;
@@ -420,11 +384,6 @@
 
 @media screen and (max-width: 321px){
 
-    .swiper-container{
-        --swiper-navigation-size: 20px !important;
-        --swiper-navigation-sides-offset: 10px !important;
-    }
-    
     .products-container{
         width: 98%;
         height: 100%;   
