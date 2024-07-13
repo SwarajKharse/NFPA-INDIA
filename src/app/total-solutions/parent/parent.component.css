@@ -1,0 +1,141 @@
+/* Section styling */
+section {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #171717;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-top: 5%;
+}
+
+/* Header styling */
+.head-container {
+    margin-bottom: 20px;
+}
+
+.heading1 {
+    text-align: center;
+    width: 65vw;
+}
+
+.heading2 {
+    text-align: center;
+    width: -65vw;
+}
+
+.heading1 .head1 {
+    font-size: 32px;
+    background-color: #EEEEEE;
+    color: #232323;
+    margin-left: -40px;
+    padding: 20px;
+    padding-left: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500; /* Medium font weight */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+.heading2 .head2 {
+    background-color: #f5a623;
+    color: #fff;
+    padding: 15px 20px;
+    margin-right: -40px;
+    margin-left: 35vw;
+    padding-right: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    font-weight: 500; /* Medium font weight */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+/* Flexbox container for the grid items */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Card styling */
+.image-container {
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: #222;
+    width: 330px;
+    height: 330px;
+    margin: 10px; /* Added margin for spacing between items */
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(70%);
+    transition: filter 0.3s;
+    z-index: -1; /* Ensure the gradient overlay is on top */
+}
+
+.image-container:hover img {
+    filter: brightness(100%);
+}
+
+.image-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(27, 27, 27, 0.5));
+    transition: background 0.3s;
+    z-index: 1; /* Ensure the gradient overlay is on top */
+}
+
+.image-container:hover:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.image-container h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    z-index: 2; /* Ensure the text is on top */
+}
+
+/* Additional styling for the footer text */
+.footer-text {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #bbb;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    padding: 20px;
+    margin-bottom: 20px;
+}

@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FirstLogoTransitionComponent } from './first-logo-transition/first-logo-transition.component';
 import { TransitionComponent } from './transition/transition.component';
 
 import { gsap } from "gsap";
@@ -24,7 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
     RouterLinkActive,
     FormsModule,
     NavbarComponent,
-    TransitionComponent, FirstLogoTransitionComponent
+    TransitionComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

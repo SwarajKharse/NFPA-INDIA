@@ -1,0 +1,90 @@
+<div class="big-img"><img
+    src="assets/Solutions/Hotels-wide.webp"
+    loading="lazy" sizes="100vw"
+    alt="" class="image-12" />
+<h1 class="heading-5">Hotels & Convention Centres</h1>
+<h1 class="heading-5-copy">Solutions</h1>
+</div>
+
+<div class="causes-div">
+<div class="red-div">
+    <div class="text-block-2">Causes of Fire</div>
+</div>
+<div class="div-block-10">
+    <div class="div-block-11">
+        <div class="div-imgtext"><img
+                src="assets/Common/Buttons/Electrical.svg"
+                loading="lazy" alt="" class="image-13" />
+            <div class="text-block-2-copy">Electrical and wiring</div>
+        </div>
+        <div class="linediv"></div>
+        <div class="div-imgtext"><img
+                src="assets/Common/Buttons/Fire.svg"
+                loading="lazy" alt="" class="image-13" />
+            <div class="text-block-2-copy">Hot Oil Flames</div>
+        </div>
+        <div class="linediv"></div>
+        <div class="div-imgtext"><img
+                src="assets/Common/Buttons/Metal Inert Gas Welding.svg"
+                loading="lazy" alt="" class="image-13" />
+            <div class="text-block-2-copy">Flammable materials</div>
+        </div>
+        <div class="linediv"></div>
+    </div>
+    <div class="div-block-11">
+        <div class="div-imgtext"><img
+                src="assets/Common/Buttons/Cooking.svg"
+                loading="lazy" alt="" class="image-13" />
+            <div class="text-block-2-copy">Cooking equipment</div>
+        </div>
+        <div class="linediv"></div>
+        <div class="div-imgtext"><img
+                src="assets/Common/Buttons/Heating.svg"
+                loading="lazy" alt="" class="image-13" />
+            <div class="text-block-2-copy">Heating and cooling systems</div>
+        </div>
+        <div class="linediv"></div>
+        <div class="div-imgtext"><img
+                src="assets/Common/Buttons/User Male.svg"
+                loading="lazy" alt="" class="image-13" />
+            <div class="text-block-2-copy">Arson</div>
+        </div>
+        <div class="linediv"></div>
+    </div>
+    <div class="div-block-11">
+        <div class="div-imgtext"><img
+                src="assets/Common/Buttons/Smok.svg"
+                loading="lazy" alt="" class="image-13" />
+            <div class="text-block-2-copy">Smoking materials</div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="req-div">
+    <h1 class="req-head">System Requirements</h1>
+    <div class="details-div-copy" *ngFor="let solution of solutions; let i = index">
+      <div class="div-block-2">
+        <img [src]="'assets/Solutions/' + solution.image" loading="lazy" width="320" height="470" alt="" class="image-4-copy" />
+      </div>
+      <div class="div-block-3-copy">
+        <h1 class="req-head-copy">{{ i + 1 }}. {{ solution.name }}</h1>
+        <p class="paragraph-2-copy">{{ solution.description }}</p>
+        <a href="#" class="link">Know this System <strong>→</strong></a>
+        </div>     
+      </div>
+    </div>
+
+    <div class="req-div">
+        <h1 class="req-head">Services</h1>
+        <div class="details-div-copy" *ngFor="let service of services; let i = index">
+          <div class="div-block-2">
+            <img [src]="'assets/Solutions/' + service.image" loading="lazy" width="320" height="470" alt="" class="image-4-copy" />
+          </div>
+          <div class="div-block-3-copy">
+            <h1 class="req-head-copy">{{ i + 1 }}. {{ service.name }}</h1>
+            <p class="paragraph-2-copy">{{ service.description }}</p>
+            <a href="#" class="link">Know this System <strong>→</strong></a>
+            </div>     
+          </div>
+        </div>

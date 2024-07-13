@@ -10,11 +10,13 @@
     max-width: 1700px;
     position: relative;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .ourTeamTitleContainer {
     text-align: center;
     margin: 15px 15px 30px 15px;
+    background-color: black;
 }
 
 .ourTeamTitleContainer h2 {
@@ -59,7 +61,7 @@
 
 .ourTeamMainSwiperContainer.swiper-container,
 .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
-    width: 750px;
+    width: 900px;
     height: 525px;
 }
 
@@ -145,6 +147,12 @@
 }
 
 @media screen and (max-width: 1260px) {
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 800px;
+        height: 475px;
+    }
+
     .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
         left: 10%;
     }
@@ -155,6 +163,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
     .ourTeamTitleContainer {
         margin: 12px 12px 26px 12px;
     }
@@ -169,7 +178,7 @@
 
     .ourTeamMainSwiperContainer.swiper-container,
     .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
-        width: 600px;
+        width: 700px;
         height: 400px;
     }
 
@@ -199,6 +208,12 @@
     .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
         right: 6%;
     }
+
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 650px;
+        height: 375px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -216,8 +231,8 @@
 
     .ourTeamMainSwiperContainer.swiper-container,
     .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
-        width: 500px;
-        height: 400px;
+        width: 575px;
+        height: 350px;
     }
 
     .ourTeamThumbsSwiperContainer.swiper-container {
@@ -235,6 +250,14 @@
     .ourTeamMainSwiperContainer.swiper-container .swiper-button-next,
     .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
         transform: translate(0px, 160px) !important;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 550px;
+        height: 350px;
     }
 }
 
@@ -272,6 +295,14 @@
 
     .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
         right: 2%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 425px;
+        height: 320px;
     }
 }
 

@@ -7,3 +7,39 @@
     justify-content: center;
     align-items: center;
 }
+
+
+.bg-pattern {
+    position: absolute;
+    flex: 0 200px 0;
+    margin: 0;
+    background-size: 50px 50px;
+    z-index: -1;
+    padding: 200px 200px 80px 80px;
+    transform: translateY(20%);
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    right: 0;
+}
+
+.black{
+    background-color: black;
+    background-image: radial-gradient(#919191 2px, transparent 2px);
+}
+
+@media screen and (max-width: 1024px){
+    .bg-pattern{
+        padding: 150px 150px 80px 80px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .bg-pattern{
+        display: none;
+    }
+}

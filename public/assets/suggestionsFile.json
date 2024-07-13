@@ -1,0 +1,16 @@
+[
+  { "name": "Fire Extinguishers", "image": "assets/P&S/fire-extinguishers3.webp", "link": "/total-systems/Extinguishers" },
+  { "name": "Fire Suppression System", "image": "assets/P&S/system/supression376.webp", "link": "/total-systems/Suppression-System" },
+  { "name": "Fire Hydrant System", "image": "assets/P&S/system/hydrant376.webp", "link": "/total-systems/Hydrant-System" },
+  { "name": "Fire Sprinkler System", "image": "assets/P&S/system/sprinkler376.webp", "link": "/total-systems/Sprinkler-System" },
+  { "name": "Fire Detection System", "image": "assets/P&S/system/detection376.webp", "link": "/total-systems/Detection-System" },
+  { "name": "Fire Metal Doors", "image": "assets/P&S/doors.webp", "link": "/total-systems/Doors" },
+  { "name": "Water Level Detector", "image": "assets/P&S/WLD.webp", "link": "/total-systems/WLD" },
+  { "name": "Public Address System", "image": "assets/P&S/PA.webp", "link": "/total-systems/PA" },
+  { "name": "AMC Services", "image": "assets/P&S/amc 1.webp", "link": "/total-systems/AMC" },
+  { "name": "Fire Extinguisher Refilling", "image": "assets/P&S/refill 1.webp", "link": "/total-systems/Refill" },
+  { "name": "Fire Training", "image": "assets/P&S/training 1.webp", "link": "/total-systems/Training" },
+  { "name": "Fire Audits", "image": "assets/P&S/audit 1.webp", "link": "/total-systems/Audits" },
+  { "name": "Repairing Services", "image": "assets/P&S/repair 1.png", "link": "/total-systems/Repair" },
+  { "name": "Licensing", "image": "assets/P&S/licensing 1-1.webp", "link": "/total-systems/Licensing" }
+]

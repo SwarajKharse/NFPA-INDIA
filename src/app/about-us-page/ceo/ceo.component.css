@@ -1,4 +1,5 @@
 .main-container{
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
@@ -19,12 +20,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
-    overflow: hidden;
-    margin-top: 75px;
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 75px; /* Adjust this value to your needs */
+}
+
+.bg-pattern {
+    position: absolute;
+    flex: 0 200px 0;
+    margin: 0;
+    background-color: white;
+    background-image: radial-gradient(#938C8C 2px, transparent 2px);
+    background-size: 50px 50px;
+    z-index: -1;
+    padding: 350px 325px 80px 80px;
+}
+
+.left{
+    left: 0;
+    transform: translateY(60%);
+}
+
+.right{
+    right: 0;
+    transform: translateY(-60%);
 }
 
 .img-container img{

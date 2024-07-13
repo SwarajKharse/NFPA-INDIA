@@ -13,6 +13,7 @@
 
 .title-container{
     text-align: center;
+    background-color: black;
 }
 
 .title-container h2{
@@ -115,6 +116,7 @@
 }
 
 .all-products-link{
+    margin-top: 20px;
     text-align: center;
     padding: 10px 15px;
     border-bottom: 2px solid #4e4e4e;

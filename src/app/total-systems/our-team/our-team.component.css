@@ -1,0 +1,354 @@
+.ourTeamContainer {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    padding: 20px 0;
+    max-width: 1700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ourTeamTitleContainer {
+    text-align: center;
+    margin: 15px 15px 30px 15px;
+}
+
+.ourTeamTitleContainer h2 {
+    margin: 0;
+    color: #C1121F;
+    font-family: "Inter", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+.ourTeamTitleContainer h3 {
+    color: #9d9d9d;
+    font-family: "Inter", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.ourTeamGalleryContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.ourTeamMainSwiperContainer.swiper-container {
+    overflow: hidden;
+    --swiper-navigation-color: #fff;
+    --swiper-pagination-color: #fff;
+}
+
+.ourTeamMainSwiperContainer.swiper-container,
+.ourTeamMainSwiperWrapper.swiper-wrapper {
+    display: flex;
+}
+
+.ourTeamMainSwiperContainer.swiper-container,
+.ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+    width: 750px;
+    height: 525px;
+}
+
+.ourTeamMainSwiperContainer.swiper-container .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.ourTeamThumbsSwiperContainer.swiper-container {
+    overflow: hidden;
+}
+
+.ourTeamThumbsSwiperContainer.swiper-container .swiper-slide {
+    height: 525px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourTeamThumbsSwiperContainer.swiper-container {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 425px;
+}
+
+.ourTeamThumbsSwiperContainer.swiper-container .swiper-slide {
+    width: 170px;
+    opacity: 0.4;
+    border-radius: 20px;
+}
+
+.ourTeamThumbsSwiperContainer.swiper-container .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.ourTeamThumbsSwiperContainer.swiper-container .swiper-slide img {
+    width: 100%;
+    height: 89%;
+    border-radius: 20px;
+}
+
+.ourTeamMainSwiperContainer.swiper-container .swiper-button-next,
+.ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+    translate: none;
+    rotate: none;
+    scale: none;
+    transform: translate(0px, 240px) !important;
+    opacity: 1;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 50px;
+}
+
+.ourTeamMainSwiperContainer.swiper-container .swiper-button-next:hover,
+.ourTeamMainSwiperContainer.swiper-container .swiper-button-prev:hover {
+    cursor: pointer;
+}
+
+.ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+    left: 20%;
+    background-image: url("/assets/Common/Buttons/prev.png");
+}
+
+.ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
+    right: 20%;
+    background-image: url("/assets/Common/Buttons/next.png");
+}
+
+@media screen and (max-width: 1440px) {
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        left: 17%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
+        right: 17%;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        left: 10%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .ourTeamTitleContainer {
+        margin: 12px 12px 26px 12px;
+    }
+
+    .ourTeamTitleContainer h2 {
+        font-size: 30px;
+    }
+
+    .ourTeamTitleContainer h3 {
+        font-size: 24px;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 600px;
+        height: 400px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container {
+        height: 350px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container .swiper-slide {
+        width: 160px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container .swiper-slide img {
+        height: 107%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        transform: translate(0px, 180px) !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        left: 6%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
+        right: 6%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ourTeamTitleContainer {
+        margin: 10px 10px 22px 10px;
+    }
+
+    .ourTeamTitleContainer h2 {
+        font-size: 26px;
+    }
+
+    .ourTeamTitleContainer h3 {
+        font-size: 20px;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 500px;
+        height: 400px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container {
+        height: 300px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container .swiper-slide {
+        width: 140px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container .swiper-slide img {
+        height: 115%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        transform: translate(0px, 160px) !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .ourTeamGalleryContainer {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .ourTeamTitleContainer {
+        margin: 8px 8px 18px 8px;
+    }
+
+    .ourTeamTitleContainer h2 {
+        font-size: 23px;
+    }
+
+    .ourTeamTitleContainer h3 {
+        font-size: 19px;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 450px;
+        height: 350px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container {
+        display: none;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        left: 2%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
+        right: 2%;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .ourTeamTitleContainer {
+        margin: 6px 6px 14px 6px;
+    }
+
+    .ourTeamTitleContainer h2 {
+        font-size: 20px;
+    }
+
+    .ourTeamTitleContainer h3 {
+        font-size: 16px;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 350px;
+        height: 275px;
+    }
+
+    .ourTeamThumbsSwiperContainer.swiper-container {
+        display: none;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        transform: translate(0px, 120px) !important;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        left: 0%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
+        right: 0%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 325px;
+        height: 250px;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        left: -2%;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next {
+        right: -2%;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .ourTeamTitleContainer {
+        margin: 4px 4px 10px 4px;
+    }
+
+    .ourTeamTitleContainer h2 {
+        font-size: 18px;
+    }
+
+    .ourTeamTitleContainer h3 {
+        font-size: 14px;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-slide {
+        width: 275px;
+        height: 225px;
+    }
+
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-next,
+    .ourTeamMainSwiperContainer.swiper-container .swiper-button-prev {
+        transform: translate(0px, 95px) !important;
+    }
+}

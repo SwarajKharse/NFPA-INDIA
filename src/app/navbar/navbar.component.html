@@ -17,9 +17,35 @@
           <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a>
         </div>
       </div>
-      <div class="navBar-menu-item">
+      <div (mouseenter)="dropdownEnter()" 
+          (mouseleave)="dropdownLeave()"
+          class="navBar-menu-item dropdown">
         <div #navBarMenuItem>
-          <a routerLink="/solutions" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
+          <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
+        </div>
+        <div #dropdown class="dropdown-content">
+          <div class="dropdown-column">
+            <h4 #dropdownHead>Systems</h4>
+            <a #dropdownbody routerLink="/total-systems/Suppression-System" routerLinkActive="active" ariaCurrentWhenActive="page">Suppression Systems</a>
+            <a #dropdownbody routerLink="/total-systems/Sprinkler-System" routerLinkActive="active" ariaCurrentWhenActive="page">Sprinkler System</a>
+            <a #dropdownbody routerLink="/total-systems/Hydrant-System" routerLinkActive="active" ariaCurrentWhenActive="page">Hydrant System</a>
+            <a #dropdownbody routerLink="/total-systems/Detection-System" routerLinkActive="active" ariaCurrentWhenActive="page">Detection Systems</a>
+          </div>
+          <div class="dropdown-column">
+            <h4 #dropdownHead>Products</h4>
+            <a (click)="dropdownLeave()" #dropdownbody routerLink="/total-systems/Extinguishers" routerLinkActive="active" ariaCurrentWhenActive="page">Fire Extinguishers</a>
+            <a #dropdownbody routerLink="/total-systems/PA" routerLinkActive="active" ariaCurrentWhenActive="page">Public Address</a>
+            <a #dropdownbody routerLink="/total-systems/Doors" routerLinkActive="active" ariaCurrentWhenActive="page">Fire Metal Doors</a>
+          </div>
+          <div class="dropdown-column">
+            <h4 #dropdownHead>Services</h4>
+            <a #dropdownbody routerLink="/total-systems/AMC" routerLinkActive="active" ariaCurrentWhenActive="page">AMC</a>
+            <a #dropdownbody routerLink="/total-systems/Training" routerLinkActive="active" ariaCurrentWhenActive="page">Training</a>
+            <a #dropdownbody routerLink="/total-systems/Repair" routerLinkActive="active" ariaCurrentWhenActive="page">One-Time-Repair</a>
+            <a #dropdownbody routerLink="/total-systems/Audit" routerLinkActive="active" ariaCurrentWhenActive="page">Fire Audits</a>
+            <a #dropdownbody routerLink="/total-systems/Refill" routerLinkActive="active" ariaCurrentWhenActive="page">Fire Extinguisher Refilling & HPT</a>
+            <a #dropdownbody routerLink="/total-systems/Licensing" routerLinkActive="active" ariaCurrentWhenActive="page">Licensing & Documentation</a>
+          </div>
         </div>
       </div>
       <div class="navBar-menu-item">
@@ -27,42 +53,14 @@
           <a routerLink="/clients" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
         </div>
      </div>
-      <div (mouseenter)="dropdownEnter()" 
-          (mouseleave)="dropdownLeave()" 
-          class="navBar-menu-item dropdown">
-        <div #navBarMenuItem>
-          <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
-        </div>
-        <div #dropdown class="dropdown-content">
-          <div class="dropdown-column">
-            <h4 #dropdownHead>Systems</h4>
-            <a #dropdownbody href="#">Supression Systems</a>
-            <a #dropdownbody href="#">Sprinkler System</a>
-            <a #dropdownbody href="#">Hydrant System</a>
-            <a #dropdownbody href="#">Detection Systems</a>
-          </div>
-          <div class="dropdown-column">
-            <h4 #dropdownHead>Products</h4>
-            <a #dropdownbody href="#">Fire Extinguishers</a>
-            <a #dropdownbody href="#">Public Address</a>
-            <a #dropdownbody href="#">Fire Metal Doors</a>
-            <a #dropdownbody href="#">Water Level Detector</a>
-          </div>
-          <div class="dropdown-column">
-            <h4 #dropdownHead>Services</h4>
-            <a #dropdownbody href="#">AMC</a>
-            <a #dropdownbody href="#">Training</a>
-            <a #dropdownbody href="#">One-Time-Repair</a>
-            <a #dropdownbody href="#">Fire Audits</a>
-            <a #dropdownbody href="#">Fire Extinguisher Refilling & HPT</a>
-            <a #dropdownbody href="#">Licensing & Documentation</a>
-          </div>
-        </div>
+     <div class="navBar-menu-item">
+      <div #navBarMenuItem>
+        <a routerLink="/total-solutions" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
       </div>
-      
+    </div>
       <div class="navBar-menu-item">
         <div #navBarMenuItem>
-          <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
+          <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a>
         </div>
       </div>
     </div>
@@ -85,16 +83,16 @@
         <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
-        <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
+        <a routerLink="/total-solutions" routerLinkActive="active" ariaCurrentWhenActive="page">Solutions</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
-        <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
+        <a routerLink="/clients" routerLinkActive="active" ariaCurrentWhenActive="page">Clients</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
-        <a routerLink="/systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
+        <a routerLink="/total-systems" routerLinkActive="active" ariaCurrentWhenActive="page">Systems</a>
       </div>
       <div (click)="toggleMenu()" #navBarMobileMenuItem class="navBar-menu-item">
-        <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
+        <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact Us</a>
       </div>
     </div>
   </div>

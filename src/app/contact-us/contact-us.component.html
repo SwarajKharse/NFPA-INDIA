@@ -1,0 +1,37 @@
+<section class="body1">
+<div>
+    <img src="assets/Contact/CUSS.webp"
+         loading="lazy" sizes="100vw"
+         alt="" class="image-cu" />
+    <h1 class="heading-cu">Where<br /><span class="text-span-cu">to find us?</span></h1>
+</div>
+<div class="div-block-cu">
+    <div class="form-block-cu w-form">
+        <h1 class="form-heading-cu">Contact NFPA India today. <br />Our experts are here to help.<br /></h1>
+        <form id="wf-form-Contact-us-form" name="wf-form-Contact-us-form" method="post" action="http://localhost:3000/send-email" class="form-cu" (submit)="submitToAPI($event)">
+            <h1 class="form-heading2">Contact NFPA India today. Our experts are here to help.</h1>
+            <div class="form-row">
+              <input class="form-field w-input" maxlength="256" name="name" placeholder="Name" type="text" id="name" [(ngModel)]="name" required />
+              <input class="form-field w-input" maxlength="256" name="email" placeholder="Email" type="email" id="email" [(ngModel)]="email" required />
+            </div>
+            <input class="form-field message-box w-input" maxlength="256" name="message" placeholder="Enter your message here" type="text" id="message" [(ngModel)]="desc" required />
+            <textarea class="form-field interested-products w-input" name="interestedProducts" placeholder="Interested Products" id="interestedProducts" readonly></textarea>
+            <input type="submit" class="submit-button w-button" value="Submit" />
+          </form>
+        <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+    </div>
+</div>
+<div class="div-block-2-cu">
+    <h1 class="map-heading">RH-15, Sai Angan Society, Wadmukhwadi, Moshi, Pune-412105<br /></h1>
+    <div class="map-2 w-widget w-widget-map" data-widget-style="roadmap" data-widget-latlng=""
+         data-enable-scroll="true" role="region" title="" data-enable-touch="true" data-widget-zoom="12"
+         data-widget-tooltip="">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7560.663739768517!2d73.84618536977534!3d18.649097899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c7f5182c65ed%3A0x3f04da8452e92518!2s(NFPA%20INDIA%20PRIVATE%20LIMITED)%20National%20Fire%20Protection%20Armour%20(NFPA)!5e0!3m2!1sen!2sin!4v1720801298304!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+</section>

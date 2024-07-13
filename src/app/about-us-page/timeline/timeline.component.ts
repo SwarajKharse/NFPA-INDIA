@@ -131,16 +131,12 @@ export class TimelineComponent implements AfterViewInit{
       }, 500);
     });
 
-    // mainSwiper.on('loopFix', () => {
-    //   thumbsSwiperEl.slideNext();
-    // });
-
   }
 
   initializeSwipers() {
     this.thumbsSwiperEl = new Swiper(this.thumbsSwiper.nativeElement, {
       loop: true,
-      freeMode: true,
+      // freeMode: true,
       watchSlidesProgress: true,
       breakpoints: {
         577: {

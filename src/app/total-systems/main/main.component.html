@@ -1,0 +1,234 @@
+<section class="total-items">
+  <div class="carousel">
+    <p>PRODUCT <span style="color: #c1121f">&amp;</span> SERVICES</p>
+  </div>
+
+  <div class="tagline">Safeguarding Your world, One Solution at a time</div>
+
+  <div class="buttons">
+    <div class="btn" (click)="scrollToSystems()">
+      <img src="assets/P&S/systems_icon.png" alt="" class="icon" />
+      <div class="smallLine"></div>
+      <span class="name">Systems</span>
+    </div>
+
+    <div class="btn" (click)="scrollToProducts()">
+      <img src="assets/P&S/products_icon.png" alt="" class="icon" />
+      <div class="smallLine"></div>
+      <span class="name">Products</span>
+    </div>
+
+    <div class="btn" (click)="scrollToServices()">
+      <img src="assets/P&S/services_icon.png" alt="" class="icon" />
+      <div class="smallLine"></div>
+      <span class="name">Services</span>
+    </div>
+  </div>
+
+  <div class="search">
+    <img src="assets/P&S/search-icon.png" alt="" class="search-icon" />
+    <input
+      class="search-box"
+      type="search"
+      placeholder="Type to search.."
+      (input)="onSearchTermChanged($event)"
+      [value]="searchTerm"
+    />
+  </div>
+
+  <div class="searchSuggestions" *ngIf="suggestions.length > 0">
+    <a
+      class="suggestion"
+      *ngFor="let suggestion of suggestions"
+      [routerLink]="suggestion.link"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <img [src]="suggestion.image" alt="" />
+      <span>{{ suggestion.name }}</span>
+    </a>
+  </div>
+
+  <div class="label" #systemsSection>
+    <span class="label1">robust&nbsp;</span>
+    <span class="label2">Systems</span>
+  </div>
+
+  <!-- systems code final -->
+  <div class="sysContainer">
+    <div class="system" (click)="toggleExploreMore(0)">
+      <div class="systemHeading">Fire Supression System</div>
+      <div class="systemImg supression">
+        <p>
+          Discover industry-standard fire suppression systems for offices to
+          professional kitchens
+        </p>
+        <div id="exploreMore" [class.show]="showExploreMore[0]">
+          <a
+            routerLink="/total-systems/Suppression-System"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Explore More ></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="system" (click)="toggleExploreMore(1)">
+      <div class="systemHeading">Fire Hydrant System</div>
+      <div class="systemImg hydrant">
+        <p>
+          Discover industry-standard fire suppression systems for offices to
+          professional kitchens
+        </p>
+        <div id="exploreMore" [class.show]="showExploreMore[1]">
+          <a
+            routerLink="/total-systems/Hydrant-System"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Explore More ></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="system" (click)="toggleExploreMore(2)">
+      <div class="systemHeading">Fire Sprinkler System</div>
+      <div class="systemImg sprinkler">
+        <p>
+          Discover industry-standard fire suppression systems for offices to
+          professional kitchens
+        </p>
+        <div id="exploreMore" [class.show]="showExploreMore[2]">
+          <a
+            routerLink="/total-systems/Sprinkler-System"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Explore More ></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="system"
+      (click)="toggleExploreMore(3)"
+      style="margin-bottom: 0px"
+    >
+      <div class="systemHeading">Fire Detection System</div>
+      <div class="systemImg detection">
+        <p>
+          Discover industry-standard fire suppression systems for offices to
+          professional kitchens
+        </p>
+        <div id="exploreMore" [class.show]="showExploreMore[3]">
+          <a
+            routerLink="/total-systems/Detection-System"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Explore More ></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="label" #productsSection>
+    <span class="label1">explore our&nbsp;</span>
+    <span class="label2">Products</span>
+  </div>
+
+  <!-- products code final -->
+
+  <div class="productContainer">
+    <a class="product" routerLink="/total-systems/Extinguishers" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <img src="assets/P&S/fire-extinguishers3.webp" />
+      <span>Fire Extinguishers</span>
+    </a>
+
+    <a class="product" routerLink="/total-systems/Doors"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page">
+      <img src="assets/P&S/doors.webp" />
+      <span>Fire Metal Doors</span>
+    </a>
+
+    <a class="product" routerLink="/total-systems/Signs"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page">
+      <img src="assets/P&S/WLD.webp" />
+      <span>Fire Signages</span>
+    </a>
+
+    <a class="product" routerLink="/total-systems/PA"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page">
+      <img src="assets/P&S/PA.webp" width="480px" height="300px"/>
+      <span>Public Address</span>
+    </a>
+
+  </div>
+
+  <div class="label" #servicesSection>
+    <span class="label1">wide range of&nbsp;</span>
+    <span class="label2">Services</span>
+  </div>
+
+  <div class="serviceContainer">
+    <a
+      class="service amc"
+      routerLink="/total-systems/AMC"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <div class="service-content">AMC</div>
+    </a>
+
+    <a
+      class="service repair"
+      routerLink="/total-systems/Repair"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <div class="service-content">Repair</div>
+    </a>
+
+    <a
+      class="service audits"
+      routerLink="/total-systems/Audit"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <div class="service-content">Audits</div>
+    </a>
+
+    <a
+      class="service refill"
+      routerLink="/total-systems/Refill"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <div class="service-content">Fire Extinguisher Refilling & HPT</div>
+    </a>
+
+    <a
+      class="service training"
+      routerLink="/total-systems/Training"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <div class="service-content">Training</div>
+    </a>
+
+    <a
+      class="service licensing"
+      routerLink="/total-systems/Licensing"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+    >
+      <div class="service-content">Licensing</div>
+    </a>
+  </div>
+</section>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,63 @@
+<section>
+    <div class="div-block-6"><img
+                src="assets/products/redirects/FD2.webp"
+                loading="lazy" alt="" /></div>
+        <div class="img-grid-fd">
+            <div id="w-node-_57c9c7fb-ca14-8cb3-083e-b418c7c6148a-761fbe4d"
+                class="w-layout-layout quick-stack wf-layout-layout">
+                <div id="w-node-_1af00b0f-ecb4-ce6f-9630-03455c650b4e-761fbe4d" class="w-layout-cell cell"><img
+                        src="assets/products/redirects/FD1.webp"
+                        loading="lazy" sizes="(max-width: 522px) 100vw, 522px"
+                        alt="" class="image-3" /></div>
+                <div id="w-node-_792bef10-c71b-d407-f4f3-1f9453c1a26c-761fbe4d" class="w-layout-cell"><img
+                        src="assets/products/redirects/FD2.webp"
+                        loading="lazy" alt="" class="image-8" /></div>
+                <div id="w-node-bd244896-97c2-dccf-2fa8-2507c1d3d45f-761fbe4d" class="w-layout-cell cell"><img
+                        src="assets/products/redirects/FD3.webp"
+                        loading="lazy" alt="" class="image-2" /><img
+                        src="assets/products/redirects/FD4.webp"
+                        loading="lazy" alt="" class="image" /></div>
+                <div id="w-node-cbf8def2-0c6c-0b67-1219-3ba815a2a8a0-761fbe4d" class="w-layout-cell cell"><img
+                        src="assets/products/redirects/FD5.webp"
+                        loading="lazy" alt="" class="image-9" /></div>
+                <div id="w-node-d3d60c60-a515-b18c-1b6b-1283e398a9cb-761fbe4d" class="w-layout-cell"><img
+                        src="assets/products/redirects/FD6.webp"
+                        loading="lazy" alt="" class="image-7" /></div>
+            </div>
+            <h1 class="heading">Fire Doors</h1>
+        </div>
+        <div class="pr-slide">
+            <!-- <h3 class="heading-3">Types Of Extinguishers</h3> -->
+            <div *ngFor="let product of products">
+                <div class="div-block">
+                    <h2 class="heading-4">{{ product.name }}</h2>
+                    <h1 class="back-text">0{{ product.id }}</h1>
+                </div>
+                <div class="details-div">
+                    <div class="div-block-2"><img
+                            [src]="'assets/products/redirects/' + product.image"
+                            loading="lazy" width="320" height="470" alt="" class="image-4" /></div>
+                    <div class="div-block-3">
+                        <div class="text-block">Product Description</div>
+                        <p class="paragraph-2">{{ product.description }}</p>
+                        <div class="div-block-4" (click)="toggleAdditionalFeatures(product)">
+                            <div class="features-wrapper">
+                                <div class="features-block">Features</div>
+                                <div class="arrow-wrapper">
+                                    <img class="forward" src="assets/Common/Buttons/Forward.svg">
+                                </div>
+                            </div>
+                            <div class="additional-features" *ngIf="product.showFeatures">
+                                <ul>
+                                    <li *ngFor="let feature of product.features" [innerHTML]="feature"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="div-block-5"><button class="add-to-cart-button" (click)="addProductToCart(product.name)">
+                            <img src="assets/Common/Buttons/Box.svg" alt="" />
+                            Add To Cart For Enquiry</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

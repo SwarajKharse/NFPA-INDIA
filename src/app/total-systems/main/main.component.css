@@ -1,0 +1,2041 @@
+* {
+  /* box-sizing: border-box; */
+  overflow-x: hidden;
+}
+
+.total-items {
+  font-family: "Montserrat", sans-serif;
+  background-color: #171717;
+}
+
+.carousel {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(0, 0, 0, 0.95) 100%
+  ),  
+  url("/assets/P&S/p&s.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  color: white;
+  font-size: 60px;
+}
+
+
+.carousel p{
+  margin-right: 20px;
+  margin-bottom: 20px;
+  white-space: wrap;
+}
+
+.tagline{
+  width: 100vw;
+  height: 135px;
+  background-color: #FAA307;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 100px;
+  text-align: center;
+  padding: 5px;
+}
+
+.searchSuggestions a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.buttons .btn{
+  background-color: white;
+  border-radius: 20px;
+  width: 25%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons .btn img{
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  margin-left: 25px;
+}
+
+.buttons .smallLine{
+  width: 1px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0px 10px;
+}
+
+.buttons .btn span{
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.name {
+  color: rgb(0, 0, 0);
+}
+
+.buttons .btn:hover {
+  cursor: pointer;
+  background-color: #e4e4e4;
+}
+
+.search {
+  display: flex;
+  background: white;
+  width: 95vw;
+  height: 70px;
+  align-items: center;
+  border-radius: 0px;
+  margin: auto;
+}
+
+.searchSuggestions{
+  width: 95vw;
+  height: auto;
+  max-height: 350px; /* Set maximum height */
+  overflow-y: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  background-color: white;
+  margin-bottom: 140px;
+}
+
+.suggestion{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: #e5e5ef;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  width: 35vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.suggestion img{
+  width: 120px;
+  height: 80px;
+  border-radius: 20%;
+  margin-right: 24px;
+  margin-left: 10px;
+}
+
+.suggestion:hover{
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+
+.search .search-icon {
+  height: 30px;
+  width: 30px; 
+  padding-left: 35px;
+  padding-right: 30px;
+  opacity: 0.7;
+}
+
+.search-box {
+  background: white;
+  border: none;
+  outline: none;
+  font-family: 'Inter';
+  font-size: 24px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 65px;
+  width: 95vw;
+  margin: auto;
+  opacity: 0.8;
+}
+
+.search-box ::-webkit-input-placeholder {
+  color: black;
+}
+
+.search-box:focus {
+  border-color: #ea3a0d;
+}
+
+.label{
+  width: 95vw;
+  height: 70px;
+  margin-left: 25px;
+  margin-bottom: 24px;
+  margin-top: 140px;
+}
+
+.label1{
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+  opacity: 0.7;
+}
+
+
+.label2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+}
+
+.sysContainer {
+  height: auto;
+  width: auto;
+}
+
+.system {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 94px;
+  height: 95vh;
+}
+
+.systemHeading {
+  font-size: 28px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  width: 45vw;
+  height: 65px;
+  background-color: #c1121f;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+}
+
+.systemImg {
+  width: 85vw;
+  height: 80vh;
+  background-position: center;
+  background-size: contain;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 300;
+  position: relative;
+  transition: background 0.3s ease; /* Add transition property */
+}
+
+.system p {
+  padding: 5px;
+  text-align: center;
+}
+
+.supression{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/supression1200.webp");
+}
+
+
+.hydrant{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/hydrant1200.webp");
+}
+
+.sprinkler{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/sprinkler1200.webp");
+}
+
+.detection{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(255, 255, 255, 0.42) 60%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/detection1200.webp");
+
+
+}
+
+
+
+.supression:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 16, 16, 0.7) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/supression1200.webp");
+}
+
+.hydrant:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 16, 16, 0.7) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/hydrant1200.webp");
+
+}
+
+.sprinkler:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 16, 16, 0.7) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/sprinkler1200.webp");
+
+}
+
+.detection:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 16, 16, 0.7) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ),
+  url("/assets/P&S/system/detection1200.webp");
+
+}
+
+
+#exploreMore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20vw;
+  height: 78px;
+  background-color: rgba(82, 82, 82, 0.7);
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.systemImg:hover #exploreMore {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.systemImg #exploreMore a {
+  text-decoration: none;
+  color: white;
+}
+
+.systemImg:hover #exploreMore a {
+  text-decoration: none;
+  color: white;
+}
+
+.productContainer{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.productContainer > :nth-child(odd){
+  margin-left: 40px;
+}
+
+.productContainer>:nth-child(even){
+  margin-right: 40px;
+}
+
+.product{
+    /* width: 600px;
+    height: 550px; */
+    width: 40vw;
+    height: 72vh;
+    background-color: #d3d3d3;
+    color: #1f1f1f;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.productContainer > a:nth-child(-n+2) {
+  margin-bottom: 70px;
+}
+
+.product img{
+  display: block;
+  margin: auto;
+  width: 95%;
+  height: 85%;
+}
+
+.product span{
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.product:hover{
+  background-color: #FAA307;
+  text-decoration: underline;
+}
+
+
+.serviceContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Optional: gap between service items */
+  margin-bottom: 70px;
+  place-items: center;
+}
+
+.service {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 28vw;
+  height: 140px;
+  color: white;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden; /* Hide overflow to clip the zooming background */
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.service::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0; /* Ensure the background is behind the content */
+}
+
+.amc::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ), 
+  url('/assets/P&S/amc\ 1.webp');
+}
+
+.repair::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ), 
+  url('/assets/P&S/repair\ 1.png');
+}
+
+.audits::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ), 
+  url('/assets/P&S/audit\ 1.webp');
+}
+
+.refill::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ), 
+  url('/assets/P&S/refill\ 1.webp');
+
+}
+
+.training::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ), 
+  url('/assets/P&S/training\ 1.webp');
+
+}
+
+.licensing::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  ), 
+  url('/assets/P&S/licensing\ 1-1.webp');
+}
+
+.service:hover::before {
+  transform: scale(1.1); /* Adjust the scale as needed */
+}
+
+.service:hover{
+  text-decoration: underline;
+}
+
+.service-content {
+  position: relative;
+  z-index: 1; /* Ensure the text is above the background */
+  padding: 10px; /* Optional: add some padding */
+}
+
+@media (max-width: 1200px){
+  
+  .system{
+    height: 65vh;
+  }
+
+  .systemHeading{
+    font-size: 22px;
+    width: 65vw;
+    height: 55px;
+  }
+
+  .systemImg{
+    height: 58vh;
+    width: 90vw;
+  }
+
+  .system p{
+    font-size: 16px;
+    padding: 0px;
+  }
+
+  .carousel{
+    height: 80vh;
+    font-size: 55px;
+    background-size: contain;
+    justify-content: end;
+  }
+
+  .carousel p{
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tagline{
+    height: 100px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .carousel{
+    height: 70vh;
+    font-size: 45px;
+    background-size: contain;
+    justify-content: center;
+  }
+
+  .carousel p{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .tagline{
+    height: 90px;
+    font-size: 22px;
+  }
+
+  .buttons .btn{
+    width: 25%;
+    height: 55px;
+    margin: 2px;
+  }
+
+  .buttons .btn img{
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;  
+    margin-left: 15px;
+  }
+
+  .buttons .smallLine{
+    margin: 0 4px;
+    height: 32px;
+  }
+
+  .buttons .btn span{
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .search{
+    height: 60px;
+  }
+
+  .search .search-icon{
+    width: 25px;
+    height: 25px;
+    padding-left: 18px;
+    padding-right: 15px;
+  }
+
+  .search-box{
+    font-size: 20px;
+    height: 60px;
+  }
+
+  .label{
+    margin-left: 15px;
+  }
+
+  .label1{
+    font-size: 24px;
+  }
+
+  .label2{
+    font-size: 32px;
+  }
+
+  .system{
+    height: 58vh;
+  }
+
+  .systemHeading{
+    font-size: 18px;
+    width: 65vw;
+    height: 50px;
+  }
+
+  .systemImg{
+    height: 52vh;
+    width: 90vw;
+  }
+
+  .system p{
+    font-size: 16px;
+    padding: 0px;
+  }
+
+  .productContainer{
+    grid-template-columns: repeat(2,1fr) ;
+    }
+  
+  .product{
+      height: 50vh;
+    }
+  
+  .product span{
+      font-size: 20px;
+    }
+  
+  .productContainer > :nth-child(odd){
+      margin-left: 20px;
+    }
+    
+  .productContainer>:nth-child(even){
+      margin-right: 20px;
+    }
+  
+    .serviceContainer{
+      grid-template-columns: repeat(2,1fr);
+    }
+  
+    .service{
+      width: 45vw;
+      height: 145px;
+    }
+  
+    .service-content{
+      font-size: 16px;
+    }
+
+    .serviceContainer > :nth-child(odd){
+      margin-left: 20px;
+    }
+
+    .serviceContainer > :nth-child(even){
+      margin-right: 20px;
+    }
+
+    .searchSuggestions{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .suggestion{
+      width: 35vw;
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+  
+    .suggestion img{
+      width: 120px;
+      height: 80px;
+      margin-right: 22px;
+      margin-left: 10px;
+    }
+    .suggestion span{
+      font-size: 16px;
+    }
+
+      
+        /* ALL MARGINS */
+
+        .tagline{
+          margin-bottom: 110px;
+        }
+      
+        .buttons{
+          margin-bottom: 80px;
+        }
+      
+        .label{
+          margin-top: 130px;
+        }
+      
+        .searchSuggestions{
+          margin-bottom: 0px;
+        }
+      
+        .label{
+          margin-bottom: 24px;
+        }
+      
+        .productContainer > a:nth-child(-n+2) {
+          margin-bottom: 70px;
+        }
+
+        .system{
+          margin-bottom: 80px;
+        }
+
+          /* all images */
+  .supression{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression1024.webp");
+  }
+  
+  
+  .hydrant{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant1024.webp");
+  }
+  
+  .sprinkler{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler1024.webp");
+  }
+  
+  .detection{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection1024.webp");
+  
+  
+  }
+  
+  
+  
+  .supression:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression1024.webp");
+  }
+  
+  .hydrant:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant1024.webp");
+  
+  }
+  
+  .sprinkler:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler1024.webp");
+  
+  }
+  
+  .detection:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection1024.webp");
+  
+  }
+
+  #exploreMore {
+    width: 25vw; 
+    height: 60px;
+    font-size: 16px;
+  }
+
+  #exploreMore.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #exploreMore {
+    width: 30vw; 
+    height: 55px;
+    font-size: 16px;
+  }
+
+  #exploreMore.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .carousel{
+    height: 60vh;
+    font-size: 30px;
+    background-size: contain;
+    justify-content: center;
+  }
+
+  .carousel p{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .tagline{
+    height: 80px;
+    font-size: 18px;
+  }
+
+  
+        /* ALL MARGINS */
+
+        .tagline{
+          margin-bottom: 80px;
+        }
+      
+        .buttons{
+          margin-bottom: 80px;
+        }
+      
+        .label{
+          margin-top: 115px;
+        }
+      
+        .searchSuggestions{
+          margin-bottom: 0px;
+        }
+      
+        .label{
+          margin-bottom: 22px;
+        }
+      
+        .productContainer > a:nth-child(-n+2) {
+          margin-bottom: 60px;
+        }
+
+        .system{
+          margin-bottom: 65px;
+        }
+
+  .buttons .btn{
+    width: 28%;
+    height: 45px;
+    margin: 2px;
+  }
+
+  .buttons .btn img{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;  
+    margin-left: 15px;
+  }
+
+  .buttons .smallLine{
+    margin: 0 4px;
+    height: 24px;
+  }
+
+  .buttons .btn span{
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .search{
+    height: 55px;
+  }
+
+  .search .search-icon{
+    width: 20px;
+    height: 20px;
+    padding-left: 18px;
+    padding-right: 15px;
+  }
+
+  .search-box{
+    font-size: 18px;
+    height: 55px;
+  }
+
+  .label{
+    margin-left: 10px;
+  }
+
+  .label1{
+    font-size: 22px;
+  }
+
+  .label2{
+    font-size: 28px;
+  }
+
+  .system{
+    height: 46vh;
+  }
+
+  .systemHeading{
+    font-size: 16px;
+    width: 65vw;
+    height: 40px;
+  }
+
+  .systemImg{
+    height: 40vh;
+    width: 90vw;
+  }
+
+  .system p{
+    font-size: 14px;
+    padding: 0px;
+  }
+
+  .productContainer{
+    grid-template-columns: repeat(2,1fr) ;
+    }
+  
+  .product{
+      height: 40vh;
+    }
+  
+  .product span{
+      font-size: 18px;
+    }
+  
+  .productContainer > :nth-child(odd){
+      margin-left: 10px;
+    }
+    
+  .productContainer>:nth-child(even){
+      margin-right: 10px;
+    }
+
+    .serviceContainer{
+      grid-template-columns: repeat(2,1fr);
+    }
+  
+    .service{
+      width: 42vw;
+      height: 130px;
+    }
+  
+    .service-content{
+      font-size: 14px;
+    }
+
+    .serviceContainer > :nth-child(odd){
+      margin-left: 15px;
+    }
+
+    .serviceContainer > :nth-child(even){
+      margin-right: 15px;
+    }
+
+    .searchSuggestions{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .suggestion{
+      width: 90vw;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  
+    .suggestion img{
+      width: 100px;
+      height: 80px;
+      margin-right: 18px;
+      margin-left: 10px;
+    }
+    .suggestion span{
+      font-size: 16px;
+    }
+
+      /* all images */
+  .supression{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression768.webp");
+  }
+  
+  
+  .hydrant{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant768.webp");
+  }
+  
+  .sprinkler{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler768.webp");
+  }
+  
+  .detection{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection768.webp");
+  
+  
+  }
+  
+  
+  
+  .supression:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression768.webp");
+  }
+  
+  .hydrant:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant768.webp");
+  
+  }
+  
+  .sprinkler:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler768.webp");
+  
+  }
+  
+  .detection:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection768.webp");
+  
+  }
+}
+
+@media (max-width: 576px) {
+
+  
+  #exploreMore {
+    width: 40vw; 
+    height: 45px;
+    font-size: 16px;
+  }
+
+  #exploreMore.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .system{
+    margin-bottom: 55px;
+  }
+
+  .carousel{
+    height: 55vh;
+    font-size: 30px;
+    background-size: contain;
+    justify-content: center;
+  }
+
+  .carousel p{
+    margin-right: 0;
+  }
+
+  .tagline{
+    height: 70px;
+    font-size: 14px;
+  }
+
+  
+
+  .buttons .btn{
+    width: 28%;
+    height: 45px;
+    margin: 2px;
+  }
+
+  .buttons .btn img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;  
+    margin-left: 15px;
+  }
+
+  .buttons .smallLine{
+    margin: 0 4px;
+    height: 24px;
+  }
+
+  .buttons .btn span{
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .search{
+    height: 50px;
+  }
+
+  .search .search-icon{
+    width: 20px;
+    height: 20px;
+    padding-left: 18px;
+    padding-right: 15px;
+  }
+
+  .search-box{
+    font-size: 16px;
+    height: 50px;
+  }
+
+  .label{
+    margin-left: 10px;
+  }
+
+  .label1{
+    font-size: 18px;
+  }
+
+  .label2{
+    font-size: 22px;
+  }
+
+  .system{
+    height: 42vh;
+  }
+
+  .systemHeading{
+    font-size: 14px;
+    width: 65vw;
+    height: 40px;
+  }
+
+  .systemImg{
+    height: 36vh;
+    width: 90vw;
+  }
+
+  .system p{
+    font-size: 12px;
+    padding: 0px;
+
+  }
+
+  .productContainer{
+    grid-template-columns: repeat(1,1fr) ;
+    }
+  
+  .product{
+      width: 90vw;
+      height: 50vh;
+    }
+  
+  .product span{
+      font-size: 18px;
+    }
+  
+  .productContainer > :nth-child(odd){
+      margin-left: 0px;
+    }
+    
+  .productContainer>:nth-child(even){
+      margin-right: 0px;
+    }
+
+    .serviceContainer{
+      grid-template-columns: repeat(1,1fr);
+    }
+  
+    .service{
+      width: 85vw;
+      height: 130px;
+    }
+  
+    .service-content{
+      font-size: 14px;
+    }
+
+    .serviceContainer > :nth-child(odd){
+      margin-left: 0px;
+    }
+
+    .serviceContainer > :nth-child(even){
+      margin-right: 0px;
+    }
+
+    .searchSuggestions{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .suggestion{
+      width: 90vw;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  
+    .suggestion img{
+      width: 90px;
+      height: 60px;
+      margin-right: 18px;
+      margin-left: 10px;
+    }
+    .suggestion span{
+      font-size: 14px;
+    }
+
+        /* ALL MARGINS */
+
+        .tagline{
+          margin-bottom: 60px;
+        }
+      
+        .buttons{
+          margin-bottom: 60px;
+        }
+      
+        .label{
+          margin-top: 100px;
+        }
+      
+        .searchSuggestions{
+          margin-bottom: 0px;
+        }
+      
+        .label{
+          margin-bottom: 20px;
+        }
+      
+        .productContainer > a:nth-child(-n+3) {
+          margin-bottom: 60px;
+        }
+
+          /* all images */
+  .supression{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression576.webp");
+  }
+  
+  
+  .hydrant{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant576.webp");
+  }
+  
+  .sprinkler{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler576.webp");
+  }
+  
+  .detection{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection576.webp");
+  
+  
+  }
+  
+  
+  
+  .supression:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression576.webp");
+  }
+  
+  .hydrant:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant576.webp");
+  
+  }
+  
+  .sprinkler:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler576.webp");
+  
+  }
+  
+  .detection:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection576.webp");
+  
+  }
+}
+
+@media (max-width: 480px) {
+
+  #exploreMore {
+    width: 45vw; 
+    height: 40px;
+    font-size: 14px;
+  }
+
+  #exploreMore.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+    /* ALL MARGINS */
+
+    .tagline{
+      margin-bottom: 50px;
+    }
+  
+    .buttons{
+      margin-bottom: 50px;
+    }
+  
+    .label{
+      margin-top: 90px;
+    }
+  
+    .searchSuggestions{
+      margin-bottom: 0px;
+    }
+  
+    .label{
+      margin-bottom: 18px;
+    }
+    .system{
+      margin-bottom: 45px;
+    }
+  
+    .productContainer > a:nth-child(-n+3) {
+      margin-bottom: 50px;
+    }
+
+  .carousel{
+    height: 45vh;
+    font-size: 20px;
+    background-size: contain;
+    justify-content: center;
+  }
+
+  .carousel p {
+    margin-right: 0;
+  }
+
+  .tagline{
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .buttons .btn{
+    width: 28%;
+    height: 40px;
+    margin: 2px;
+  }
+
+  .buttons .btn img{
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;  
+    margin-left: 10px;
+  }
+
+  .buttons .smallLine{
+    margin: 0 1px;
+    height: 20px;
+  }
+
+  .buttons .btn span{
+    font-size: 12px;
+    margin-left: 10px;
+  }
+
+  .search{
+    height: 50px;
+  }
+
+  .search .search-icon{
+    width: 18px;
+    height: 18px;
+    padding-left: 18px;
+    padding-right: 15px;
+  }
+
+  .search-box{
+    font-size: 14px;
+    height: 50px;
+  }
+
+  .label{
+    margin-left: 10px;
+  }
+
+  .label1{
+    font-size: 18px;
+  }
+
+  .label2{
+    font-size: 22px;
+  }
+
+  .system{
+    height: 38vh;
+  }
+
+  .systemHeading{
+    font-size: 14px;
+    width: 65vw;
+    height: 40px;
+  }
+
+  .systemImg{
+    height: 32vh;
+    width: 90vw;
+  }
+
+  .system p{
+    font-size: 12px;
+    padding: 0px;
+
+  }
+
+  .productContainer{
+    grid-template-columns: repeat(1,1fr) ;
+    }
+  
+    .product{
+      width: 90vw;
+      height: 45vh;
+    }
+  
+    .product span{
+      font-size: 16px;
+    }
+  
+    .productContainer > :nth-child(odd){
+      margin-left: 0px;
+    }
+    
+    .productContainer>:nth-child(even){
+      margin-right: 0px;
+    }
+
+    .serviceContainer{
+      grid-template-columns: repeat(1,1fr);
+    }
+  
+    .service{
+      width: 85vw;
+      height: 130px;
+    }
+  
+    .service-content{
+      font-size: 14px;
+    }
+
+    .serviceContainer > :nth-child(odd){
+      margin-left: 0px;
+    }
+
+    .serviceContainer > :nth-child(even){
+      margin-right: 0px;
+    }
+
+    .searchSuggestions{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .suggestion{
+      width: 90vw;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  
+    .suggestion img{
+      width: 80px;
+      height: 60px;
+      margin-right: 16px;
+      margin-left: 10px;
+    }
+    .suggestion span{
+      font-size: 12px;
+    }
+  
+      /* all images */
+  .supression{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression480.webp");
+  }
+  
+  
+  .hydrant{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant480.webp");
+  }
+  
+  .sprinkler{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler480.webp");
+  }
+  
+  .detection{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection480.webp");
+  
+  
+  }
+  
+  
+  
+  .supression:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression480.webp");
+  }
+  
+  .hydrant:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant480.webp");
+  
+  }
+  
+  .sprinkler:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler480.webp");
+  
+  }
+  
+  .detection:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection480.webp");
+  
+  }
+
+}
+
+@media (max-width: 376px){
+
+  #exploreMore {
+    width: 40vw; 
+    height: 30px;
+    font-size: 14px;
+  }
+
+  #exploreMore.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  /* ALL MARGINS */
+
+  .tagline{
+    margin-bottom: 40px;
+  }
+
+  .buttons{
+    margin-bottom: 40px;
+  }
+
+  .label{
+    margin-top: 80px;
+  }
+
+  .searchSuggestions{
+    margin-bottom: 0px;
+  }
+
+  .label{
+    margin-bottom: 16px;
+  }
+
+  .system{
+    margin-bottom: 40px;
+  }
+
+  .productContainer > a:nth-child(-n+3) {
+    margin-bottom: 40px;
+  }
+
+
+  .buttons .btn{
+    width: 105px;
+    height: 40px;
+    margin: 2px;
+  }
+
+  .buttons .btn img{
+    width: 15px;
+    height: 15px;
+    margin-right: 7px;
+    margin-left: 10px;
+  }
+
+  .buttons .smallLine{
+    margin-left: 1px;
+    height: 20px;
+  }
+
+  .buttons .btn span{
+    font-size: 10px;
+    margin-left: 10px;
+  }
+
+  
+  .search{
+    height: 45px;
+  }
+
+  .search .search-icon{
+    width: 15px;
+    height: 15px;
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+
+  .search-box{
+    font-size: 12px;
+    height: 45px;
+  }
+
+  .label{
+    margin-left: 10px;
+  }
+
+  .label1{
+    font-size: 15px;
+  }
+
+  .label2{
+    font-size: 18px;
+  }
+
+  .system{
+    height: 35vh;
+  }
+
+  .systemHeading{
+    font-size: 12px;
+    width: 65vw;
+    height: 40px;
+  }
+
+  .systemImg{
+    height: 28vh;
+    width: 90vw;
+  }
+
+  .system p{
+    font-size: 10px;
+    padding: 0px;
+  }
+
+  .productContainer{
+  grid-template-columns: repeat(1,1fr) ;
+
+  }
+
+  .product{
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .product span{
+    font-size: 14px;
+  }
+
+  .productContainer > :nth-child(odd){
+    margin-left: 0px;
+  }
+  
+  .productContainer>:nth-child(even){
+    margin-right: 0px;
+  }
+
+  .serviceContainer{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .service{
+    width: 80vw;
+    height: 120px;
+  }
+
+  .service-content{
+    font-size: 12px;
+  }
+
+  .serviceContainer > :nth-child(odd){
+    margin-left: 0px;
+  }
+
+  .serviceContainer > :nth-child(even){
+    margin-right: 0px;
+  }
+
+  .carousel{
+    height: 40vh;
+    font-size: 20px;
+    background-size: contain;
+    justify-content: center;
+  }
+
+  .carousel p {
+    margin-right: 0;
+  }
+
+  .tagline{
+    height: 60px;
+    font-size: 12px;
+  }
+
+  /* all images */
+  .supression{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression376.webp");
+  }
+  
+  
+  .hydrant{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant376.webp");
+  }
+  
+  .sprinkler{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler376.webp");
+  }
+  
+  .detection{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(255, 255, 255, 0.42) 60%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection376.webp");
+  
+  }
+  
+  
+  
+  .supression:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/supression376.webp");
+  }
+  
+  .hydrant:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/hydrant376.webp");
+  
+  }
+  
+  .sprinkler:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/sprinkler376.webp");
+  
+  }
+  
+  .detection:hover {
+    background: linear-gradient(
+      to bottom,
+      rgba(16, 16, 16, 0.7) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/assets/P&S/system/detection376.webp");
+  
+  }
+  
+
+}
+
+@media (max-width: 320px) {
+  .buttons .btn{
+    width: 100px;
+    height: 40px;
+    margin: 2px;
+  }
+
+  .buttons .btn img{
+    width: 15px;
+    height: 15px;
+    margin-right: 7px;
+    margin-left: 10px;
+  }
+
+  .buttons .smallLine{
+    margin-left: 1px;
+    height: 20px;
+  }
+
+  .buttons .btn span{
+    font-size: 10px;
+    margin-left: 10px;
+  }
+
+  .hero-main::before {
+    height: 70vh;
+    background-size: contain;
+  }
+
+  .main-heading .ps-heading {
+    font-size: 15px;
+  }
+
+  .main .and{
+    font-size: 15px;
+  }
+
+  .main-heading .ps-heading1 {
+    font-size: 15px;
+  }
+
+}
+
+
+
+
+
+
