@@ -227,6 +227,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    padding: 5px 0;
     transition: background-color 0.3s ease; /* Added transition property */
 }
 
@@ -299,16 +300,6 @@
     .timelineCont .swiper-container.timelineThumbsSwiper .swiper-slide .timeline-year {
         margin-bottom: 0;
         font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 767px){
-    .swiper-container.timelineMainSwiper, .swiper-container.timelineThumbsSwiper {
-        display: flex;
-    }
-    
-    .swiper-wrapper.timelineMainWrapper, .swiper-wrapper.timelineThumbsWrapper{
-        display: flex;
     }
 }
 

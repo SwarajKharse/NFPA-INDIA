@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DocumentData } from '@angular/fire/firestore';
 import { Observable, Subject, catchError, of } from 'rxjs';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { ServicesRedirectComponent } from '../amc/services-redirect.component';
 import { FireAuditComponent } from '../fire-audit/fire-audit.component';
@@ -17,11 +17,10 @@ import { LicensingComponent } from '../licensing/licensing.component';
 import { RepairComponent } from '../repair/repair.component';
 import { TrainingComponent } from '../training/training.component';
 
-
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, ServicesRedirectComponent, FireAuditComponent, FireDetectionSystemComponent, FireExtinguisherRefillingComponent, FireHydrantSystemComponent, FireSprinklerSystemComponent, FireSuppressionSystemComponent, HydraulicPressureTestingComponent, LicensingComponent, RepairComponent, TrainingComponent, HttpClientModule],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, ServicesRedirectComponent, FireAuditComponent, FireDetectionSystemComponent, FireExtinguisherRefillingComponent, FireHydrantSystemComponent, FireSprinklerSystemComponent, FireSuppressionSystemComponent, HydraulicPressureTestingComponent, LicensingComponent, RepairComponent, TrainingComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
