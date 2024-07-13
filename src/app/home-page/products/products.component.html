@@ -7,40 +7,48 @@
         <div #mySwiper class="mySwiper swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" #prods>
-                    <div class="product-card extinguisher">
-                        <div class="image-wrapper">
-                            <img src="assets/Home/Products/extinguisher.webp" alt="Product Image">
+                    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <div class="product-card extinguisher">
+                            <div class="image-wrapper">
+                                <img src="assets/Home/Products/extinguisher.webp" alt="Product Image">
+                            </div>
+                            <div class="product-overlay"></div>
+                            <div class="product-title">Fire Extinguisher</div>
                         </div>
-                        <div class="product-overlay"></div>
-                        <div class="product-title">Fire Extinguisher</div>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide" #prods>
-                    <div class="product-card sprinkler">
-                        <div class="image-wrapper">
-                            <img src="assets/Home/Products/sprinkler.webp" alt="Product Image">
+                    <a routerLink="/clients" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <div class="product-card sprinkler">
+                            <div class="image-wrapper">
+                                <img src="assets/Home/Products/sprinkler.webp" alt="Product Image">
+                            </div>
+                            <div class="product-overlay"></div>
+                            <div class="product-title">Fire Sprinkler System</div>
                         </div>
-                        <div class="product-overlay"></div>
-                        <div class="product-title">Fire Sprinkler System</div>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide" #prods>
-                    <div class="product-card detection">
-                        <div class="image-wrapper">
-                            <img src="assets/Home/Products/detection.webp" alt="Product Image">
+                    <a routerLink="/detection" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <div class="product-card detection">
+                            <div class="image-wrapper">
+                                <img src="assets/Home/Products/detection.webp" alt="Product Image">
+                            </div>
+                            <div class="product-overlay"></div>
+                            <div class="product-title">Fire Detection System</div>
                         </div>
-                        <div class="product-overlay"></div>
-                        <div class="product-title">Fire Detection System</div>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide" #prods>
-                    <div class="product-card hydrant">
-                        <div class="image-wrapper">
-                            <img src="assets/Home/Products/hydrant.webp" alt="Product Image">
+                    <a routerLink="/hydrant" routerLinkActive="active" ariaCurrentWhenActive="page">
+                        <div class="product-card hydrant">
+                            <div class="image-wrapper">
+                                <img src="assets/Home/Products/hydrant.webp" alt="Product Image">
+                            </div>
+                            <div class="product-overlay"></div>
+                            <div class="product-title">Fire Hydrant System</div>
                         </div>
-                        <div class="product-overlay"></div>
-                        <div class="product-title">Fire Hydrant System</div>
-                    </div>
+                    </a>
                 </div>
             </div>
             
@@ -49,6 +57,6 @@
         </div>
     </div>
     <div #link class="all-products-link">
-        <a routerLink="/total-systems">View All Products</a>
+        <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">View All Products</a>
     </div>
 </div>

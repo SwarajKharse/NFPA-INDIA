@@ -70,16 +70,6 @@ export class OurTeamComponent implements AfterViewInit{
 
   initializeSwiper(): void {
 
-    // this.thumbsSwiper = new Swiper(this.teamsThumbsSelector.nativeElement, {
-    //   // modules: [Thumbs, Navigation],
-    //   loop: true,
-    //   freeMode: true,
-    //   watchSlidesProgress: true,
-    //   direction: 'vertical',
-    //   slidesPerView: 3,
-    //   speed: 1000,
-    // });
-
     this.mainSwiper = new Swiper(this.teamsSwiperSelector.nativeElement, {
       modules: [Navigation],
       loop: true,
@@ -93,9 +83,6 @@ export class OurTeamComponent implements AfterViewInit{
         prevEl: '.swiper-button-prev'
       },
       slidesPerView: 1,
-      // thumbs: {
-      //   swiper: this.thumbsSwiper
-      // },
       effect: 'coverflow',
     });
   }

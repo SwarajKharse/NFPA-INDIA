@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, ViewChildren, QueryList } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import { gsap } from 'gsap';
@@ -9,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-our-services',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './our-services.component.html',
   styleUrl: './our-services.component.css',
 })
@@ -81,7 +82,7 @@ export class OurServicesComponent implements AfterViewInit {
     this.swiperInstance = new Swiper(this.mySwiper.nativeElement, {
       loop: true,
       autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
       },
       speed: 1000,
@@ -94,11 +95,9 @@ export class OurServicesComponent implements AfterViewInit {
       breakpoints: {
         0: {
           slidesPerView: 1,
-          // spaceBetween: 10,
         },
         768: {
           slidesPerView: 3,
-          // spaceBetween: 30,
         }
       },
       effect: 'coverflow',
@@ -111,5 +110,4 @@ export class OurServicesComponent implements AfterViewInit {
       }
     });
   }
-
 }

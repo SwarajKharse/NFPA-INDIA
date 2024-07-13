@@ -1,4 +1,5 @@
 import { Component, ElementRef, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
@@ -10,7 +11,7 @@ import { Navigation } from 'swiper/modules';
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -90,7 +91,7 @@ export class ProductsComponent implements AfterViewInit{
       modules: [Navigation],
       loop: true,
       autoplay: {
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
       },
       speed: 1000,

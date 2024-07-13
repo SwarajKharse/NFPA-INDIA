@@ -53,12 +53,11 @@ export class CarouselComponent implements AfterViewInit {
       modules: [Autoplay, EffectCoverflow],
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false
       },
       speed: 1000,
       effect: 'coverflow',
     });
   }
-
 }

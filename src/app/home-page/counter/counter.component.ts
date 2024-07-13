@@ -71,11 +71,6 @@ export class CounterComponent implements AfterViewInit{
   animateValues() {
     const tl = gsap.timeline();
 
-    // tl.to(this.valueDisplays.map((el) => el.nativeElement), {
-    //   opacity: 1,
-    //   duration: 0
-    // });
-  
     this.valueDisplays.forEach((valueDisplayRef) => {
       const valueDisplay: HTMLElement = valueDisplayRef.nativeElement;
       const endValue = parseInt(valueDisplay.getAttribute("data-val") || '0', 10);
@@ -98,5 +93,4 @@ export class CounterComponent implements AfterViewInit{
   
     return tl;
   }
-  
 }
