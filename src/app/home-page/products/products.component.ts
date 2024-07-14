@@ -51,7 +51,7 @@ export class ProductsComponent implements AfterViewInit{
       title, { 
         opacity: 0, 
         x: 100,
-        duration: 1, 
+        duration: 0.5,
         stagger: 0.25 
     });
 
@@ -64,7 +64,7 @@ export class ProductsComponent implements AfterViewInit{
         opacity: 0,
         scale: 0.5,
         x: -200,
-        duration: 1.2,
+        duration: 0.8,
         stagger: 0.3
     });
 
@@ -73,16 +73,16 @@ export class ProductsComponent implements AfterViewInit{
         opacity: 0,
         scale: 0.5,
         x: -200,
-        duration: 0.7,
-        stagger: 0.3
-    }, '-=0.5');
+        duration: 0.5,
+        stagger: 0.25
+    }, '-=0.3');
 
     tl.from(
       link, { 
         opacity: 0,
         y: 100,
-        duration: 0.8
-    }, '-=0.6');
+        duration: 0.4
+    }, '-=0.3');
       
   }
 

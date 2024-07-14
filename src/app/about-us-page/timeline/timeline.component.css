@@ -317,6 +317,11 @@
         --swiper-navigation-top-offset: 60%;
     }
 
+    .timelineCont .swiper-container.timelineMainSwiper,
+    .swiper-container.timelineMainSwiper .swiper-wrapper.timelineMainWrapper{
+        display: flex;
+    }
+
     .timelineCont .swiper-container.timelineMainSwiper .swiper-slide-content {
         left: 13%;
         top: 40%;
@@ -389,6 +394,9 @@
         transform: translateX(-50%);
     }
 
+    .timelineCont .timelineThumbsSwiper .swiper-slide.thumbs-slide span{
+        text-wrap: nowrap;
+    }
 }
 
 @media screen and (max-width: 426px){

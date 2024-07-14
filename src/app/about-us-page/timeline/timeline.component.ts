@@ -38,9 +38,7 @@ export class TimelineComponent implements AfterViewInit{
   private thumbsSwiperEl!: Swiper;
   private mainSwiper!: Swiper;
 
-  constructor() { 
-    // SwiperCore.use([Navigation]);
-  }
+  constructor() {}
 
   ngAfterViewInit(): void {
 
@@ -75,17 +73,17 @@ export class TimelineComponent implements AfterViewInit{
         ease: "power2.inOut"
       }, "-=0.2"
     )
-    .fromTo(sliderText,
-      { opacity: 0, x: -200 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        stagger: 0.3,
-        ease: "power2.inOut"
-      },
-      "-=1" // Start this animation 1.5 seconds before the previous one ends
-    )
+    // .fromTo(sliderText,
+    //   { opacity: 0, x: -200 },
+    //   {
+    //     opacity: 1,
+    //     x: 0,
+    //     duration: 1,
+    //     stagger: 0.3,
+    //     ease: "power2.inOut"
+    //   },
+    //   "-=1" // Start this animation 1.5 seconds before the previous one ends
+    // )
     .fromTo(wrapperLine,
       { opacity: 0 },
       {
@@ -107,26 +105,13 @@ export class TimelineComponent implements AfterViewInit{
         ease: "power2.inOut"
       },
       "-=0.7" // Start this animation 0.5 seconds before the previous one ends
-    )
-    .fromTo(buttons,
-      { opacity: 0, x: -200 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.5,
-        stagger: 0.2,
-        ease: "power2.inOut"
-      },
-      "-=0.5" // Start this animation 0.5 seconds before the previous one ends
     );
 
     // Initial check on component load
     // this.checkWindowWidth();
 
     this.mainSwiper.on('slideChange', () => {
-      // const activeIndex = mainSwiper.activeIndex;
       setTimeout(() => {
-        // thumbsSwiperEl.slideTo(activeIndex);
         this.thumbsSwiperEl.slideNext();
       }, 500);
     });

@@ -118,6 +118,9 @@
     .vision{
         transform: translateY(-80%);
     }
+    .counter{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 576px) {
