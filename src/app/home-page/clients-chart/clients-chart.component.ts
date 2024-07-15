@@ -76,6 +76,24 @@ export class ClientsChartComponent implements AfterViewInit{
                     weight: 300
                   }
                 }
+              },
+              tooltip: {
+                enabled: true,
+                callbacks: {
+                  label: function(this: any, tooltipItem: any) {
+                    // Accessing the chart instance via 'this.chart'
+                    const chart = this.chart;
+                    const dataIndex = tooltipItem.dataIndex;
+                    const datasetIndex = tooltipItem.datasetIndex;
+              
+                    // Retrieving the label and data value using the indices
+                    const label = chart.data.labels[dataIndex];
+                    const value = chart.data.datasets[datasetIndex].data[dataIndex];
+              
+                    // Constructing the label string with a '%' sign
+                    return `${label}: ${Math.round(value)}%`;
+                  }
+                }
               }
             },
             animation: {

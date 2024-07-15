@@ -1,4 +1,4 @@
-.main-container{
+.whyUsContainer{
     width: 99%;
     height: auto;
     display: flex;
@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 
-.content{
+.whyUsContent{
     width: 60%;
     height: 100%;
     display: flex;
@@ -27,7 +27,7 @@
     color: white;
 }
 
-.content h3{
+.whyUsContent h3{
     width: 100%;
     font-family: "Inter", sans-serif;
     font-size: 28px;
@@ -53,7 +53,7 @@
     color: white;
 }
 
-.content h2{
+.whyUsContent h2{
     width: 100%;
     font-family: "Inter", sans-serif;
     font-size: 28px;
@@ -65,7 +65,7 @@
     text-align: left;
 }
 
-.content p{
+.whyUsContent .description{
     width: 100%;
     font-family: "Inter", sans-serif;
     font-size: 18px;
@@ -76,6 +76,12 @@
     line-height: 24px;
     text-align: justify;
 }
+
+.whyUsContent .description .desc{
+    margin: 0;
+    padding: 0;
+}
+
 
 .img-container{
     width: 40%;
@@ -113,15 +119,15 @@
 }
 
 @media screen and (max-width: 1024px){
-    .main-container{
+    .whyUsContainer{
         height: auto;
     }
 
-    .content{
+    .whyUsContent{
         padding: 0 20px 0 40px;
     }
 
-    .content h3{
+    .whyUsContent h3{
         font-size: 22px;
     }
 
@@ -129,11 +135,11 @@
         height: 16px;
     }
 
-    .content h2{
+    .whyUsContent h2{
         font-size: 22px;
     }
 
-    .content p{
+    .whyUsContent .description{
         font-size: 14px;
         line-height: 22px;
     }
@@ -156,7 +162,7 @@
 
 @media screen and (max-width: 768px){
 
-    .content{
+    .whyUsContent{
         padding: 0 16px 0 32px;
     }
 
@@ -164,15 +170,15 @@
         height: 12px;
     }
 
-    .content h3{
+    .whyUsContent h3{
         font-size: 18px;
     }
 
-    .content h2{
+    .whyUsContent h2{
         font-size: 18px;
     }
 
-    .content p{
+    .whyUsContent .description{
         font-size: 12px;
         line-height: 20px;
     }
@@ -193,7 +199,7 @@
 }
 
 @media screen and (max-width: 576px){
-    .main-container{
+    .whyUsContainer{
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
@@ -204,7 +210,7 @@
         position: relative;
     }
 
-    .content{
+    .whyUsContent{
         width: 90%;
         height: auto;
         padding: 0 25px;
@@ -217,14 +223,14 @@
         padding-bottom: 25px;
     }
 
-    .content h3{
+    .whyUsContent h3{
         width: 100%;
         text-align: center;
         padding-bottom: 15px;
         border-bottom: 1px solid #1d1d1d;
     }
 
-    .content h2{
+    .whyUsContent h2{
         width: 100%;
         color: black;
         text-align: center;
@@ -238,7 +244,7 @@
         height: 10px;
     }
 
-    .content p{
+    .whyUsContent .description{
         width: 100%;
         color: black;
     }
@@ -271,36 +277,65 @@
     }
 }
 
-@media screen and (max-width: 426px){
+@media screen and (max-width: 527px){
+    .whyUsContent{
+        margin-top: 100px;
+        padding-top: 100px;
+    }
+}
 
-    .content{
+@media screen and (max-width: 487px){
+    .whyUsContent{
         margin-top: 90px;
         padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 457px){
+    .whyUsContent{
+        margin-top: 80px;
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 426px){
+
+    .whyUsContent{
+        margin-top: 75px;
+        padding-top: 75px;
     }
 
     .br-wrapper {
         height: 8px;
     }
 
-    .content h3{
+    .whyUsContent h3{
         font-size: 16px;
     }
 
-    .content h2{
+    .whyUsContent h2{
         font-size: 16px;
     }
 
-    .content p{
+    .whyUsContent .description{
         font-size: 10px;
         line-height: 18px;
     }
 }
 
+@media screen and (max-width: 395px){
+
+    .whyUsContent{
+        margin-top: 70px;
+        padding-top: 70px;
+    }
+}
+
 @media screen and (max-width: 376px){
-    .content{
+    .whyUsContent{
         width: 86%;
-        margin-top: 75px;
-        padding-top: 80px;
+        margin-top: 65px;
+        padding-top: 65px;
     }
     .br-wrapper {
         height: 6px;
@@ -308,24 +343,24 @@
 }
 
 @media screen and (max-width: 321px){
-    .content{
-        margin-top: 60px;
-        padding-top: 70px;
+    .whyUsContent{
+        margin-top: 55px;
+        padding-top: 55px;
     }
 
     .br-wrapper {
         height: 4px;
     }
 
-    .content h3{
+    .whyUsContent h3{
         font-size: 14px;
     }
 
-    .content h2{
+    .whyUsContent h2{
         font-size: 14px;
     }
 
-    .content p{
+    .whyUsContent .description{
         font-size: 8px;
         line-height: 16px;
     }
