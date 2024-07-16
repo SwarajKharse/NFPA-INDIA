@@ -3,7 +3,10 @@ import { CartService } from '../cartService/cart.services';
 
 // For swiper
 import Swiper from 'swiper';
+import SwiperCore from 'swiper';
 import 'swiper/swiper-bundle.css';
+import { Navigation, Pagination, Thumbs, Autoplay } from 'swiper/modules';
+SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay]);
 
 // For Animation
 import { gsap } from 'gsap';
