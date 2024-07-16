@@ -212,10 +212,13 @@ swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
     border-radius: 50px;
 }
 
-/* .mySwiper swiper-slide img:hover {
-    background-color: black;
-    opacity: 0.4;
-} */
+.mySwiper.system-swiper .swiper-wrapper {
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+    transform: translate3d(0px, 0px, 0px);
+}
 
 .mySwiper2.system-swiper2 {
     /* padding: 10px 0; */
@@ -227,12 +230,6 @@ swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
     height: 475px;
     width: 400px;
     gap: 5px;
-}
-
-.mySwiper.system-swiper .swiper-wrapper {
-    height: 475px;
-    overflow: hidden;
-    display: flex;
 }
 
 .mySwiper2.system-swiper2 swiper-slide, .mySwiper2.system-swiper2 .swiper-slide{
