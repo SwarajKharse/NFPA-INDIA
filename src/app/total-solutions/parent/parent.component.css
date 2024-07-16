@@ -115,6 +115,66 @@ section {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
+/* Base styles (as provided) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: #222;
+    width: 330px;
+    height: 330px;
+    margin: 10px;
+}
+
+/* Other styles remain the same */
+
+/* Media query for screens between 500px and 740px */
+@media screen and (min-width: 630px) and (max-width: 740px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-bottom: 80px;
+    }
+
+    .image-container {
+        width: 280px;
+        height: 280px;
+        margin: 8px;
+    }
+}
+
+/* Media query for screens smaller than 500px */
+/* @media screen and (max-width: 499px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 60px;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 5px 0;
+    }
+} */
+
 .image-container h3 {
     position: absolute;
     bottom: 10px;
