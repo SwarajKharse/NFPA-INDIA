@@ -2468,7 +2468,14 @@ html {
     width: 320px;
     min-width: 320px;
     height: 470px;
-    min-height: 470px;
+    /* min-height: 470px; */
+  }
+
+  .image-4-ps {
+    width: 320px;
+    min-width: 320px;
+    height: 245px;
+    /* min-height: 470px; */
   }
   
   .div-block-2 {
@@ -2716,6 +2723,13 @@ html {
       height: 350px;
       min-height: 350px;
     }
+
+    .image-4-ps {
+      width: 250px;
+      min-width: 250px;
+      height: 200px;
+      /* min-height: 350px; */
+    }
   
     .div-block-3 {
       padding-top: 15px;
@@ -2916,6 +2930,13 @@ html {
       height: 320px;
       min-height: 320px;
     }
+
+    .image-4-ps {
+      width: 220px;
+      min-width: 220px;
+      height: 180px;
+      /* min-height: 320px; */
+    }
   
     .text-block {
       font-size: 16px;
@@ -3076,6 +3097,13 @@ html {
     }
   
     .image-4 {
+      width: 50px;
+      min-width: 150px;
+      height: auto;
+      min-height: auto;
+    }
+
+    .image-4-ps {
       width: 50px;
       min-width: 150px;
       height: auto;
