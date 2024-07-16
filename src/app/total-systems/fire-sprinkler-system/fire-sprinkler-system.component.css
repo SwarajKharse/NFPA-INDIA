@@ -215,8 +215,6 @@ swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
     gap: 10px;
     display: flex;
     overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
     transform: translate3d(0px, 0px, 0px);
 }
 
