@@ -2,6 +2,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../cartService/cart.services'; // Correct path to the service
 
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  showFeatures: boolean;
+  features: string[];
+  addedToCart?: boolean;
+}
 
 @Component({
   selector: 'app-fire-ex',
@@ -23,7 +32,8 @@ export class FireExComponent {
         'Suitable to fight all three classes of fire (A, B, & C), hence known as a multipurpose fire extinguisher',
         'Also available in stainless steel',
         '<b>Ideal uses:</b> homes, offices, shops, warehouses, farms, and woodworking areas'
-      ]
+      ],
+      addedToCart: false
     },
     {
       id: 2,
@@ -38,7 +48,8 @@ export class FireExComponent {
         'Effective for Class B and C flammable liquids and is electrically non-conductive',
         'Carbon Dioxide is a clean, non-contaminating, odorless gas',
         '<b>Ideal uses:</b> Chemical and manufacturing plants, oil rigs, rail yards, warehouses, construction sites, parking garages, airport ramps, boat docks, and large laboratories.'
-      ]
+      ],
+      addedToCart: false
     },
     {
       id: 3,
@@ -51,7 +62,8 @@ export class FireExComponent {
         'Suitable for Class A fires',
         'Environmentally friendly and leaves no chemical residue',
         '<b>Ideal uses:</b> Schools, Theatres, Department & retail stores'
-      ]
+      ],
+      addedToCart: false
     },
     {
       id: 4,
@@ -64,7 +76,8 @@ export class FireExComponent {
         'Suitable for Class A and Class B fires',
         'Forms a blanket over the fire to smother flames and cool the burning material',
         '<b>Ideal uses:</b> Oil & fuel warehouses, Fuel Pumps, Factories etc.'
-      ]
+      ],
+      addedToCart: false
     },
     {
       id: 5,
@@ -78,7 +91,8 @@ export class FireExComponent {
         'Forms a soapy layer to smother and cool the fire',
         'Essential for commercial kitchens and food service areas',
         'Also suitable for Class A fires involving solid combustibles'
-      ]
+      ],
+      addedToCart: false
     }
   ];
 
@@ -88,8 +102,11 @@ export class FireExComponent {
 
   constructor(private cartService: CartService) {}
 
-  addProductToCart(productName: string) {
-    this.cartService.addProduct(productName);
-    console.log('Products in cart:', this.cartService.getProducts());
+  addProductToCart(product: Product) {
+    if (!product.addedToCart) {
+      this.cartService.addProduct(product.name);
+      product.addedToCart = true;
+      console.log('Products in cart:', this.cartService.getProducts());
+    }
   }
 }
