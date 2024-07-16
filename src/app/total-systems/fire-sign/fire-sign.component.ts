@@ -2,6 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../cartService/cart.services'; // Correct path to the service
 
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  showFeatures: boolean;
+  features: string[];
+  addedToCart?: boolean;
+}
+
 @Component({
   selector: 'app-fire-sign',
   standalone: true,
@@ -23,7 +33,8 @@ export class FireSignComponent {
         'Strategically placed for maximum visibility',
         'Enhances safety and preparedness during emergencies',
         'Conforms to safety regulations and standards'
-      ]
+      ],
+      addedToCart: false
     }
   ];
 
@@ -33,8 +44,11 @@ export class FireSignComponent {
   
   constructor(private cartService: CartService) {}
 
-  addProductToCart(productName: string) {
-    this.cartService.addProduct(productName);
-    console.log('Products in cart:', this.cartService.getProducts());
+  addProductToCart(product: Product) {
+    if (!product.addedToCart) {
+      this.cartService.addProduct(product.name);
+      product.addedToCart = true;
+      console.log('Products in cart:', this.cartService.getProducts());
+    }
   }
 }
