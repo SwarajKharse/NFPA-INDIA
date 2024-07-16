@@ -116,7 +116,14 @@ html {
   
   .image-cu {
     width: 100%;
-    max-width: none;
+    /* max-width: none;
+    content: "";
+    position: absolute; */
+    /* top: 0;
+    left: 0;
+    width: 100%; */
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1));
   }
   
   .heading-cu {
@@ -178,15 +185,18 @@ html {
   }
   
   .form-field.message-box {
+    margin-left: auto;
+    margin-right: auto;
     height: 100px;
     padding-top: 0;
     padding-bottom: 65px;
   }
   
   .form-field.interested-products {
+    margin-left: auto;
+    margin-right: auto;
     height: 100px;
     resize: none;
-    cursor: not-allowed;
     background-color: rgba(217, 217, 217, .25);
   }
   
@@ -210,6 +220,30 @@ html {
   .form-row .form-field {
     width: 49%;
   }
+
+  /* Media query for screens smaller than 479px */
+@media screen and (max-width: 478px) {
+  .form-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .form-row .form-field, .form-field.interested-products, .form-field.message-box {
+    width: 49%;
+    /* margin-bottom: 10px; */
+  }
+}
+
+/* Media query for screens smaller than 400px */
+@media screen and (max-width: 399px) {
+  .submit-button {
+    display: block;
+    margin-left: 40%;
+    /* margin-right: auto; */
+    margin-top: 20px; /* Adjust this value for desired vertical spacing */
+  }
+}
   
   .map {
     margin-left: 0%;
@@ -2939,15 +2973,21 @@ html {
   }
   
   @media screen and (max-width: 479px) {
+
+    .form-block-cu{
+      justify-content: center;
+      align-items: center;
+    }
+
     .heading-cu {
       font-size: 30px;
       line-height: 30px;
       top: 13%;
     }
   
-    .map-2 {
+    /* .map-2 {
       height: 200px;
-    }
+    } */
   
     .text-span-cu {
       font-size: 30px;
@@ -2987,6 +3027,7 @@ html {
       line-height: 22px;
       display: block;
       top: 13%;
+      
     }
   
     .div-block-5 {
