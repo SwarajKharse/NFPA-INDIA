@@ -36,7 +36,7 @@
                 <div class="details-div">
                     <div class="div-block-2"><img
                             [src]="'assets/products/redirects/' + product.image"
-                            loading="lazy" width="320" height="470" alt="" class="image-4" /></div>
+                            loading="lazy" width="320" height="470" alt="" class="image-4-ps" /></div>
                     <div class="div-block-3">
                         <div class="text-block">Product Description</div>
                         <p class="paragraph-2">{{ product.description }}</p>
@@ -53,9 +53,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="div-block-5"><button class="add-to-cart-button" (click)="addProductToCart(product.name)">
+                        <div class="div-block-5"><button class="add-to-cart-button" (click)="addProductToCart(product)">
                             <img src="assets/Common/Buttons/Box.svg" alt="" />
-                            Add To Cart For Enquiry</button></div>
+                            {{ product.addedToCart ? 'Added' : 'Add To Cart For Enquiry' }}
+                          </button></div>
                     </div>
                 </div>
             </div>

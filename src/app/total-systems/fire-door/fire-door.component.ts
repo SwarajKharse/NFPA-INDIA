@@ -2,6 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../cartService/cart.services'; // Correct path to the service
 
+interface Product {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  showFeatures: boolean;
+  features: string[];
+  addedToCart?: boolean;
+}
+
 @Component({
   selector: 'app-fire-door',
   standalone: true,
@@ -23,7 +33,8 @@ export class FireDoorComponent {
         'Typically rated for specific fire resistance durations (e.g., 30, 60, 90 minutes)',
         'Equipped with self-closing mechanisms',
         'Essential for maintaining safe escape routes and compartmentalizing fire'
-      ]
+      ],
+      addedToCart: false
     }
   ];
 
@@ -33,8 +44,11 @@ export class FireDoorComponent {
 
   constructor(private cartService: CartService) {}
 
-  addProductToCart(productName: string) {
-    this.cartService.addProduct(productName);
-    console.log('Products in cart:', this.cartService.getProducts());
+  addProductToCart(product: Product) {
+    if (!product.addedToCart) {
+      this.cartService.addProduct(product.name);
+      product.addedToCart = true;
+      console.log('Products in cart:', this.cartService.getProducts());
+    }
   }
 }

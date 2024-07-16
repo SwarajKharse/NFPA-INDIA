@@ -63,8 +63,5 @@ export class ClientsLoopComponent implements AfterViewInit {
         duration: 1,
         stagger: 0.25
     });
-
-
   }
-
 }

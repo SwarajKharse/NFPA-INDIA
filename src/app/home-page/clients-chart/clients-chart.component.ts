@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, QueryList, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { Chart , ChartType, registerables} from 'chart.js/auto';
 Chart.register(...registerables);
 import { gsap } from 'gsap';
@@ -16,14 +16,13 @@ gsap.registerPlugin(ScrollTrigger);
 export class ClientsChartComponent implements AfterViewInit{
   @ViewChild('clientChart') clientChart!: ElementRef<HTMLCanvasElement>;
   chart!: Chart;
-  legendFontSize: number = 11; // Initial font size for legend labels
+  legendFontSize: number = 11;
 
   constructor() {}
 
-  datalabels = ['Hospitality Groups', 
-    'Industrial Sheds', 'Commercial Offices',
-    'IT Offices', 'Educational Institutes', 
-    'Residential Premises', 'Hospitals'];
+  // Below is the data for the chart which is rendered on the screen
+  datalabels = ['Hospitality Groups', 'Industrial Sheds', 'Commercial Offices', 'IT Offices', 'Educational Institutes', 'Residential Premises', 'Hospitals'];
+  dataSet = [30, 25, 20, 10, 5, 5, 5];
 
   chartDiscuss(){
     const context = this.clientChart.nativeElement.getContext('2d');
@@ -34,7 +33,7 @@ export class ClientsChartComponent implements AfterViewInit{
           data: {
             labels: this.datalabels,
             datasets: [{
-              data: [30, 25, 20, 10, 5, 5, 5],
+              data: this.dataSet,
               backgroundColor: [
                 'rgba(20, 82, 119, 0.8)',
                 'rgba(38, 103, 133, 0.8)',
@@ -129,17 +128,16 @@ export class ClientsChartComponent implements AfterViewInit{
   }
 
   adjustLegendFontSize() {
-    // Adjust font size based on viewport width
+
     if (window.innerWidth < 430) {
       this.legendFontSize = 8;
     } else {
       this.legendFontSize = 11;
     }
 
-    // Update chart legend options
+
     if (this.chart && this.chart.options.plugins && this.chart.options.plugins.legend) {
       this.chart.update();
     }
   }
-
 }

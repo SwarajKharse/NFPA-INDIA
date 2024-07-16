@@ -53,9 +53,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="div-block-5"><button class="add-to-cart-button" (click)="addProductToCart(product.name)">
+                        <div class="div-block-5"><button class="add-to-cart-button" (click)="addProductToCart(product)">
                             <img src="assets/Common/Buttons/Box.svg" alt="" />
-                            Add To Cart For Enquiry</button></div>
+                            {{ product.addedToCart ? 'Added' : 'Add To Cart For Enquiry' }}
+                          </button></div>
                     </div>
                 </div>
             </div>

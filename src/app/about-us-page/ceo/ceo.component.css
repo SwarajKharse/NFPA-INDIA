@@ -138,6 +138,11 @@
     text-align: right;
 }
 
+.br-wrapper {
+    display: block;
+    height: 20px;
+}
+
 @media screen and (max-width: 1440px){
 
     .img-container img{
