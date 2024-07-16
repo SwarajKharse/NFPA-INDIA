@@ -10,7 +10,7 @@ import { FireExtinguisherRefillingComponent } from './total-systems/fire-extingu
 import { FireHydrantSystemComponent } from './total-systems/fire-hydrant-system/fire-hydrant-system.component';
 import { FireSprinklerSystemComponent } from './total-systems/fire-sprinkler-system/fire-sprinkler-system.component';
 import { FireSuppressionSystemComponent } from './total-systems/fire-suppression-system/fire-suppression-system.component';
-import { HydraulicPressureTestingComponent } from './total-systems/hydraulic-pressure-testing/hydraulic-pressure-testing.component';
+import { ConsultingComponent } from './total-systems/consulting/consulting.component';
 import { LicensingComponent } from './total-systems/licensing/licensing.component';
 import { RepairComponent } from './total-systems/repair/repair.component';
 import { MainComponent } from './total-systems/main/main.component';
@@ -51,7 +51,7 @@ export const routes: Routes = [
           { path: 'Hydrant-System', component: FireHydrantSystemComponent },
           { path: 'Sprinkler-System', component: FireSprinklerSystemComponent },
           { path: 'Suppression-System', component: FireSuppressionSystemComponent },
-          { path: 'Hydraulic-Pressure-Testing', component: HydraulicPressureTestingComponent},
+          { path: 'consulting', component: ConsultingComponent},
           { path: 'Licensing', component: LicensingComponent },
           { path: 'Training', component: TrainingComponent },
           { path: 'Repair', component: RepairComponent},

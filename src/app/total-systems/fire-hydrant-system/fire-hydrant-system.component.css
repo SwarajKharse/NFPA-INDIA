@@ -4,7 +4,7 @@
     width: 99%;
     min-height: 100vh; 
     overflow: hidden;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 
 .systems-redirect-container{
@@ -122,6 +122,7 @@
     font-size: 100px;
 }
 
+
 .systems-redirect-marquee-text {
     position: absolute;
     top: 50px;
@@ -175,7 +176,7 @@
 .wet-chemical-suppression-systems {
     width: 100%;
     height: 450px;
-    margin: auto 0;
+    /* margin: auto 0; */
 }
 
 .gallery-container{
@@ -187,18 +188,21 @@
     width: 100%;
 }
 
-swiper-container.mySwiper, .swiper-container.mySwiper {
+swiper-container.mySwiper.system-swiper, .swiper-container.mySwiper.system-swiper {
     height: 450px;
     width: 675px;
+    display: flex;
 }
 
-swiper-slide, .swiper-slide {
+swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
+    height: 450px;
+    width: 675px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.mySwiper swiper-slide img, .mySwiper .swiper-slide img {
+.mySwiper swiper-slide.system-swiper-slide img, .mySwiper .swiper-slide.system-swiper-slide img {
     width: 675px;
     height: 450px;
     object-fit: cover;
@@ -210,23 +214,25 @@ swiper-slide, .swiper-slide {
     opacity: 0.4;
 } */
 
-.mySwiper2 {
+.mySwiper2.system-swiper2 {
     /* padding: 10px 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
     height: 475px;
     width: 400px;
     gap: 5px;
 }
 
-.mySwiper .swiper-wrapper {
+.mySwiper.system-swiper .swiper-wrapper {
     height: 475px;
     overflow: hidden;
+    display: flex;
 }
 
-.mySwiper2 swiper-slide, .mySwiper2 .swiper-slide{
+.mySwiper2.system-swiper2 swiper-slide, .mySwiper2.system-swiper2 .swiper-slide{
     height: 175px;
     /* margin: 5px; */
     width: 170px;
@@ -236,18 +242,19 @@ swiper-slide, .swiper-slide {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transform: translate3d(0px, 0px, 0px) !important;
 }
 
-.mySwiper2 swiper-slide img, .mySwiper2 .swiper-slide img {
+.mySwiper2.system-swiper2 swiper-slide img, .mySwiper2.system-swiper2 .swiper-slide img {
     height: 60%;
     border-radius: 20px;
 }
 
-.mySwiper2 .swiper-slide-thumb-active {
+.mySwiper2.system-swiper2 .swiper-slide-thumb-active {
     opacity: 1;
 }
 
-swiper-slide img, .swiper-slide img {
+swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -266,6 +273,10 @@ swiper-slide img, .swiper-slide img {
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.wet-chemical-systems-description-container:last-child{
+    margin-bottom: 100px;
 }
 
 .wet-chemical-systems-product-description-heading {
@@ -419,14 +430,14 @@ swiper-slide img, .swiper-slide img {
         width: 100%;
     }
     
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 380px;
         width: 550px;
         /* background: #282929; */
         border-radius: 20px;
     }
     
-    .mySwiper .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -434,7 +445,7 @@ swiper-slide img, .swiper-slide img {
         /* box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6); */
     }
     
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         border: 1px solid white;
         width: 550px;
         height: 380px;
@@ -447,7 +458,7 @@ swiper-slide img, .swiper-slide img {
         opacity: 0.4;
     } */
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         /* padding: 10px 0; */
         display: flex;
         flex-direction: column;
@@ -457,16 +468,8 @@ swiper-slide img, .swiper-slide img {
         width: 320px;
         gap: 10px;
     }
-
-    .mySwiper .swiper-wrapper {
-        height: auto;
-    }
     
-    .mySwiper2 .swiper-wrapper {
-        height: 475px;
-    }
-    
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 175px;
         /* margin: 5px; */
         width: 150px;
@@ -478,7 +481,7 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide img {
         height: 70%;
     }
 
@@ -609,38 +612,29 @@ swiper-slide img, .swiper-slide img {
     
     .wet-chemical-suppression-systems {
         width: 100%;
-        height: 250px;
+        height: 280px;
         margin: auto 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    .gallery-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        width: 100%;
-    }
-    
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 280px;
         width: 400px;
         /* background: #282929; */
         border-radius: 20px;
     }
     
-    .mySwiper .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
-        /* box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6); */
+        height: 280px;
     }
     
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         border: 1px solid white;
         width: 400px;
         height: 280px;
@@ -653,29 +647,25 @@ swiper-slide img, .swiper-slide img {
         opacity: 0.4;
     } */
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         /* padding: 10px 0; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 300px;
+        height: 250px;
         width: 400px;
         gap: 5px;
     }
 
-    .mySwiper .swiper-wrapper {
-        height: auto;
+    .mySwiper.system-swiper .swiper-wrapper {
+        height: 280px;
     }
     
-    .mySwiper2 .swiper-wrapper {
-        height: 475px;
-    }
-    
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 200px;
         /* margin: 5px; */
-        width: 170px;
+        width: 140px;
         opacity: 0.4;
         border-radius: 20px;
         display: flex;
@@ -684,15 +674,15 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide img {
         height: 70%;
     }
     
-    .mySwiper2 .swiper-slide-thumb-active {
+    .mySwiper2.system-swiper2 .swiper-slide-thumb-active {
         opacity: 1;
     }
     
-    .swiper-slide img {
+    .swiper-slide.system-swiper-slide img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
@@ -876,23 +866,23 @@ swiper-slide img, .swiper-slide img {
         margin-top: 90px;
     }
 
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 280px;
         width: 400px;
     }
 
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         width: 400px;
         height: 280px;
         object-fit: cover;
         border-radius: 50px;
     }
 
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         width: 300px;
     }
 
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 160px;
         /* margin: 5px; */
         width: 120px;
@@ -1010,7 +1000,7 @@ swiper-slide img, .swiper-slide img {
         width: 83%;
     }
     
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 250px;
         width: 350px;
         background: #282929;
@@ -1018,35 +1008,36 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 250px;
     }
     
-    .mySwiper .swiper-slide img {
-        width: 100%;
+    .mySwiper .swiper-slide.system-swiper-slide img {
+        width: 350px;
         height: 250px;
         object-fit: cover;
         box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.6);
         border-radius: 20px;
     }
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 250px;
+        height: 230px;
         width: 300px;
         gap: 5px;
     }
     
-    .swiper-wrapper {
+    .mySwiper.system-swiper .swiper-wrapper {
         height: 250px;
     }
     
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 160px;
         width: 120px;
         opacity: 0.4;
@@ -1057,15 +1048,15 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide img {
         height: 60%;
     }
     
-    .mySwiper2 .swiper-slide-thumb-active {
+    .mySwiper2.system-swiper2 .swiper-slide-thumb-active {
         opacity: 1;
     }
     
-    .swiper-slide img {
+    .swiper-slide.system-swiper-slide img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
@@ -1206,7 +1197,7 @@ swiper-slide img, .swiper-slide img {
 }
 
 @media (max-width: 690px) {
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 140px;
         width: 85px;
     }
@@ -1217,17 +1208,21 @@ swiper-slide img, .swiper-slide img {
 }
 
 @media (max-width: 650px) {
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 200px;
         width: 320px;
     }
 
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide {
+        height: 200px;
+    }
+
+    .mySwiper.system-swiper .swiper-slide img {
         width: 320px;
         height: 200px;
     }
 
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 140px;
         width: 85px;
     }
@@ -1312,7 +1307,7 @@ swiper-slide img, .swiper-slide img {
         width: 100%;
     }
     
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 250px;
         width: 350px;
         background: #282929;
@@ -1320,13 +1315,14 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 250px;
     }
     
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         width: 350px;
         height: 250px;
         object-fit: cover;
@@ -1334,7 +1330,7 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1344,7 +1340,7 @@ swiper-slide img, .swiper-slide img {
         gap: 20px;
     }
     
-    .mySwiper2 .swiper-wrapper {
+    .mySwiper2.system-swiper2 .swiper-wrapper {
         height: 250px;
         display: flex;
         flex-direction: row;
@@ -1353,7 +1349,7 @@ swiper-slide img, .swiper-slide img {
         gap: 20px;
     }
     
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 170px;
         width: 170px;
         opacity: 0.4;
@@ -1364,15 +1360,15 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide img {
         height: 60%;
     }
     
-    .mySwiper2 .swiper-slide-thumb-active {
+    .mySwiper2.system-swiper2 .swiper-slide-thumb-active {
         opacity: 1;
     }
     
-    .swiper-slide img {
+    .swiper-slide.system-swiper-slide img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
@@ -1588,7 +1584,7 @@ swiper-slide img, .swiper-slide img {
         width: 95%;
     }
     
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 220px;
         width: 340px;
         background: #282929;
@@ -1596,13 +1592,14 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 220px;
     }
     
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         width: 340px;
         height: 220px;
         object-fit: cover;
@@ -1610,21 +1607,21 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 170px;
+        height: 200px;
         width: 340px;
         gap: 2px;
     }
     
-    .swiper-wrapper {
-        height: 250px;
+    .mySwiper.system-swiper .swiper-wrapper {
+        height: 220px;
     }
     
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 170px;
         width: 90px;
         opacity: 0.4;
@@ -1635,15 +1632,15 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide img {
         height: 60%;
     }
     
-    .mySwiper2 .swiper-slide-thumb-active {
+    .mySwiper2.system-swiper2 .swiper-slide-thumb-active {
         opacity: 1;
     }
     
-    .swiper-slide img {
+    .swiper-slide.system-swiper-slide img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
@@ -1855,7 +1852,7 @@ swiper-slide img, .swiper-slide img {
         width: 95%;
     }
     
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 230px;
         width: 300px;
         background: #282929;
@@ -1863,13 +1860,14 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 230px;
     }
     
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         width: 300px;
         height: 230px;
         object-fit: cover;
@@ -1877,17 +1875,22 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         /* height: auto; */
         width: 300px;
+        height: 200px;
         gap: 2px;
     }
+
+    .mySwiper.system-swiper .swiper-wrapper {
+        height: 230px;
+    }
     
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 110px;
         width: 300px;
         opacity: 0.4;
@@ -1898,15 +1901,15 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide img {
         height: 90%;
     }
     
-    .mySwiper2 .swiper-slide-thumb-active {
+    .mySwiper2.system-swiper2 .swiper-slide-thumb-active {
         opacity: 1;
     }
     
-    .swiper-slide img {
+    .swiper-slide.system-swiper-slide img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
@@ -2124,7 +2127,7 @@ swiper-slide img, .swiper-slide img {
         width: 80%;
     }
     
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 200px;
         width: 260px;
         background: #282929;
@@ -2132,13 +2135,14 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 200px;
     }
     
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         width: 260px;
         height: 200px;
         object-fit: cover;
@@ -2146,7 +2150,7 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2156,11 +2160,11 @@ swiper-slide img, .swiper-slide img {
         gap: 2px;
     }
     
-    .swiper-wrapper {
-        height: auto;
+    .mySwiper.system-swiper .swiper-wrapper {
+        height: 200px;
     }
     
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide{
         height: 90px;
         width: 280px;
         opacity: 0.4;
@@ -2171,15 +2175,15 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide img {
         height: 100%;
     }
     
-    .mySwiper2 .swiper-slide-thumb-active {
+    .mySwiper2.system-swiper2 .swiper-slide-thumb-active {
         opacity: 1;
     }
     
-    .swiper-slide img {
+    .swiper-slide.system-swiper-slide img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
@@ -2382,7 +2386,7 @@ swiper-slide img, .swiper-slide img {
         width: 80%;
     }
     
-    .swiper-container.mySwiper {
+    .swiper-container.mySwiper.system-swiper {
         height: 170px;
         width: 230px;
         background: #282929;
@@ -2390,13 +2394,14 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .swiper-slide {
+    .mySwiper .swiper-slide.system-swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 170px;
     }
     
-    .mySwiper .swiper-slide img {
+    .mySwiper .swiper-slide.system-swiper-slide img {
         width: 230px;
         height: 170px;
         object-fit: cover;
@@ -2404,7 +2409,7 @@ swiper-slide img, .swiper-slide img {
         border-radius: 20px;
     }
     
-    .mySwiper2 {
+    .mySwiper2.system-swiper2 {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2413,8 +2418,12 @@ swiper-slide img, .swiper-slide img {
         width: 230px;
         gap: 2px;
     }
+
+    .mySwiper.system-swiper .swiper-wrapper {
+        height: 170px;
+    }
     
-    .mySwiper2 .swiper-slide{
+    .mySwiper2.system-swiper2 .swiper-slide.system-swiper-slide {
         height: 70px;
         width: 230px;
         opacity: 0.4;
@@ -2425,15 +2434,15 @@ swiper-slide img, .swiper-slide img {
         cursor: pointer;
     }
     
-    .mySwiper2 .swiper-slide img {
+    .mySwiper2.system-swiper2 .swiper-slide.system-swiper-slide img {
         height: 100%;
     }
     
-    .mySwiper2 .swiper-slide-thumb-active {
+    .mySwiper2.system-swiper2 .swiper-slide-thumb-active {
         opacity: 1;
     }
     
-    .swiper-slide img {
+    .swiper-slide.system-swiper-slide img {
         width: 100%;
         height: 100%;
         border-radius: 20px;

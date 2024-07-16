@@ -12,15 +12,15 @@ import { FireExtinguisherRefillingComponent } from '../fire-extinguisher-refilli
 import { FireHydrantSystemComponent } from '../fire-hydrant-system/fire-hydrant-system.component';
 import { FireSprinklerSystemComponent } from '../fire-sprinkler-system/fire-sprinkler-system.component';
 import { FireSuppressionSystemComponent } from '../fire-suppression-system/fire-suppression-system.component';
-import { HydraulicPressureTestingComponent } from '../hydraulic-pressure-testing/hydraulic-pressure-testing.component';
 import { LicensingComponent } from '../licensing/licensing.component';
 import { RepairComponent } from '../repair/repair.component';
 import { TrainingComponent } from '../training/training.component';
+import { ConsultingComponent } from '../consulting/consulting.component';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, ServicesRedirectComponent, FireAuditComponent, FireDetectionSystemComponent, FireExtinguisherRefillingComponent, FireHydrantSystemComponent, FireSprinklerSystemComponent, FireSuppressionSystemComponent, HydraulicPressureTestingComponent, LicensingComponent, RepairComponent, TrainingComponent],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive, ServicesRedirectComponent, FireAuditComponent, FireDetectionSystemComponent, FireExtinguisherRefillingComponent, FireHydrantSystemComponent, FireSprinklerSystemComponent, FireSuppressionSystemComponent,  LicensingComponent, ConsultingComponent, RepairComponent, TrainingComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
