@@ -4,7 +4,6 @@
     width: 99%;
     min-height: 100vh; 
     overflow: hidden;
-    /* margin-bottom: 50px; */
 }
 
 .systems-redirect-container{
@@ -17,7 +16,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* background-image: url(/assets/systems-redirect-bgImg.png); */
     background-image: url(/assets/products/redirects/fire_sprinkler.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -206,13 +204,21 @@ swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
     width: 675px;
     height: 450px;
     object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50px;
 }
 
-/* .mySwiper swiper-slide img:hover {
-    background-color: black;
-    opacity: 0.4;
-} */
+.mySwiper.system-swiper .swiper-wrapper {
+    height: 450px;
+    gap: 10px;
+    display: flex;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate3d(0px, 0px, 0px);
+}
 
 .mySwiper2.system-swiper2 {
     /* padding: 10px 0; */
@@ -224,12 +230,6 @@ swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
     height: 475px;
     width: 400px;
     gap: 5px;
-}
-
-.mySwiper.system-swiper .swiper-wrapper {
-    height: 475px;
-    overflow: hidden;
-    display: flex;
 }
 
 .mySwiper2.system-swiper2 swiper-slide, .mySwiper2.system-swiper2 .swiper-slide{
