@@ -4,6 +4,7 @@
     width: 99%;
     min-height: 100vh; 
     overflow: hidden;
+    /* margin-bottom: 50px; */
 }
 
 .systems-redirect-container{
@@ -16,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    /* background-image: url(/assets/systems-redirect-bgImg.png); */
     background-image: url(/assets/products/redirects/fire_sprinkler.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -38,14 +40,9 @@
     font-style: normal;
     font-size: 40px;
     color:white;
-    /* position: absolute; */
-    /* right: 50%; */
-    /* bottom: 30px; */
     margin: 30px;
     text-align: center;
     z-index: 999;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
 }
 
 .class1 {
@@ -56,7 +53,6 @@
 }
 
 .systems-redirect-body-container {
-    /* height: 150px; */
     position: relative;
     display: flex;
 }
@@ -76,14 +72,12 @@
 
 .systems-redirect-first-content {
     flex: 1;
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
     background-color: black;
-    /* top: 10px; */
     font-size: 30px;
     font-weight: 200;
 }
@@ -178,8 +172,9 @@
 }
 
 .gallery-container{
+    margin-top: -20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -188,20 +183,22 @@
 
 swiper-container.mySwiper.system-swiper, .swiper-container.mySwiper.system-swiper {
     height: 450px;
-    width: 675px;
+    width: 880px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
     height: 450px;
-    width: 675px;
+    width: 880px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .mySwiper swiper-slide.system-swiper-slide img, .mySwiper .swiper-slide.system-swiper-slide img {
-    width: 675px;
+    width: 880px;
     height: 450px;
     object-fit: cover;
     display: flex;
@@ -211,36 +208,46 @@ swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
 }
 
 .mySwiper.system-swiper .swiper-wrapper {
-    height: 450px;
-    gap: 10px;
-    display: flex;
+    height: 550px;
     overflow: hidden;
-    transform: translate3d(0px, 0px, 0px);
+    display: flex;
+    gap: 10px;
+    /* transform: translate3d(0px, 0px, 0px); */
 }
 
 .mySwiper2.system-swiper2 {
     /* padding: 10px 0; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
-    height: 475px;
-    width: 400px;
+    height: 280px;
+    width: 60%;
+    margin: 20px;
+    margin-top: 10px;
     gap: 5px;
 }
 
+.mySwiper2.system-swiper2 .swiper-wrapper {
+    height: 280px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
 .mySwiper2.system-swiper2 swiper-slide, .mySwiper2.system-swiper2 .swiper-slide{
-    height: 175px;
-    /* margin: 5px; */
-    width: 170px;
+    height: 280px;
+    width: 150px;
     opacity: 0.4;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transform: translate3d(0px, 0px, 0px) !important;
+    /* transform: translate3d(0px, 0px, 0px) !important; */
 }
 
 .mySwiper2.system-swiper2 swiper-slide img, .mySwiper2.system-swiper2 .swiper-slide img {
@@ -265,16 +272,12 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     border-radius: 20px;
     display: block;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 370px;
     margin-bottom: 20px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-}
-
-.wet-chemical-systems-description-container:last-child{
-    margin-bottom: 100px;
 }
 
 .wet-chemical-systems-product-description-heading {
@@ -421,7 +424,7 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
 @media (max-width: 1150px) {
     .gallery-container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
@@ -436,6 +439,8 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     }
     
     .mySwiper .swiper-slide.system-swiper-slide {
+        height: 380px;
+        width: 550px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -450,26 +455,36 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         object-fit: cover;
         border-radius: 20px;
     }
-    
-    /* .mySwiper swiper-slide img:hover {
-        background-color: black;
-        opacity: 0.4;
-    } */
+
+    .mySwiper.system-swiper .swiper-wrapper {
+        height: 380px;
+        overflow: hidden;
+        display: flex;
+        gap: 10px;
+    }
     
     .mySwiper2.system-swiper2 {
         /* padding: 10px 0; */
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 350px;
-        width: 320px;
+        height: 250px;
         gap: 10px;
+    }
+
+    .mySwiper2.system-swiper2 .swiper-wrapper {
+        height: 250px;
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
     
     .mySwiper2.system-swiper2 .swiper-slide{
         height: 175px;
-        /* margin: 5px; */
         width: 150px;
         opacity: 0.4;
         border-radius: 20px;
@@ -484,7 +499,7 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     }
 
     .wet-chemical-systems-description-container {
-        margin-top: 40px;
+        margin-top: 200px;
     }
 
     .wet-chemical-systems-description-container {
@@ -616,6 +631,10 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         justify-content: center;
         align-items: center;
     }
+
+    .gallery-container{
+        margin-top: 25%;
+    }
     
     .swiper-container.mySwiper.system-swiper {
         height: 280px;
@@ -640,11 +659,6 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         border-radius: 20px;
     }
     
-    /* .mySwiper swiper-slide img:hover {
-        background-color: black;
-        opacity: 0.4;
-    } */
-    
     .mySwiper2.system-swiper2 {
         /* padding: 10px 0; */
         display: flex;
@@ -661,8 +675,7 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     }
     
     .mySwiper2.system-swiper2 .swiper-slide{
-        height: 200px;
-        /* margin: 5px; */
+        height: 180px;
         width: 140px;
         opacity: 0.4;
         border-radius: 20px;
@@ -691,7 +704,7 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         height: auto;
         border: 1px solid white;
         border-radius: 20px;
-        margin-top: 50px;
+        margin-top: 22%;
         margin-bottom: 20px;
         padding: 40px;
         display: flex;
@@ -828,8 +841,8 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     }
 
     .gallery-container {
-        margin-top: 60px;
-        margin-bottom: 40px;
+        margin-top: 40%;
+        margin-bottom: 120px;
     }
 }
 
@@ -838,6 +851,15 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         height: 70px;
         width: 70px;
         border-radius: 20px;
+    }
+
+    .gallery-container {
+        margin-top: 50%;
+        margin-bottom: 120px;
+    }
+
+    .wet-chemical-systems-description-container {
+        margin-top: 30%;
     }
 }
 
@@ -877,13 +899,13 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     }
 
     .mySwiper2.system-swiper2 {
-        width: 300px;
+        width: 60%;
     }
 
     .mySwiper2.system-swiper2 .swiper-slide{
-        height: 160px;
+        height: 180px;
         /* margin: 5px; */
-        width: 120px;
+        width: 160px;
     }
 
     .wet-chemical-systems-components-main-container {
@@ -991,10 +1013,10 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     
     .gallery-container{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
         width: 83%;
     }
     
@@ -1023,11 +1045,11 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     
     .mySwiper2.system-swiper2 {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 230px;
-        width: 300px;
+        width: 60%;
         gap: 5px;
     }
     
@@ -1065,7 +1087,7 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         height: auto;
         border: 1px solid white;
         border-radius: 20px;
-        margin-top: 90px;
+        margin-top: 280px;
         margin-bottom: 20px;
         padding: 30px;
         display: flex;
@@ -1206,6 +1228,10 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
 }
 
 @media (max-width: 650px) {
+    .gallery-container {
+        gap: 10px;
+    }
+
     .swiper-container.mySwiper.system-swiper {
         height: 200px;
         width: 320px;
@@ -1220,9 +1246,17 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         height: 200px;
     }
 
+    .mySwiper2.system-swiper2 {
+        width: 60%;
+    }
+
     .mySwiper2.system-swiper2 .swiper-slide{
         height: 140px;
         width: 85px;
+    }
+
+    .wet-chemical-systems-description-container {
+        margin-top: 200px;
     }
 }
 
@@ -1297,6 +1331,8 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
     }
     
     .gallery-container{
+        margin-top: 5%;
+        margin-bottom: 5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1377,7 +1413,7 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         height: auto;
         border: 1px solid white;
         border-radius: 20px;
-        margin-top: 40px;
+        margin-top: -40px;
         margin-bottom: 20px;
         padding: 30px;
         display: flex;
@@ -1649,7 +1685,7 @@ swiper-slide.system-swiper-slide img, .swiper-slide.system-swiper-slide img {
         height: auto;
         border: 1px solid white;
         border-radius: 20px;
-        margin-top: 40px;
+        margin-top: -40px;
         margin-bottom: 20px;
         padding: 30px;
         display: flex;
