@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  /* section {
+    overflow-x: hidden;
+  } */
   
   /* Body styling */
   body {
@@ -2623,8 +2627,67 @@
     justify-content: center;
     display: flex;
   }
+
+  @media screen and (max-width: 1023px) {
+    section{
+      overflow-x: hidden;
+    }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1919px) {
+    .big-img::before{
+      width: 146%;
+    }
+
+    .image-12{
+      width: 146%;
+    }
+
+    .req-head {
+      /* font-size: 25px;
+      line-height: 25px; */
+      margin-bottom: 10%;
+    }
+
+    .details-div-copy {
+      /* flex-flow: column; */
+      margin-bottom: 10%;
+    }
   
+  }
+
+  @media screen and (max-width: 1024px){
+    .big-img::before{
+      width: 146%;
+    }
+
+    .image-12{
+      width: 146%;
+    }
+
+    .req-head {
+      /* font-size: 25px;
+      line-height: 25px; */
+      margin-bottom: 10%;
+    }
+
+    .details-div-copy {
+      /* flex-flow: column; */
+      margin-bottom: 10%;
+    }
+  
+  }
+
   @media screen and (max-width: 991px) {
+    .image-12{
+      width: 100vw;
+    }
+
+    .details-div-copy {
+      /* flex-flow: column; */
+      margin-bottom: 10%;
+    }
+
     .heading {
       font-size: 35px;
       line-height: 40px;
@@ -2736,6 +2799,8 @@
       min-width: 0;
       margin-left: 0;
       margin-right: 0;
+      margin-top: 10%;
+      margin-bottom: 15%;
     }
   
     .red-div {
@@ -2779,6 +2844,7 @@
     .req-head {
       font-size: 25px;
       line-height: 25px;
+      margin-bottom: 10%;
     }
   
     .image-4-copy {
@@ -3022,6 +3088,11 @@
   }
   
   @media screen and (max-width: 479px) {
+    section {
+      margin-top: 17%;
+      overflow-x: hidden;
+    }
+
     .img-grid {
       display: block;
     }
@@ -3120,15 +3191,15 @@
     .heading-5 {
       font-size: 20px;
       line-height: 20px;
-      top: 20px;
-      left: 10px;
+      top: 150px;
+      left: 20px;
     }
   
     .heading-5-copy {
       font-size: 15px;
       line-height: 15px;
-      top: 45px;
-      left: 10px;
+      top: 180px;
+      left: 20px;
     }
   
     .causes-div {
@@ -3165,15 +3236,15 @@
     }
   
     .req-head {
-      margin-top: 20px;
-      margin-bottom: 20px;
+      /* margin-top: 40px; */
+      margin-bottom: 50px;
       font-size: 12px;
       line-height: 12px;
     }
   
     .details-div-copy {
       flex-flow: column;
-      margin-bottom: 5%;
+      margin-bottom: 10%;
     }
   
     .image-4-copy {
