@@ -208,11 +208,11 @@ swiper-slide.system-swiper-slide, .swiper-slide.system-swiper-slide {
 }
 
 .mySwiper.system-swiper .swiper-wrapper {
-    height: 550px;
+    height: 450px;
     overflow: hidden;
     display: flex;
     gap: 10px;
-    /* transform: translate3d(0px, 0px, 0px); */
+    transform: translate3d(0px, 0px, 0px);
 }
 
 .mySwiper2.system-swiper2 {
