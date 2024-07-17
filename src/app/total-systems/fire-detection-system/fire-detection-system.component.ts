@@ -440,10 +440,10 @@ export class FireDetectionSystemComponent implements AfterViewInit {
       breakpoints: {
         577: {
           grid: {
-            rows: 2,
+            rows: 1,
           },
-          slidesPerView: 2,
-          direction: 'vertical',
+          slidesPerView: 4,
+          direction: 'horizontal',
         },
         460: {
           grid: {
@@ -507,10 +507,10 @@ export class FireDetectionSystemComponent implements AfterViewInit {
       breakpoints: {
         577: {
           grid: {
-            rows: 2,
+            rows: 1,
           },
-          slidesPerView: 2,
-          direction: 'vertical',
+          slidesPerView: 4,
+          direction: 'horizontal',
         },
         460: {
           grid: {
@@ -560,10 +560,10 @@ export class FireDetectionSystemComponent implements AfterViewInit {
       breakpoints: {
         577: {
           grid: {
-            rows: 2,
+            rows: 1,
           },
-          slidesPerView: 2,
-          direction: 'vertical',
+          slidesPerView: 4,
+          direction: 'horizontal',
         },
         460: {
           grid: {
@@ -613,10 +613,10 @@ export class FireDetectionSystemComponent implements AfterViewInit {
       breakpoints: {
         577: {
           grid: {
-            rows: 2,
+            rows: 1,
           },
-          slidesPerView: 2,
-          direction: 'vertical',
+          slidesPerView: 4,
+          direction: 'horizontal',
         },
         460: {
           grid: {
@@ -666,10 +666,10 @@ export class FireDetectionSystemComponent implements AfterViewInit {
       breakpoints: {
         577: {
           grid: {
-            rows: 2,
+            rows: 1,
           },
-          slidesPerView: 2,
-          direction: 'vertical',
+          slidesPerView: 4,
+          direction: 'horizontal',
         },
         460: {
           grid: {
