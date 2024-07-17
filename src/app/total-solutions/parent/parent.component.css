@@ -88,7 +88,7 @@ section {
 
 .image-container img {
     width: 100%;
-    height: auto;
+    height: 330px;
     display: block;
     filter: brightness(70%);
     transition: filter 0.3s;
@@ -105,7 +105,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 330px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(27, 27, 27, 0.5));
     transition: background 0.3s;
     z-index: 1; /* Ensure the gradient overlay is on top */
@@ -113,15 +113,6 @@ section {
 
 .image-container:hover:before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
-}
-
-/* Base styles (as provided) */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 100px;
 }
 
 .flex-container {
@@ -144,8 +135,32 @@ section {
 
 /* Other styles remain the same */
 
+@media screen and (max-width: 1024px) {
+    .image-container:before {
+        content: none;
+    }
+
+    .heading2 .head2{
+        margin-bottom: 0;
+    }
+
+    .head-container {
+        margin-top: 5%;
+        margin-bottom: 40px;
+    }
+
+    .grid-container{
+        margin-bottom: 0;
+    }
+}
+
+
 /* Media query for screens between 500px and 740px */
 @media screen and (min-width: 630px) and (max-width: 740px) {
+    .image-container:before {
+        content: none;
+    }
+
     .grid-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
@@ -156,6 +171,33 @@ section {
         width: 280px;
         height: 280px;
         margin: 8px;
+    }
+
+    .head-container{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .heading2 .head2{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 629px) {
+    .image-container:before {
+        content: none;
+    }
+
+    .grid-container {
+        margin-bottom: 50px;
+    }
+    .head-container{
+        margin-top: 15%;
+        margin-bottom: 10%;
+    }
+
+    .heading2 .head2{
+        margin-bottom: 0;
     }
 }
 
