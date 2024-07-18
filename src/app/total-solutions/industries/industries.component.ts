@@ -52,18 +52,13 @@ export class IndustriesComponent {
       description: 'Clean Agent Fire Suppression Systems are advanced fire protection solutions designed for areas where water-based systems could cause significant damage. They use environmentally friendly gases to quickly suppress fires without leaving residue, making them ideal for protecting sensitive equipment and valuable assets in data centers, museums, and electrical rooms.',
       image: 'Suppression.webp'
     },
-    // {
-    //   id:7,
-    //   name: 'Gas Leak Detection Systems',
-    //   description: 'Gas Leak Detection Systems are crucial safety components in industrial and residential settings where flammable or toxic gases are present. These systems continuously monitor the air for dangerous gas concentrations, providing early warnings to prevent explosions, fires, or health hazards in environments such as chemical plants, oil refineries, and homes with natural gas appliances.',
-    //   image: 'GasSensor.webp'
-    // }
-    // {
-    //   id:8,
-    //   name: 'Rodent Repellent Systems',
-    //   description: 'Rodent Repellent Systems offer a humane and effective solution for preventing rodent infestations in buildings and outdoor areas. These systems use ultrasonic frequencies or other non-toxic methods to deter rodents, protecting property and health without the use of harmful chemicals or traps.',
-    //   image: 'RSystem.webp'
-    // }
+    {
+      id:7,
+      name: 'Gas Leak Detection Systems',
+      description: 'Gas Leak Detection Systems are crucial safety components in industrial and residential settings where flammable or toxic gases are present. These systems continuously monitor the air for dangerous gas concentrations, providing early warnings to prevent explosions, fires, or health hazards in environments such as chemical plants, oil refineries, and homes with natural gas appliances.',
+      image: 'GasSensor.webp',
+      link: '/total-systems/Detection-System'
+    }
   ];
 
   services = [
