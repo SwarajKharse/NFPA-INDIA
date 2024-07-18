@@ -39,21 +39,22 @@ export class RestaurantsComponent {
       image: 'Fire Pump.webp',
       link: '/total-systems/Hydrant-System'
     },
-    // {
-    //   id: 5,
-    //   name: 'Kitchen Suppression Systems',
-    //   description: 'Kitchen Suppression Systems are specialized fire protection solutions designed for commercial kitchens and food service areas. These systems rapidly detect and extinguish fires caused by cooking oils and fats, preventing the spread of flames and minimizing damage to kitchen equipment and surrounding areas.',
-    //   image: 'KSystem.webp',
-    //   link: '/total-systems/Hydrant-System'
-    // },
-    // {
-    //   id:6,
-    //   name: 'Gas Leak Detection Systems',
-    //   description: 'Gas Leak Detection Systems are crucial safety components in industrial and residential settings where flammable or toxic gases are present. These systems continuously monitor the air for dangerous gas concentrations, providing early warnings to prevent explosions, fires, or health hazards in environments such as chemical plants, oil refineries, and homes with natural gas appliances.',
-    //   image: 'GasSensor.webp'
-    // },
     {
       id: 5,
+      name: 'Kitchen Suppression Systems',
+      description: 'Kitchen Suppression Systems are specialized fire protection solutions designed for commercial kitchens and food service areas. These systems rapidly detect and extinguish fires caused by cooking oils and fats, preventing the spread of flames and minimizing damage to kitchen equipment and surrounding areas.',
+      image: 'KSystem.webp',
+      link: '/total-systems/Suppression-System'
+    },
+    {
+      id:6,
+      name: 'Gas Leak Detection Systems',
+      description: 'Gas Leak Detection Systems are crucial safety components in industrial and residential settings where flammable or toxic gases are present. These systems continuously monitor the air for dangerous gas concentrations, providing early warnings to prevent explosions, fires, or health hazards in environments such as chemical plants, oil refineries, and homes with natural gas appliances.',
+      image: 'GasSensor.webp',
+      link: '/total-systems/Detection-System'
+    },
+    {
+      id: 7,
       name: 'Electrical Panel Suppression System',
       description: 'Fire suppression systems form a crucial line of defense in buildings, employing various technologies to extinguish flames and protect lives. Fire alarms with smoke and heat detectors trigger early warnings, while automatic sprinkler systems douse flames with water.',
       image: 'electric-carousel-1.webp',
