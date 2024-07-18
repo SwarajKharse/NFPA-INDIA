@@ -3053,8 +3053,8 @@ html {
     }
   
     .heading {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin-top: 5%;
+      margin-bottom: 10%;
       padding-top: 2%;
       font-size: 20px;
       line-height: 25px;
@@ -3081,7 +3081,7 @@ html {
   
     .details-div {
       flex-flow: column;
-      margin-bottom: 5%;
+      margin-bottom: 15%;
     }
   
     .image-4 {
@@ -3215,8 +3215,8 @@ html {
   @media screen and (max-width: 480px) {
     /* Adjustments for screens up to 480px */
     .heading-3{
-      margin-top: 50px;
-      margin-bottom: 90px;
+      margin-top: 20px;
+      margin-bottom: 70px;
     }
 
     .div-block-2{
