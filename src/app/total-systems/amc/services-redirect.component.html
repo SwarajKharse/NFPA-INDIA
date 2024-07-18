@@ -170,11 +170,12 @@
     </div>
 
     <div class="services-redirect-button">
-      <button class="add-to-cart-button" (click)="addProductToCart('Annual Maintenance Contract')">
-        <img src="assets/products/redirects/add-to-cart-btnimg.png" alt="" />
+      <button class="add-to-cart-button" (click)="addProductToCart($event, 'Annual Maintenance Contract')">
+        <img src="assets/products/redirects/add-to-cart-btnimg.png" alt="">
         Add To Cart For Enquiry
       </button>
     </div>
+    
     <div class="services-redirect-button">
       <a class="add-to-cart-button" href="assets/products/redirects/Company-Profile.pdf" download="Company-Profile.pdf">
           <img src="assets/products/redirects/pdf_logo.png" alt="">
