@@ -32,12 +32,13 @@ import { FireDoorComponent } from './total-systems/fire-door/fire-door.component
 import { TotalSolutionsComponent } from './total-solutions/total-solutions.component';
 import { ParentComponent } from './total-solutions/parent/parent.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { ClientsComponent } from './clients/clients.component';
+import { CatalogueComponent } from './catalogue/catalogue.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomePageComponent },
     {path: 'about',component: AboutUsPageComponent},
+    { path: 'catalogue', component: CatalogueComponent},
     {
         path: 'total-systems',
         component: TotalSystemsComponent,
