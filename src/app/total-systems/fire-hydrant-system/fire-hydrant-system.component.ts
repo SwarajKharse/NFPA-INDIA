@@ -19,13 +19,19 @@ gsap.registerPlugin(ScrollTrigger);
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class FireHydrantSystemComponent implements AfterViewInit {
+constructor(private cartService: CartService) {}
 
-  constructor(private cartService: CartService) {}
+  addProductToCart(event: Event, productName: string) {
+    const buttonElement = (event.target as HTMLElement).closest('button');
 
-  addProductToCart(productName: string) {
-    this.cartService.addProduct(productName);
-    console.log('Products in cart:', this.cartService.getProducts());
+    // Check if the product is already in the cart
+    if (buttonElement && buttonElement.innerText.trim() === 'Add To Cart For Enquiry') {
+      this.cartService.addProduct(productName);
+      buttonElement.innerText = 'Added';
+      console.log('Products in cart:', this.cartService.getProducts());
+    }
   }
+  
   @ViewChild('mainSwiper') mainSwiper!: ElementRef;
   @ViewChild('thumbsSwiper') thumbsSwiper!: ElementRef;
   private swiperInstance!: Swiper;
