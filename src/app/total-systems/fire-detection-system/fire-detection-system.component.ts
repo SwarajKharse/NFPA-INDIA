@@ -21,10 +21,17 @@ gsap.registerPlugin(ScrollTrigger);
 export class FireDetectionSystemComponent implements AfterViewInit {
   constructor(private cartService: CartService) {}
 
-  addProductToCart(productName: string) {
-    this.cartService.addProduct(productName);
-    console.log('Products in cart:', this.cartService.getProducts());
+  addProductToCart(event: Event, productName: string) {
+    const buttonElement = (event.target as HTMLElement).closest('button');
+
+    // Check if the product is already in the cart
+    if (buttonElement && buttonElement.innerText.trim() === 'Add To Cart For Enquiry') {
+      this.cartService.addProduct(productName);
+      buttonElement.innerText = 'Added';
+      console.log('Products in cart:', this.cartService.getProducts());
+    }
   }
+  
   @ViewChild('mainSwiper') mainSwiper!: ElementRef;
   @ViewChild('thumbsSwiper') thumbsSwiper!: ElementRef;
   private swiperInstance!: Swiper;
