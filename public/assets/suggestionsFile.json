@@ -5,7 +5,7 @@
   { "name": "Fire Sprinkler System", "image": "assets/P&S/system/sprinkler376.webp", "link": "/total-systems/Sprinkler-System" },
   { "name": "Fire Detection System", "image": "assets/P&S/system/detection376.webp", "link": "/total-systems/Detection-System" },
   { "name": "Fire Metal Doors", "image": "assets/P&S/doors.webp", "link": "/total-systems/Doors" },
-  { "name": "Water Level Detector", "image": "assets/P&S/WLD.webp", "link": "/total-systems/WLD" },
+  { "name": "Fire Signages", "image": "assets/products/redirects/Fire-Signage.webp", "link": "/total-systems/Signs" },
   { "name": "Public Address System", "image": "assets/P&S/PA.webp", "link": "/total-systems/PA" },
   { "name": "AMC Services", "image": "assets/P&S/amc 1.webp", "link": "/total-systems/AMC" },
   { "name": "Fire Extinguisher Refilling", "image": "assets/P&S/refill 1.webp", "link": "/total-systems/Refill" },
