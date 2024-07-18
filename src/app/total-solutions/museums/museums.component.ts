@@ -46,12 +46,13 @@ export class MuseumsComponent {
       image: 'Fire Pump.webp',
       link: '/total-systems/Hydrant-System'
     },
-    // {
-    //   id:6,
-    //   name: 'Gas Leak Detection Systems',
-    //   description: 'Gas Leak Detection Systems are crucial safety components in industrial and residential settings where flammable or toxic gases are present. These systems continuously monitor the air for dangerous gas concentrations, providing early warnings to prevent explosions, fires, or health hazards in environments such as chemical plants, oil refineries, and homes with natural gas appliances.',
-    //   image: 'GasSensor.webp'
-    // },
+    {
+      id:6,
+      name: 'Gas Leak Detection Systems',
+      description: 'Gas Leak Detection Systems are crucial safety components in industrial and residential settings where flammable or toxic gases are present. These systems continuously monitor the air for dangerous gas concentrations, providing early warnings to prevent explosions, fires, or health hazards in environments such as chemical plants, oil refineries, and homes with natural gas appliances.',
+      image: 'GasSensor.webp',
+      link: '/total-systems/Detection-System'
+    },
     {
       id: 7,
       name: 'Electrical Panel Suppression System',
