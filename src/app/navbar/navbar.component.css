@@ -51,7 +51,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 50px;
+    gap: 45px;
 }
 
 .navBar-menu .navBar-menu-item a{
