@@ -29,8 +29,8 @@ footer{
 }
 
 .name .nfpa-logo img{
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
 }
 
 .name .nfpa-content{
@@ -42,7 +42,7 @@ footer{
 }
 
 .name .nfpa-content h3{
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 500;
     margin: 5px 0 8px 0;
 }
@@ -300,7 +300,7 @@ footer{
     }
 
     .name .nfpa-content h3{
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .name .nfpa-content h4{
@@ -308,8 +308,8 @@ footer{
     }
 
     .name img{
-        width: 48px;
-        height: 48px;
+        width: 60px;
+        height: 60px;
     }
 
     .about{
@@ -405,8 +405,12 @@ footer{
     }
 
     .name img{
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .name .nfpa-content h3{
+        font-size: 24px;
     }
 
     .about{
@@ -493,8 +497,12 @@ footer{
     }
 
     .name img{
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .name .nfpa-content h3{
+        font-size: 22px;
     }
 
     .about{
@@ -592,8 +600,8 @@ footer{
     }
 
     .name img{
-        width: 35px;
-        height: 35px;
+        width: 42px;
+        height: 42px;
     }
 
     .about{
