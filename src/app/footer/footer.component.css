@@ -29,8 +29,8 @@ footer{
 }
 
 .name .nfpa-logo img{
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .name .nfpa-content{
@@ -42,7 +42,7 @@ footer{
 }
 
 .name .nfpa-content h3{
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 500;
     margin: 5px 0 8px 0;
 }
@@ -273,6 +273,16 @@ footer{
     font-variation-settings: "slnt" 0;
 }
 
+.developedWithLove .non-affiliated{
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
 @media screen and (max-width: 1024px){
     footer{
         gap: 15px;
@@ -365,6 +375,10 @@ footer{
     .developedWithLove p{
         font-size: 10px;
     }
+
+    .developedWithLove .non-affiliated{
+        font-size: 8px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -454,6 +468,10 @@ footer{
 
     .developedWithLove p{
         font-size: 10px;
+    }
+
+    .developedWithLove .non-affiliated{
+        font-size: 8px;
     }
 }
 
@@ -546,6 +564,10 @@ footer{
 
     .developedWithLove p{
         font-size: 8px;
+    }
+
+    .developedWithLove .non-affiliated{
+        font-size: 6px;
     }
 }
 
@@ -644,5 +666,9 @@ footer{
 
     .developedWithLove p{
         font-size: 7px;
+    }
+
+    .developedWithLove .non-affiliated{
+        font-size: 6px;
     }
 }
